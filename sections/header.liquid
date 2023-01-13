@@ -67,6 +67,10 @@
     line-height: calc(1 + 0.3 / var(--font-body-scale));
   }
 
+  .list-menu__item.active {
+    text-decoration: underline;
+  }
+
   .list-menu__item--link {
     text-decoration: none;
     padding-bottom: 1rem;
@@ -79,6 +83,27 @@
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
+  }
+
+  .header__submenu .button {
+    margin-top: 50px;
+  }
+
+  .header-collection-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .header-collection-titles {
+    width: 25%;
+    display: inline-block;
+  }
+
+  .header-collection-products {
+    width: 75%;
+    display: inline-block;
   }
 </style>
 
@@ -401,37 +426,50 @@
               <li>
                 {%- if link.links != blank -%}
                   <header-menu>
-                    <details id="Details-HeaderMenu-{{ forloop.index }}">
+                    <details {% if link.title == 'Shop' %} class="mega-menu" {% endif %} id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
-                      <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
-                        {%- for childlink in link.links -%}
-                          <li>
-                            {%- if childlink.links == blank -%}
-                              <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                {{ childlink.title | escape }}
-                              </a>
-                            {%- else -%}
-                              <details id="Details-HeaderSubMenu-{{ forloop.index }}">
-                                <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
-                                  <span>{{ childlink.title | escape }}</span>
-                                  {% render 'icon-caret' %}
-                                </summary>
-                                <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
-                                  {%- for grandchildlink in childlink.links -%}
-                                    <li>
-                                      <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                        {{ grandchildlink.title | escape }}
-                                      </a>
-                                    </li>
-                                  {%- endfor -%}
-                                </ul>
-                              </details>
-                            {%- endif -%}
-                          </li>
-                        {%- endfor -%}
+                      <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu {% if link.title == 'Shop' %}mega-submenu {% endif %}list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
+                        <div class="page-width">
+                          {% if link.title == 'Shop' %}
+                            <div class="header-collection-wrapper">
+                              <div class="header-collection-titles">
+                                <strong>Our Goodies</strong>
+                                {%- for childlink in link.links -%}
+                                  <li>
+                                    <a href="{{ childlink.url }}" class="header__menu-item list-menu__item {% if forloop.index == 1 %}active {% endif %}link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                      {{ childlink.title | escape }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                                <a role="link" href="/collections/all" aria-disabled="false" class="button button--primary">
+                                  Shop All
+                                </a>
+                              </div>
+                              {%- for i in (1..5) -%}
+                                {% render 'card-product', show_vendor: section.settings.show_vendor %}
+                              {%- endfor -%}
+                              {%- comment -%} {%- for childlink in link.links -%}
+                                <div class="header-collection-products">
+                                  {% assign collection = collections[childlink] %}
+                                  {% for product in collection.products limit: 5 %}
+                                    {% render 'card-product', product: product, header_menu: true %}
+                                  {% endfor %}
+                                </div>
+                              {% endfor %} {%- endcomment -%}
+                            </div>
+                          {% else %}
+                            {%- for childlink in link.links -%}
+                              <li>
+                                <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                  {{ childlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          {% endif %}
+                        </div>
                       </ul>
                     </details>
                   </header-menu>

@@ -1,0 +1,9 @@
+<div class="product-card">
+  <img src="{{ product.image }}" alt="{{ product.title }}" loading="lazy"/>
+  <span>Candied Nuts</span>
+  <p class="product-title">{{ product.title }}</p>
+  <p class="product-price">{{ product.price | money }}</p>
+  <a role="link" href="{{ product.url }}" aria-disabled="false" class="button button--primary">
+    Shop Now
+  </a>
+</div>
