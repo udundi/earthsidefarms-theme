@@ -769,11 +769,18 @@ summary {
   position: relative;
 }
 
-summary .icon-caret {
+summary .icon-caret,
+.menu-drawer__close-button .icon-caret {
   position: absolute;
   height: 0.6rem;
   right: 1.5rem;
   top: calc(50% - 0.2rem);
+}
+
+@media (max-width: 992px) {
+  summary .icon-caret {
+    transform: rotate(-90deg);
+  }
 }
 
 summary::-webkit-details-marker {
