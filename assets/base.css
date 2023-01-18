@@ -2649,23 +2649,24 @@ details[open] > .header__submenu.mega-submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  transition: 0.3s;
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: #29438B;
 }
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-
 details[open] > .header__menu-item {
-  text-decoration: underline;
+  color: #29438B;
+  font-weight: 900;
 }
 
 details[open]:hover > .header__menu-item {
@@ -2725,7 +2726,7 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__submenu .header__menu-item {
   justify-content: space-between;
-  padding: 1rem 0 0 0;
+  padding: 1.5rem 0 0 0;
   font-weight: 900;
   font-size: 16px;
   line-height: 150%;
