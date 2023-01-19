@@ -96,8 +96,8 @@
         {%- endif -%}
       </div>
       <div class="field">
-        <input type="text" id="ContactForm-topic" class="field__input" autocomplete="topic" name="contact[{{ 'templates.contact.form.topic' | t }}]" value="{% if form.topic %}{{ form.topic }}{% endif %}" placeholder="{{ 'templates.contact.form.topic' | t }}">
-        <label class="field__label" for="ContactForm-topic">{{ 'templates.contact.form.topic' | t }}</label>
+        <input type="text" id="ContactForm-topic" class="field__input" autocomplete="topic" name="contact[topic]" value="{% if form.topic %}{{ form.topic }}{% endif %}" placeholder="Choose a topic">
+        <label class="field__label" for="ContactForm-topic">Choose a topic</label>
       </div>
       <div class="field">
         <textarea
