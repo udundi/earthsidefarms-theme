@@ -37,3 +37,145 @@
     grid-column-gap: 2rem;
   }
 }
+
+
+/* Contact Form With Image */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: var(--page-width);
+  padding: 112px 5rem;
+  margin: 0 auto;
+}
+
+.contact-container .contact {
+  width: 45%;
+}
+
+.page-title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+}
+
+.page-title span {
+  color: #FF9A30;
+}
+
+h2.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contact-container .contact-image {
+  position: relative;
+  height: 782px;
+  width: 616px;
+  margin-left: 5%;
+}
+
+.contact-container .contact-image img {
+  position: absolute;
+  object-fit: center;
+  width: 100%;
+  height: 100%;
+}
+
+.field_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.field_2__label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+
+.field_2__input {
+  margin-bottom: 24px;
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.field_2__input::placeholder {
+  color: #505050;
+}
+
+.text-area.field_2__input {
+  border-radius: 10px;
+  height: 180px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox-container #checkbox {
+  margin-right: 12px;
+}
+
+.checkbox-container label a {
+  color: #000000;
+}
+
+.contact__button button {
+  font-weight: normal;
+}
+
+@media (max-width: 990px) {
+  .contact-container .contact {
+    width: 100%;
+  }
+  
+  .contact-container .contact-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 45px 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    line-height: 110%;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+
+  h2.title {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto 24px auto;
+  }
+
+  .field_2__input {
+    margin-bottom: 10px;
+  }
+
+  .contact__button button {
+    width: 100%;
+  }
+}
