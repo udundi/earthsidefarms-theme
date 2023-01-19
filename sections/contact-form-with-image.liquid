@@ -19,6 +19,13 @@
     font-size: 18px;
     line-height: 150%;
   }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
@@ -97,7 +104,15 @@
       </div>
     {%- endform -%}
     <div class="contact-image">
-      <img src="" />
+      {{ section.settings.image | image_url: width: 1500 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image.width,
+        height: image_height_2,
+        class: image_class_2,
+        sizes: sizes,
+        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+        alt: section.settings.image.alt | escape
+      }}
     </div>
   </div>
 </div>
