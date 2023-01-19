@@ -41,7 +41,9 @@
 }
 
 @media (max-width: 768px) {
-  font-size: 20px;
+  .contact-information-container .info-container h3 {
+    font-size: 20px;
+  }
 }
 
 .contact-information-container .info-container a, 
