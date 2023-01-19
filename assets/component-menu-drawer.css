@@ -129,6 +129,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
+.js .menu-drawer__menu li:first-child {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
 .menu-drawer__menu .menu-drawer__inner-submenu li {
   border-bottom: none;
 }
