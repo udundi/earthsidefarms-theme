@@ -133,7 +133,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   border-top: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
-.menu-drawer__menu .menu-drawer__inner-submenu li {
+.menu-drawer__menu .menu-drawer__inner-submenu li,
+.menu-drawer__menu .menu-drawer__inner-submenu .menu-drawer__menu li:first-child {
   border-bottom: none;
   border-top: none;
 }
