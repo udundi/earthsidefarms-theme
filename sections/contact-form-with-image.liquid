@@ -108,7 +108,7 @@
       {%- endif -%}
       <div class="field_2">
         <label class="field_2__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
-        <input class="field_2__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+        <input class="field_2__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
       </div>
       <div class="field_2 field_2--with-error">
         <label class="field_2__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
@@ -126,7 +126,6 @@
             aria-invalid="true"
             aria-describedby="ContactForm-email-error"
           {% endif %}
-          placeholder="{{ 'templates.contact.form.email' | t }}"
         >
         {%- if form.errors contains 'email' -%}
           <small class="contact__field_2-error" id="ContactForm-email-error">
