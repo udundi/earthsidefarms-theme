@@ -13,6 +13,17 @@
     }
   }
 
+  .page-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  .page-title span {
+    color: #FF9A30;
+  }
+
   h2.title {
     font-style: normal;
     font-weight: 400;
@@ -52,6 +63,7 @@
 
 <div class="contact-container color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   <div class="contact page-width page-width--narrow">
+    <h1 class="page-title">Contact <span>Us</span></h1>
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
     {%- else -%}
