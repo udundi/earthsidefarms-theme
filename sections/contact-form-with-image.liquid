@@ -88,6 +88,7 @@
 
   .text-area.field_2__input {
     border-radius: 10px;
+    height: 180px;
   }
 {%- endstyle -%}
 
@@ -164,6 +165,10 @@
         >
           {{- form.body -}}
         </textarea>
+      </div>
+      <div class="field_2">
+        <input type="checkbox" id="checkbox" value="">
+        <label for="checkbox">I accept the <a href="pages/terms">Terms</a></label>
       </div>
       <div class="contact__button">
         <button type="submit" class="button">
