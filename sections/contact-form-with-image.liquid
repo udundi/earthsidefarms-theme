@@ -24,7 +24,23 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .contact-container .contact,
+  .contact-container .contact-image {
+    width: 45%;
+  }
+
+  .contact-container .contact-image {
+    position: relative;
+  }
+
+  .contact-container .contact-image img {
+    position: absolute;
+    object-fit: center;
+    width: 100%;
+    height: 100%;
   }
 {%- endstyle -%}
 
