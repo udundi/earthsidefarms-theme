@@ -90,6 +90,19 @@
     border-radius: 10px;
     height: 180px;
   }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .checkbox-container #checkbox {
+    margin-right: 12px;
+  }
+
+  .check-box-container label a {
+    color: #000000;
+  }
 {%- endstyle -%}
 
 <div class="contact-container color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -166,7 +179,7 @@
           {{- form.body -}}
         </textarea>
       </div>
-      <div class="field_2">
+      <div class="field_2 checkbox-container">
         <input type="checkbox" id="checkbox" value="">
         <label for="checkbox">I accept the <a href="pages/terms">Terms</a></label>
       </div>
