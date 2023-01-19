@@ -60,4 +60,5 @@
 .contact-information-container .info-container a {
   text-decoration: underline!important;
   color: #000;
+  margin: 0;
 }
