@@ -135,6 +135,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu .menu-drawer__inner-submenu li {
   border-bottom: none;
+  border-top: none;
 }
 
 .menu-drawer__menu .menu-drawer__inner-submenu li a:not(.submenu-collection) {
