@@ -5,7 +5,12 @@
     {%- for block in section.blocks -%}
       <div class="info-container">
         {%- if block.settings.image != blank -%}
-          <img src="{{ block.settings.image | file_img_url: 'master' }}" alt="envelope">
+          {{ block.settings.image | image_url: width: 1420 | image_tag:
+            loading: 'lazy',
+            sizes: sizes,
+            widths: '275, 550, 710, 1420',
+            class: 'multicolumn-card__image'
+          }}
         {%- endif -%}
         {%- if block.settings.title != blank -%}
           <h3>{{ block.settings.title | escape }}</h3>
