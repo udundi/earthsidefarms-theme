@@ -1,17 +1,9 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "contact-form-with-image": {
       "type": "contact-form-with-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/Image.jpg",
-        "image_height": "large",
         "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "heading_size": "h2",
         "color_scheme": "background-1",
@@ -21,7 +13,6 @@
     }
   },
   "order": [
-    "main",
     "contact-form-with-image"
   ]
 }
