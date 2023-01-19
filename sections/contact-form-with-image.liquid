@@ -96,8 +96,15 @@
         {%- endif -%}
       </div>
       <div class="field">
-        <input type="text" id="ContactForm-topic" class="field__input" autocomplete="topic" name="contact[topic]" value="{% if form.topic %}{{ form.topic }}{% endif %}" placeholder="Choose a topic">
         <label class="field__label" for="ContactForm-topic">Choose a topic</label>
+
+        <select name="contact[topic]" id="ContactForm-topic" class="field__input">
+          <option value="">Choose a topic</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
       </div>
       <div class="field">
         <textarea
