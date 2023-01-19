@@ -1,11 +1,6 @@
-section.contact-information {
-  background: #f4f4f4;
-  padding: 110px 15px;
-}
-
 .contact-information-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
 }
 
