@@ -33,12 +33,15 @@
 
 .contact-information-container .info-container h3 {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 32px;
-  line-height: 46px;
-  color: #000000;
+  line-height: 130%;
   margin: 0 0 16px 0;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  font-size: 20px;
 }
 
 .contact-information-container .info-container a, 
@@ -46,7 +49,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 150%;
   margin-bottom: 24px;
   text-align: center;
   max-width: 405px;
@@ -54,4 +57,5 @@
 
 .contact-information-container .info-container a {
   text-decoration: underline!important;
+  color: #000;
 }
