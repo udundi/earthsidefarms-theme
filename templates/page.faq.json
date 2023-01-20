@@ -52,9 +52,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "d594c3d6-dc54-4729-ad64-0fd2b2451895": {
+      "type": "faq",
+      "blocks": {
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-0",
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-1",
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-2",
+        "template--17652647657777__d594c3d6-dc54-4729-ad64-0fd2b2451895-16742461709368d46f-3"
+      ],
+      "settings": {
+        "heading": "Shipping & Returns",
+        "heading_alignment": "left",
+        "color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "d74e0f6b-fa60-4caa-bc45-79dbe96793c9"
+    "d74e0f6b-fa60-4caa-bc45-79dbe96793c9",
+    "d594c3d6-dc54-4729-ad64-0fd2b2451895"
   ]
 }
