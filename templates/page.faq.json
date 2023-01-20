@@ -7,7 +7,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Question text goes here",
-            "row_content": "",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/p>",
             "page": ""
           }
         },
