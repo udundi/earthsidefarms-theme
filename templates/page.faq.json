@@ -1,14 +1,66 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "contact-form-with-image": {
+      "type": "contact-form-with-image",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify:\/\/shop_images\/Image.jpg",
+        "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "heading_size": "h2",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "contact-information": {
+      "type": "contact-information",
+      "blocks": {
+        "be040c39-7ff8-46eb-b7f7-ee16fe2acfba": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector.png",
+            "title": "Email",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.<\/p>",
+            "link_label": "hello@earthside.com",
+            "link": "mailto:hello@earthside.com"
+          }
+        },
+        "5eb2e5b2-f9f5-43ab-a5ad-72087bb51ac2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_e5f5828a-2e50-4c2f-b7af-30c1548047da.png",
+            "title": "Phone",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.<\/p>",
+            "link_label": "+1 (555) 000-0000",
+            "link": "tel:555-000-0000"
+          }
+        },
+        "e59591a5-e2d0-4d5a-a544-8840b5fdf394": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_016adb35-fe0e-476d-8247-264dcc2c2981.png",
+            "title": "Office",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in ero.<\/p>",
+            "link_label": "123 sample address",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "be040c39-7ff8-46eb-b7f7-ee16fe2acfba",
+        "5eb2e5b2-f9f5-43ab-a5ad-72087bb51ac2",
+        "e59591a5-e2d0-4d5a-a544-8840b5fdf394"
+      ],
+      "settings": {
+        "columns_desktop": 3,
+        "background_style": "primary",
+        "color_scheme": "background-2",
+        "padding_top": 80,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
-    "main"
+    "contact-form-with-image",
+    "contact-information"
   ]
 }
