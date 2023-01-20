@@ -34,21 +34,7 @@
             <p class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</p>
           {% endif %}
         </div>
-        <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}">
-          {%- if section.settings.image != blank -%}
-            <div class="grid__item collapsible-content__grid-item">
-              <div class="collapsible-content__media collapsible-content__media--{{ section.settings.image_ratio }} media global-media-settings gradient"
-                {% if section.settings.image_ratio == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
-              >
-              {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2){%- endcapture -%}
-              {{ section.settings.image | image_url: width: 1500 | image_tag:
-                loading: 'lazy',
-                sizes: sizes,
-                widths: '165, 360, 535, 750, 1070, 1250, 1500'
-              }}
-              </div>
-            </div>
-          {% endif %}
+        <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid">
           <div class="grid__item">
             {%- for block in section.blocks -%}
               <div class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" {{ block.shopify_attributes }}>
