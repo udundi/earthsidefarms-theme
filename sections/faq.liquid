@@ -34,6 +34,13 @@
     align-items: center;
     padding: 0;
   }
+
+  #faq-content .accordion summary .accordion__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+  }
 {%- endstyle -%}
 
 <div id="faq-content" class="color-{{ section.settings.color_scheme }} gradient">
@@ -53,7 +60,7 @@
               <div class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}" {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}"{% if section.settings.open_first_collapsible_row and forloop.first %} open{% endif %}>
                   <summary id="Summary-{{ block.id }}-{{ section.id }}">
-                    <p class="accordion__title h4">
+                    <p class="accordion__title">
                       {{ block.settings.heading | default: block.settings.page.title }}
                     </p>
                     {% render 'faq-plus' %}
