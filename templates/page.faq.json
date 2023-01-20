@@ -101,10 +101,62 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "4f3a4354-3eee-457c-912f-a31de0cc858e": {
+      "type": "faq-table-of-contents",
+      "blocks": {
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question text goes here",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question text goes here",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question text goes here",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question text goes here",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-0",
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-1",
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-2",
+        "template--17654314139953__4f3a4354-3eee-457c-912f-a31de0cc858e-16742527365be5045a-3"
+      ],
+      "settings": {
+        "heading": "Topic",
+        "heading_alignment": "center",
+        "color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "d74e0f6b-fa60-4caa-bc45-79dbe96793c9",
-    "d594c3d6-dc54-4729-ad64-0fd2b2451895"
+    "d594c3d6-dc54-4729-ad64-0fd2b2451895",
+    "4f3a4354-3eee-457c-912f-a31de0cc858e"
   ]
 }
