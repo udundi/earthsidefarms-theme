@@ -7,7 +7,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -16,7 +15,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -25,7 +23,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -34,7 +31,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -47,16 +43,12 @@
         "template--17652647657777__d74e0f6b-fa60-4caa-bc45-79dbe96793c9-167424205085b96913-3"
       ],
       "settings": {
-        "caption": "",
         "heading": "Product Information",
-        "heading_size": "h1",
         "heading_alignment": "left",
-        "layout": "none",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "desktop_layout": "image_first",
         "padding_top": 36,
         "padding_bottom": 36
       }
