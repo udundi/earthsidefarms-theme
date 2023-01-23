@@ -2996,3 +2996,7 @@ details-disclosure > details.mega-menu {
     outline: transparent solid 1px;
   }
 }
+
+.yellow-header-text {
+  color: #FF9A30;
+}
