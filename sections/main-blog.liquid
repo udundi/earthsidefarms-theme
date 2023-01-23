@@ -33,7 +33,7 @@
     <ul>
       <li>
         {%- for tag in blog.all_tags -%}
-          <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+          {{ tag }}
         {%- endfor -%}
       </li>
     </ul>
