@@ -104,6 +104,12 @@
   background: #3356AE;
 }
 
+.blog-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-blog .search-modal__form {
   max-width: 365px;
 }
