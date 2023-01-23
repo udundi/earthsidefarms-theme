@@ -88,13 +88,26 @@
 {%- endpaginate -%}
 
 <script>
-    const blog_tag_carousel = new Swiper('#blog-tag-carousel', {
+  const breakpoint = window.matchMedia( '(min-width: 768px)' );
+  let blog_tag_carousel;
+  
+  const breakpointChecker = function() {
+    if ( breakpoint.matches === true ) {
+      if ( blog_tag_carousel !== undefined ) blog_tag_carousel.destroy( true, true );
+      return;
+    } else if ( breakpoint.matches === false ) {
+      return enableSwiper();
+    }
+  };
+  
+  const enableSwiper = function() {
+    blog_tag_carousel = new Swiper('#blog-tag-carousel', {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 0,
       loop: true,
       preventClicks: true,
-
+    
       breakpoints: {
         576: {
           slidesPerView: 1.3,
@@ -103,6 +116,10 @@
         }
       }
     });
+  };
+  
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 </script>
 
 {% schema %}
