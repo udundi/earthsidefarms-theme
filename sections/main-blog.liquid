@@ -27,7 +27,7 @@
     background: #fff;
     border: 1px solid #3356AE;
     border-radius: 100px;
-    text-decoration: underline;
+    text-decoration: none;
     padding: 8px 20px;
   }
 
@@ -44,7 +44,7 @@
     <p class="subtitle--primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
     <ul>
-      <li><a class="blog-tag active" href="/blogs/all">View All</a></li>
+      <li><a class="blog-tag active" href="/blogs/all">View all</a></li>
       <li>
         {%- for tag in blog.all_tags -%}
           <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
