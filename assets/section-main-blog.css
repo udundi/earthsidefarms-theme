@@ -63,6 +63,7 @@
 .swiper {
   height: 100%;
   max-width: 70%;
+  min-width: 1200px;
   margin: 0;
 }
 
