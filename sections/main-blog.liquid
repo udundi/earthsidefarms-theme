@@ -89,28 +89,19 @@
 
 <script>
     const blog_tag_carousel = new Swiper('#blog-tag-carousel', {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        loop: true,
-        preventClicks: true,
-  
-        breakpoints: {
-            576: {
-                slidesPerView: 1.3,
-                slidesPerGroup: 1,
-            },
-    
-            778: {
-                slidesPerView: 2.3,
-                slidesPerGroup: 1,
-            },
-    
-            1200: {
-                slidesPerView: 3.3,
-                slidesPerGroup: 2,
-            },
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      loop: true,
+      preventClicks: true,
+
+      breakpoints: {
+        576: {
+          slidesPerView: 1.3,
+          slidesPerGroup: 1,
+          allowTouchMove: false
         }
+      }
     });
 </script>
 
