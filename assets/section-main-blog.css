@@ -130,3 +130,9 @@
   border-radius: 50px;
   background: transparent;
 }
+
+.main-blog form .search__button {
+  background: #2F4FA1;
+  border-radius: 50px;
+  color: #fff;
+}
