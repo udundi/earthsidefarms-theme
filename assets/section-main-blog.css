@@ -121,7 +121,8 @@
 }
 
 .main-blog form input,
-.main-blog form .field {
+.main-blog form .field,
+.main-blog form .field::before {
   background: #FFFFFF;
   border-radius: 50px;
 }
