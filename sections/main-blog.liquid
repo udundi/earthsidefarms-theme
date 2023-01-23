@@ -63,13 +63,6 @@
           </div>
         {%- endfor -%}
       </div>
-      
-      <div class="swiper-pagination"></div>
-    
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    
-      <div class="swiper-scrollbar"></div>
     </div>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
@@ -101,15 +94,6 @@
         spaceBetween: 0,
         loop: true,
         preventClicks: true,
-
-        pagination: {
-            el: '.swiper-pagination',
-        },
-  
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
   
         breakpoints: {
             576: {
