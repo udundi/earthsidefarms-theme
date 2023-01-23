@@ -132,7 +132,7 @@
 }
 
 .main-blog form .search__button {
-  background: #2F4FA1;
+  background: #2F4FA1!important;
   border-radius: 50px;
   color: #fff;
 }
