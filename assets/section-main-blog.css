@@ -80,3 +80,26 @@
     height: 100%;
   }
 }
+
+.title--primary {
+  margin-bottom: 24px;
+}
+
+.subtitle--primary {
+  margin-bottom: 50px;
+}
+
+.blog-tag {
+  background: #fff;
+  border: 1px solid #3356AE;
+  border-radius: 100px;
+  text-decoration: none;
+  padding: 8px 20px;
+  text-transform: capitalize;
+  margin-right: 15px;
+}
+
+.blog-tag.active {
+  color: #fff;
+  background: #3356AE;
+}
