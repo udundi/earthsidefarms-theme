@@ -103,3 +103,7 @@
   color: #fff;
   background: #3356AE;
 }
+
+.main-blog .search-modal__form {
+  max-width: 365px;
+}
