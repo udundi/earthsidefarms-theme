@@ -66,14 +66,7 @@
 }
 
 #blog-tag-carousel {
-  margin-top: 80px;
-  height: 500px;
-}
-
-@media (max-width: 995px) {
-  #blog-tag-carousel {
-    margin-top: 32px;
-  }
+  height: 60px;
 }
 
 .swiper-btns-container {
