@@ -120,7 +120,8 @@
   border-radius: 50px;
 }
 
-.main-blog form input {
+.main-blog form input,
+.main-blog form .field {
   background: #FFFFFF;
   border-radius: 50px;
 }
