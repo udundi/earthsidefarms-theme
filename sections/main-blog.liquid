@@ -22,6 +22,16 @@
   .subtitle--primary {
     margin-bottom: 50px;
   }
+
+  .blog-tag {
+    background: #fff;
+    border: 1px solid #3356AE;
+    border-radius: 100px;
+  }
+
+  .blog-tag.active {
+    background: #3356AE;
+  }
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
@@ -31,9 +41,10 @@
     <p class="subtitle--primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
     <ul>
+      <li><a class="blog-tag active" href="/blogs/all">View All</a></li>
       <li>
         {%- for tag in blog.all_tags -%}
-          {{ tag }}
+          <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
         {%- endfor -%}
       </li>
     </ul>
