@@ -131,6 +131,13 @@
   background: transparent;
 }
 
+.main-blog form .field__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
 .main-blog form .search__button {
   background: #2F4FA1!important;
   border-radius: 50px;
