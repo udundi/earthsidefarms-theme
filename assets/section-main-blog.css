@@ -119,3 +119,8 @@
   border: 1px solid #000000;
   border-radius: 50px;
 }
+
+.main-blog form input {
+  background: #FFFFFF;
+  border-radius: 50px;
+}
