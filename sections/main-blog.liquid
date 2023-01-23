@@ -46,9 +46,14 @@
 
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <a class="blog-tag active" href="/blogs/all">View all</a>
+        </div>
+        {%- for tag in blog.all_tags -%}
+          <div class="swiper-slide">
+            <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+          </div>
+        {%- endfor -%}
       </div>
       
       <div class="swiper-pagination"></div>
@@ -58,15 +63,6 @@
     
       <div class="swiper-scrollbar"></div>
     </div>
-
-    <ul>
-      <li><a class="blog-tag active" href="/blogs/all">View all</a></li>
-      <li>
-        {%- for tag in blog.all_tags -%}
-          <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-        {%- endfor -%}
-      </li>
-    </ul>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
