@@ -123,4 +123,5 @@
 .main-blog form .field,
 .main-blog form .field::before {
   border-radius: 50px;
+  background: transparent;
 }
