@@ -14,11 +14,21 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .title--primary {
+    margin-bottom: 24px;
+  }
+
+  .subtitle--primary {
+    margin-bottom: 50px;
+  }
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">Check Out <span class="yellow-header-text">Our Articles</span></h1>
+
+    <p class="subtitle--primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
