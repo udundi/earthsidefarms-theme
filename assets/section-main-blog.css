@@ -76,12 +76,24 @@
   padding: 10px 0 50px 0;
 }
 
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1400px) {
   .swiper {
     width: 100%;
     max-width: none;
     min-width: none;
     height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 
