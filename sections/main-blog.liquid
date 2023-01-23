@@ -49,9 +49,17 @@
         <div class="swiper-slide">
           <a class="blog-tag active" href="/blogs/all">View all</a>
         </div>
+        {% comment %}
         {%- for tag in blog.all_tags -%}
           <div class="swiper-slide">
             <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+          </div>
+        {%- endfor -%}
+        {% endcomment %}
+
+        {%- for i in (1..10) -%}
+          <div class="swiper-slide">
+            hello
           </div>
         {%- endfor -%}
       </div>
