@@ -105,9 +105,40 @@
       {% if forloop.index == 1 %}
         <div class="first-blog-article">
           <div class="first-blog-image">
-            
+            {{ article.image | image_url: width: 2400 | image_tag:
+              loading: 'lazy',
+              sizes: sizes,
+              widths: '165, 360, 535, 750, 1070, 1500, 2400'
+            }}
           </div>
-          <div class="first-blog-info"
+          <div class="first-blog-info">
+            <div class="first-blog-into__top">
+              {% for tag in article.tags %}
+                <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+              {% endfor %}
+              <h2>{{ article.title }}</h2>
+              <p>
+                {{ article.excerpt }}
+              </p>
+            </div>
+            <div class="first-blog-into__bottom">
+              <div class="author-image">
+                {{ article.author.image | image_url: width: 2400 | image_tag:
+                  loading: 'lazy',
+                  sizes: sizes,
+                  widths: '165, 360, 535, 750, 1070, 1500, 2400'
+                }}
+              </div>
+              <div class="author-info">
+                {{ article.author.name }}
+                <div class="author-bottom">
+                  {{ article.author.name }}
+                  •
+                  {{ article.metafields.custom.minutes_to_read_blog_post }}
+                </div>
+              </div>
+            </div>
+          </div>
         {% break %}
       {% endif %}
     {% endfor %}
