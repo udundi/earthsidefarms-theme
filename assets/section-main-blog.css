@@ -258,4 +258,9 @@
   .first-blog-info .blog-excerpt {
     margin-bottom: 25px;
   }
+
+  .first-blog-info__bottom-content,
+  .first-blog-info__bottom-content .author-name {
+    font-size: 10px;
+  }
 }
