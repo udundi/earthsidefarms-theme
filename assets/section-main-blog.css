@@ -108,7 +108,8 @@
   text-decoration: none;
   padding: 10px 26px;
   text-transform: capitalize;
-  margin-right: 15px;
+  margin: 10px 15px 0 0;
+  display: block;
 }
 
 .blog-tag.active {
