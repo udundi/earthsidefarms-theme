@@ -123,7 +123,7 @@
             </div>
             <div class="first-blog-info__bottom">
               <div class="first-blog-info__bottom-content">
-                {{ article.updated_at }}
+                {{ article.published_at |date: "%d %m %y" }}
                 <div class="first-blog-info__bottom-content-divider">
                   {{ article.author }}
                   •
