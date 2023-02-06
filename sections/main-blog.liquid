@@ -18,9 +18,14 @@
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary">Check Out <span class="yellow-header-text">Our Articles</span></h1>
 
-    <p class="subtitle--primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <h1 class="title--primary" {% if section.settings.main_title %}style="display: none;"{% endif %}>
+      {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
+    </h1>
+
+    {% if section.settings.main_title %}
+    <p class="subtitle--primary">{{ section.settings.sub_text }}</p>
+    {% endif %}
 
     <div class="blog-top">
       <div class="swiper" id="blog-tag-carousel">
@@ -173,6 +178,24 @@
     {
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "default": "Check Out",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "secondary_title",
+      "default": "Our Articles",
+      "label": "Secondary Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "label": "Sub Text"
     },
     {
       "type": "select",
