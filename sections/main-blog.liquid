@@ -126,6 +126,7 @@
         width: 50%;
         display: flex;
         align-items: flex-between;
+        flex-direction: column;
       }
 
       .first-blog-info__top .blog-tag {
@@ -144,6 +145,18 @@
       .first-blog-info__top .blog-excerpt {
         font-weight: 400;
         font-size: 16px;
+        line-height: 150%;
+      }
+
+      .first-blog-info__bottom-content {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+      }
+
+      .first-blog-info__bottom-content .author-name {
+        font-weight: 500;
+        font-size: 14px;
         line-height: 150%;
       }
     </style>
@@ -169,11 +182,9 @@
             </div>
             <div class="first-blog-info__bottom">
               <div class="first-blog-info__bottom-content">
-                {{ article.published_at |date: "%d %B 20%y" }}
+                <div class="author-name">{{ article.author }}</div>
                 <div class="first-blog-info__bottom-content-divider">
-                  {{ article.author }}
-                  •
-                  {{ article.metafields.custom.minutes_to_read_blog_post }} min read
+                  {{ article.published_at |date: "%d %B 20%y" }}•{{ article.metafields.custom.minutes_to_read_blog_post }} min read
                 </div>
               </div>
             </div>
