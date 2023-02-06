@@ -19,7 +19,7 @@
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
 
-    <h1 class="title--primary" {% if section.settings.main_title %}style="display: none;"{% endif %}>
+    <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
       {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
     </h1>
 
