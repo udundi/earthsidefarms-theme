@@ -66,7 +66,7 @@
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
     "blog_card_color_scheme": "background-1",
-    "blog_card_border_thickness": 2,
+    "blog_card_border_thickness": 1,
     "blog_card_border_opacity": 100,
     "blog_card_corner_radius": 12,
     "blog_card_shadow_opacity": 100,
