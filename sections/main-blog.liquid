@@ -104,8 +104,10 @@
     {% for article in blog.articles %}
       {% if forloop.index == 1 %}
         <div class="first-blog-article">
-          {{ article.title }}
-        </div>
+          <div class="first-blog-image">
+            
+          </div>
+          <div class="first-blog-info"
         {% break %}
       {% endif %}
     {% endfor %}
