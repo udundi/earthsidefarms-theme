@@ -179,17 +179,6 @@
   z-index: 0;
 }
 
-@media (max-width: 768px) {
-  .first-blog-article {
-    flex-direction: column;
-  }
-
-  .first-blog-image,
-  .first-blog-info {
-    width: 100%;
-  }
-}
-
 .first-blog-image img {
   width: 100%;
   height: 100%;
@@ -240,4 +229,19 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  .first-blog-article {
+    flex-direction: column;
+  }
+
+  .first-blog-image,
+  .first-blog-info {
+    width: 100%;
+  }
+
+  .first-blog-info {
+    padding: 20px;
+  }
 }
