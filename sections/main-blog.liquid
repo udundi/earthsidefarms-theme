@@ -112,11 +112,28 @@
         z-index: 10;
       }
 
+      @media and (max-width: 768px) {
+        .first-blog-article {
+          flex-direction: column;
+        }
+      }
+
       .first-blog-image {
         width: 50%;
         position: relative;
         min-height: 500px;
         z-index: 0;
+      }
+
+      @media and (max-width: 768px) {
+        .first-blog-article {
+          flex-direction: column;
+        }
+
+        .first-blog-image,
+        .first-blog-info {
+          width: 100%;
+        }
       }
 
       .first-blog-image img {
