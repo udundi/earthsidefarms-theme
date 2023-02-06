@@ -239,7 +239,7 @@
   .first-blog-image,
   .first-blog-info {
     width: 100%;
-    min-height: none;
+    min-height: auto;
   }
 
   .first-blog-image {
