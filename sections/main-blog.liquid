@@ -112,7 +112,7 @@
             }}
           </div>
           <div class="first-blog-info">
-            <div class="first-blog-into__top">
+            <div class="first-blog-info__top">
               {% for tag in article.tags %}
                 <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
               {% endfor %}
@@ -121,17 +121,10 @@
                 {{ article.excerpt }}
               </p>
             </div>
-            <div class="first-blog-into__bottom">
-              <div class="author-image">
-                {{ article.author.image | image_url: width: 2400 | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '165, 360, 535, 750, 1070, 1500, 2400'
-                }}
-              </div>
-              <div class="author-info">
-                {{ article.author }}
-                <div class="author-bottom">
+            <div class="first-blog-info__bottom">
+              <div class="first-blog-info__bottom-content">
+                {{ article.updated_at }}
+                <div class="first-blog-info__bottom-content-divider">
                   {{ article.author }}
                   •
                   {{ article.metafields.custom.minutes_to_read_blog_post }} min read
