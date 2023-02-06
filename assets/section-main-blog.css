@@ -239,6 +239,11 @@
   .first-blog-image,
   .first-blog-info {
     width: 100%;
+    min-height: none;
+  }
+
+  .first-blog-image {
+    min-height: 300px;
   }
 
   .first-blog-info {
