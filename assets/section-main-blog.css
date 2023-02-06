@@ -179,7 +179,7 @@
   z-index: 0;
 }
 
-@media and (max-width: 768px) {
+@media (max-width: 768px) {
   .first-blog-article {
     flex-direction: column;
   }
