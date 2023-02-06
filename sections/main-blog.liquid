@@ -101,6 +101,51 @@
       {%- endif -%}
     </div>
 
+    <style>
+      .first-blog-article {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 50px;
+      }
+
+      .first-blog-image {
+        width: 50%;
+        position: relative;
+      }
+
+      .first-blog-image img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: center;
+      }
+
+      .first-blog-info {
+        width: 50%;
+        display: flex;
+        align-items: flex-between;
+      }
+
+      .first-blog-info__top .blog-tag {
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+      }
+
+      .first-blog-info__top .blog-title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 130%;
+      }
+
+      .first-blog-info__top .blog-excerpt {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    </style>
     {% for article in blog.articles %}
       {% if forloop.index == 1 %}
         <div class="first-blog-article">
@@ -116,8 +161,8 @@
               {% for tag in article.tags %}
                 <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
               {% endfor %}
-              <h2>{{ article.title }}</h2>
-              <p>
+              <h2 class="blog-title">{{ article.title }}</h2>
+              <p class="blog-excerpt">
                 {{ article.excerpt }}
               </p>
             </div>
