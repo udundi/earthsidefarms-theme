@@ -168,7 +168,7 @@
 }
 
 .first-blog-article-container:hover .first-blog-image img {
-  scale: 0.5;
+  scale: 1.05;
 }
 
 .first-blog-article {
