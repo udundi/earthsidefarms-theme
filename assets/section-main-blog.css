@@ -168,7 +168,7 @@
 }
 
 .first-blog-article-container:hover .first-blog-image img {
-  scale: 1.1;
+  scale: 0.5;
 }
 
 .first-blog-article {
@@ -195,7 +195,7 @@
   height: 100%;
   position: absolute;
   object-fit: cover;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .first-blog-info {
