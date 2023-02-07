@@ -105,7 +105,7 @@
             <div class="first-blog-info">
               <div class="first-blog-info__top">
                 {% for tag in article.tags %}
-                  <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                  <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
                 {% endfor %}
                 <h2 class="blog-title">{{ article.title }}</h2>
                 <p class="blog-excerpt">
