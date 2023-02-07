@@ -167,6 +167,10 @@
   text-decoration: none;
 }
 
+.first-blog-article-container:hover .first-blog-image img {
+  scale: 1.2;
+}
+
 .first-blog-article {
   display: flex;
   width: 100%;
