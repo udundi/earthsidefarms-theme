@@ -168,7 +168,7 @@
 }
 
 .first-blog-article-container:hover .first-blog-image img {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .first-blog-article {
@@ -179,6 +179,7 @@
   border: var(--blog-card-border-width) solid #000;
   border-radius: var(--blog-card-corner-radius);
   z-index: 10;
+  overflow: hidden;
 }
 
 .first-blog-image {
@@ -193,6 +194,7 @@
   height: 100%;
   position: absolute;
   object-fit: cover;
+  transition: 0.3s;
 }
 
 .first-blog-info {
