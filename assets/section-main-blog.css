@@ -162,6 +162,11 @@
   color: #fff;
 }
 
+.first-blog-article-container {
+  color: #000;
+  text-decoration: none;
+}
+
 .first-blog-article {
   display: flex;
   width: 100%;
