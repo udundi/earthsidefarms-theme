@@ -93,8 +93,8 @@
     </div>
     {% for article in blog.articles %}
       {% if forloop.index == 1 %}
-        <div class="first-blog-article">
-          <a href="{{ article.url }}">
+        <a href="{{ article.url }}">
+          <div class="first-blog-article">
             <div class="first-blog-image">
               {{ article.image | image_url: width: 2400 | image_tag:
                 loading: 'lazy',
@@ -121,8 +121,8 @@
                 </div>
               </div>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
         {% break %}
       {% endif %}
     {% endfor %}
