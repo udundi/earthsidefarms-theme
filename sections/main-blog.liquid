@@ -116,7 +116,7 @@
                 <div class="first-blog-info__bottom-content">
                   <div class="author-name">{{ article.author }}</div>
                   <div class="first-blog-info__bottom-content-divider">
-                    {{ article.published_at |date: "%d %B 20%y" }} • {{ article.metafields.custom.minutes_to_read_blog_post }} min read
+                    {{ article.published_at |date: "%d %B 20%y" }}{% if article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}}
                   </div>
                 </div>
               </div>
