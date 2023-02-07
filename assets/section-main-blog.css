@@ -203,6 +203,7 @@
   line-height: 150%;
   padding: 0;
   margin: 0 8px 8px 0;
+  display: inline-block;
 }
 
 .first-blog-info__top .blog-title {
