@@ -479,8 +479,8 @@
               <li>
                 {%- if link.links != blank -%}
                   <header-menu>
-                    <details {% if link.title == 'Shop' %} class="mega-menu shop-btn-menu" {% endif %} id="Details-HeaderMenu-{{ forloop.index }}">
-                      <summary class="button button--primary header__menu-item list-menu__item link focus-inset">
+                    <details {% if link.title == 'Shop' %} class="mega-menu shop-btn-menu color-accent-2" {% endif %} id="Details-HeaderMenu-{{ forloop.index }}">
+                      <summary class="{% if link.title == 'Shop' %}button button--primary{% endif %} header__menu-item list-menu__item link focus-inset">
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% unless link.title == 'Shop' %}
                           {% render 'icon-caret' %}
