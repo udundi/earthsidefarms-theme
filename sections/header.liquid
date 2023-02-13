@@ -504,9 +504,11 @@
                                     </a>
                                   </li>
                                 {%- endfor -%}
-                                <a role="link" href="/collections/all" aria-disabled="false" class="button button--primary">
-                                  Shop All
-                                </a>
+                                {%- for childlink in link.links -%}
+                                  <a id="{{ childlink.handle }}-shop-all-link" role="link" href="/collections/{{ childlink.handle }}" aria-disabled="false" class="shop-all-link button button--primary{% if forloop.index == 1 %} active{% endif %}">
+                                    Shop All
+                                  </a>
+                                {%- endfor -%}
                               </div>
                               {%- for childlink in link.links -%}
                                 {%- if forloop.index == 1 -%}
