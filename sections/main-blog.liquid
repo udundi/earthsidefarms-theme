@@ -91,58 +91,59 @@
         </predictive-search>
       {%- endif -%}
     </div>
-  
+
+    {% assign featuredArticles = false %}
     {% for link in linklists.blog-categories.links %}
       {% assign blog = link.object %}
-      {% assign article_date = 0 %}
-      {% for article in blog.articles %}
-        {% if forloop.index == 1 %}
-          {% if article.published_at > article_date %}
-            {% assign article_date = article.published_at %}
-            {% assign first_article = article %}
-          {% endif %}
-          {% break %}
-        {% endif %}
-      {% endfor %} 
+      {% if blog.articles %}
+		{% if featuredArticles %}
+			{% assign featuredArticles = featuredArticles | concat:blog.articles %}
+		{% else %}
+			{% assign featuredArticles = blog.articles %}
+		{% endif %}
+      {% endif %}
     {% endfor %}
 
-    {% if first_article %}
-      <a href="{{ first_article.url }}" class="first-blog-article-container">
-        <div class="first-blog-article">
-          <div class="first-blog-image">
-            {{ first_article.image | image_url: width: 2400 | image_tag:
-              loading: 'lazy',
-              sizes: sizes,
-              widths: '165, 360, 535, 750, 1070, 1500, 2400'
-            }}
-          </div>
-          <div class="first-blog-info">
-            <div class="first-blog-info__top">
-              {% for tag in first_article.tags %}
-                <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
-              {% endfor %}
-              <h2 class="blog-title">{{ first_article.title }}</h2>
-              <p class="blog-excerpt">
-                {{ first_article.excerpt }}
-              </p>
+
+    {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+      {% assign first_article = featuredArticles[0] %}
+  
+      {% if first_article %}
+        <a href="{{ first_article.url }}" class="first-blog-article-container">
+          <div class="first-blog-article">
+            <div class="first-blog-image">
+              {{ first_article.image | image_url: width: 2400 | image_tag:
+                loading: 'lazy',
+                sizes: sizes,
+                widths: '165, 360, 535, 750, 1070, 1500, 2400'
+              }}
             </div>
-            <div class="first-blog-info__bottom">
-              <div class="first-blog-info__bottom-content">
-                <div class="author-name">{{ first_article.author }}</div>
-                <div class="first-blog-info__bottom-content-divider">
-                  {{ first_article.published_at |date: "%d %B 20%y" }}{% if first_article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ first_article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
+            <div class="first-blog-info">
+              <div class="first-blog-info__top">
+                {% for tag in first_article.tags %}
+                  <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
+                {% endfor %}
+                <h2 class="blog-title">{{ first_article.title }}</h2>
+                <p class="blog-excerpt">
+                  {{ first_article.excerpt }}
+                </p>
+              </div>
+              <div class="first-blog-info__bottom">
+                <div class="first-blog-info__bottom-content">
+                  <div class="author-name">{{ first_article.author }}</div>
+                  <div class="first-blog-info__bottom-content-divider">
+                    {{ first_article.published_at |date: "%d %B 20%y" }}{% if first_article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ first_article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
-    {% endif %}
-                  
-    <div class="blog-articles">
-      {% for link in linklists.blog-categories.links %}
-        {% assign blog = link.object %}
-        {% for article in blog.articles %}
+        </a>
+      {% endif %}
+                    
+      <div class="blog-articles">
+        {% for article in featuredArticles %}
           {% unless forloop.index == 1 %}
             <div class="blog-articles__article article">
               {%- render 'article-card',
@@ -157,8 +158,8 @@
             </div>
           {% endunless %}
         {% endfor %} 
-      {% endfor %}
-    </div>
+      </div>
+    {% endif %}
 
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
