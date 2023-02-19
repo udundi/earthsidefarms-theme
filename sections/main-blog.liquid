@@ -21,13 +21,15 @@
   {% assign blog = link.object %}
   {% if blog.articles %}
     {% if allArticles %}
-        {% assign allArticles = allArticles | concat:blog.articles %}
+        {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
+        {% comment %}{% assign allArticles = allArticles | concat:blog.articles %}{% endcomment %}
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
+{% assign allArticles = allArticles | remove_first: ',' | split: ',' %}
 {%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
