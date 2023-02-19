@@ -114,7 +114,7 @@
   </div>
 
   {% if allArticles.size > 0 %}
-    {% comment %}{% assign allArticles = allArticles | sort:'published_at' | reverse %}{% endcomment %}
+    {% assign allArticles = allArticles | sort:'published_at' | reverse %}
     {% assign first_article = allArticles[0] %}
 
     {% if first_article %}
