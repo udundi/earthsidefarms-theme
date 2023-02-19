@@ -27,8 +27,6 @@
   {% endif %}
 {% endfor %}
 
-{{ allArticles }}
-
 {%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
@@ -153,7 +151,7 @@
     {% endif %}
                   
     <div class="blog-articles">
-      {% for article in allArticles %}
+      {% for article in paginate.parts %}
         {% unless forloop.index == 1 %}
           <div class="blog-articles__article article">
             {%- render 'article-card',
