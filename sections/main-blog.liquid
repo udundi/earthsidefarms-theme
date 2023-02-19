@@ -16,6 +16,7 @@
   }
 {%- endstyle -%}
 
+{% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
   {% if blog.articles %}
