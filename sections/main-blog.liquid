@@ -28,123 +28,123 @@
   {% endif %}
 {% endfor %}
 
-{%- paginate featuredArticles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
+<div class="main-blog page-width section-{{ section.id }}-padding">
 
-    <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
-      {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
-    </h1>
+  <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
+    {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
+  </h1>
 
-    {% if section.settings.main_title %}
-    <p class="subtitle--primary">{{ section.settings.sub_text }}</p>
-    {% endif %}
+  {% if section.settings.main_title %}
+  <p class="subtitle--primary">{{ section.settings.sub_text }}</p>
+  {% endif %}
 
-    <div class="blog-top">
-      <div class="swiper" id="blog-tag-carousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a class="blog-tag active" href="/blogs/all">View all</a>
-          </div>
-          {% for link in linklists.blog-categories.links %}
-            {% assign blog = link.object %}
-            {%- for tag in blog.all_tags -%}
-              <div class="swiper-slide">
-                <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-              </div>
-            {%- endfor -%}
-          {%- endfor -%}
+  <div class="blog-top">
+    <div class="swiper" id="blog-tag-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a class="blog-tag active" href="/blogs/all">View all</a>
         </div>
-      </div>
-
-      {%- if settings.predictive_search_enabled -%}
-        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-      {%- endif -%}
-        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-          <input type="hidden" name="type" value="article" />
-          <div class="field">
-            <input class="search__input field__input"
-              id="Search-In-Modal-1"
-              type="search"
-              name="q"
-              value=""
-              placeholder="{{ 'general.search.search' | t }}"
-              {%- if settings.predictive_search_enabled -%}
-                role="combobox"
-                aria-expanded="false"
-                aria-owns="predictive-search-results-list"
-                aria-controls="predictive-search-results-list"
-                aria-haspopup="listbox"
-                aria-autocomplete="list"
-                autocorrect="off"
-                autocomplete="off"
-                autocapitalize="off"
-                spellcheck="false"
-              {%- endif -%}
-            >
-            <label class="field__label" for="Search-In-Modal-1">Search for article</label>
-            <input type="hidden" name="options[prefix]" value="last">
-            <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-              <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
-              </svg>
-            </button>
-          </div>
-      
-          {%- if settings.predictive_search_enabled -%}
-            <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-              <div class="predictive-search__loading-state">
-                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                </svg>
-              </div>
+        {% for link in linklists.blog-categories.links %}
+          {% assign blog = link.object %}
+          {%- for tag in blog.all_tags -%}
+            <div class="swiper-slide">
+              <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
             </div>
-      
-            <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-          {%- endif -%}
-        </form>
-      {%- if settings.predictive_search_enabled -%}
-        </predictive-search>
-      {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
     </div>
 
-    {% if featuredArticles %}
-      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
-      {% assign first_article = featuredArticles[0] %}
-  
-      {% if first_article %}
-        <a href="{{ first_article.url }}" class="first-blog-article-container">
-          <div class="first-blog-article">
-            <div class="first-blog-image">
-              {{ first_article.image | image_url: width: 2400 | image_tag:
-                loading: 'lazy',
-                sizes: sizes,
-                widths: '165, 360, 535, 750, 1070, 1500, 2400'
-              }}
+    {%- if settings.predictive_search_enabled -%}
+      <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+    {%- endif -%}
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+        <input type="hidden" name="type" value="article" />
+        <div class="field">
+          <input class="search__input field__input"
+            id="Search-In-Modal-1"
+            type="search"
+            name="q"
+            value=""
+            placeholder="{{ 'general.search.search' | t }}"
+            {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            {%- endif -%}
+          >
+          <label class="field__label" for="Search-In-Modal-1">Search for article</label>
+          <input type="hidden" name="options[prefix]" value="last">
+          <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+            <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+              <use href="#icon-search">
+            </svg>
+          </button>
+        </div>
+    
+        {%- if settings.predictive_search_enabled -%}
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            <div class="predictive-search__loading-state">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
             </div>
-            <div class="first-blog-info">
-              <div class="first-blog-info__top">
-                {% for tag in first_article.tags %}
-                  <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
-                {% endfor %}
-                <h2 class="blog-title">{{ first_article.title }}</h2>
-                <p class="blog-excerpt">
-                  {{ first_article.excerpt }}
-                </p>
-              </div>
-              <div class="first-blog-info__bottom">
-                <div class="first-blog-info__bottom-content">
-                  <div class="author-name">{{ first_article.author }}</div>
-                  <div class="first-blog-info__bottom-content-divider">
-                    {{ first_article.published_at |date: "%d %B 20%y" }}{% if first_article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ first_article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
-                  </div>
+          </div>
+    
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        {%- endif -%}
+      </form>
+    {%- if settings.predictive_search_enabled -%}
+      </predictive-search>
+    {%- endif -%}
+  </div>
+
+  {% if featuredArticles %}
+    {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+    {% assign first_article = featuredArticles[0] %}
+
+    {% if first_article %}
+      <a href="{{ first_article.url }}" class="first-blog-article-container">
+        <div class="first-blog-article">
+          <div class="first-blog-image">
+            {{ first_article.image | image_url: width: 2400 | image_tag:
+              loading: 'lazy',
+              sizes: sizes,
+              widths: '165, 360, 535, 750, 1070, 1500, 2400'
+            }}
+          </div>
+          <div class="first-blog-info">
+            <div class="first-blog-info__top">
+              {% for tag in first_article.tags %}
+                <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
+              {% endfor %}
+              <h2 class="blog-title">{{ first_article.title }}</h2>
+              <p class="blog-excerpt">
+                {{ first_article.excerpt }}
+              </p>
+            </div>
+            <div class="first-blog-info__bottom">
+              <div class="first-blog-info__bottom-content">
+                <div class="author-name">{{ first_article.author }}</div>
+                <div class="first-blog-info__bottom-content-divider">
+                  {{ first_article.published_at |date: "%d %B 20%y" }}{% if first_article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ first_article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
                 </div>
               </div>
             </div>
           </div>
-        </a>
-      {% endif %}
-                    
-      <div class="blog-articles">
+        </div>
+      </a>
+    {% endif %}
+                  
+    <div class="blog-articles">
+      {%- paginate featuredArticles by 6 -%}
         {% for article in featuredArticles %}
           {% unless forloop.index == 1 %}
             <div class="blog-articles__article article">
@@ -160,14 +160,14 @@
             </div>
           {% endunless %}
         {% endfor %} 
-      </div>
-    {% endif %}
+      {%- endpaginate -%}
+    </div>
+  {% endif %}
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  </div>
-{%- endpaginate -%}
+  {%- if paginate.pages > 1 -%}
+    {%- render 'pagination', paginate: paginate -%}
+  {%- endif -%}
+</div>
 
 <script>
   const breakpoint = window.matchMedia( '(min-width: 992px)' );
