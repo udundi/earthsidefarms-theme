@@ -170,22 +170,7 @@
 </div>
 
 <script>
-  const breakpoint = window.matchMedia( '(min-width: 992px)' );
-  let blog_tag_carousel;
-  
-  const breakpointChecker = function() {
-    if ( breakpoint.matches === true ) {
-      if ( blog_tag_carousel !== undefined ) blog_tag_carousel.destroy( true, true );
-      return;
-    } else if ( breakpoint.matches === false ) {
-      return enableSwiper();
-    }
-  };
-  
-  const enableSwiper = function() {
-    const tagWidth = {{ featuredArticles.size }};
-    
-    blog_tag_carousel = new Swiper('#blog-tag-carousel', {
+  const blog_tag_carousel = new Swiper('#blog-tag-carousel', {
       slidesPerView: 2.3,
       slidesPerGroup: 1,
       spaceBetween: 0,
@@ -203,11 +188,7 @@
           slidesPerGroup: 1,
         }
       }
-    });
-  };
-  
-  breakpoint.addListener(breakpointChecker);
-  breakpointChecker();
+  });
 </script>
 
 {% schema %}
