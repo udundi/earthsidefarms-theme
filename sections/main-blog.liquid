@@ -38,20 +38,27 @@
   <p class="subtitle--primary">{{ section.settings.sub_text }}</p>
   {% endif %}
 
+  {% for link in linklists.blog-categories.links %}
+    {% assign blog = link.object %}
+    {%- for tag in blog.all_tags -%}
+      {% unless tagList contains tag %}
+        {% assign tagList = tagList | append: ',' | append: tag %}
+      {% endunless %}
+    {%- endfor -%}
+  {%- endfor -%}
+
   <div class="blog-top">
     <div class="swiper" id="blog-tag-carousel">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a class="blog-tag active" href="/blogs/all">View all</a>
         </div>
-        {% for link in linklists.blog-categories.links %}
-          {% assign blog = link.object %}
-          {%- for tag in blog.all_tags -%}
-            <div class="swiper-slide">
-              <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-            </div>
-          {%- endfor -%}
-        {%- endfor -%}
+        {% assign tagList = tagList | remove_first: ',' | split: ',' %}
+        {% for tag in tagList %}
+          <div class="swiper-slide">
+            <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+          </div>
+        {% endfor %}
       </div>
     </div>
 
