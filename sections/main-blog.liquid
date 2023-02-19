@@ -152,7 +152,7 @@
     {% endif %}
                   
     <div class="blog-articles">
-      {% for article in paginate.parts %}
+      {% for article in allArticles %}
         {% unless forloop.index == 1 %}
           <div class="blog-articles__article article">
             {%- render 'article-card',
