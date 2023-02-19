@@ -16,7 +16,7 @@
   }
 {%- endstyle -%}
 
-{% assign featuredArticles = '' %}
+{% assign featuredArticles = '' | split: '' %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
   {% if blog.articles %}
