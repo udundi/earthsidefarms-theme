@@ -94,42 +94,50 @@
   
     {% for link in linklists.blog-categories.links %}
       {% assign blog = link.object %}
+      {% assign article_date = 0 %}
       {% for article in blog.articles %}
         {% if forloop.index == 1 %}
-          <a href="{{ article.url }}" class="first-blog-article-container">
-            <div class="first-blog-article">
-              <div class="first-blog-image">
-                {{ article.image | image_url: width: 2400 | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '165, 360, 535, 750, 1070, 1500, 2400'
-                }}
-              </div>
-              <div class="first-blog-info">
-                <div class="first-blog-info__top">
-                  {% for tag in article.tags %}
-                    <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
-                  {% endfor %}
-                  <h2 class="blog-title">{{ article.title }}</h2>
-                  <p class="blog-excerpt">
-                    {{ article.excerpt }}
-                  </p>
-                </div>
-                <div class="first-blog-info__bottom">
-                  <div class="first-blog-info__bottom-content">
-                    <div class="author-name">{{ article.author }}</div>
-                    <div class="first-blog-info__bottom-content-divider">
-                      {{ article.published_at |date: "%d %B 20%y" }}{% if article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
+          {% if article.published_at > article_date %}
+            {% assign article_date = article.published_at %}
+            {% assign first_article = article %}
+          {% endif %}
           {% break %}
         {% endif %}
       {% endfor %} 
     {% endfor %}
+
+    {% if first_article %}
+      <a href="{{ first_article.url }}" class="first-blog-article-container">
+        <div class="first-blog-article">
+          <div class="first-blog-image">
+            {{ first_article.image | image_url: width: 2400 | image_tag:
+              loading: 'lazy',
+              sizes: sizes,
+              widths: '165, 360, 535, 750, 1070, 1500, 2400'
+            }}
+          </div>
+          <div class="first-blog-info">
+            <div class="first-blog-info__top">
+              {% for tag in first_article.tags %}
+                <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
+              {% endfor %}
+              <h2 class="blog-title">{{ article.title }}</h2>
+              <p class="blog-excerpt">
+                {{ first_article.excerpt }}
+              </p>
+            </div>
+            <div class="first-blog-info__bottom">
+              <div class="first-blog-info__bottom-content">
+                <div class="author-name">{{ first_article.author }}</div>
+                <div class="first-blog-info__bottom-content-divider">
+                  {{ first_article.published_at |date: "%d %B 20%y" }}{% if first_article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ first_article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    {% endif %}
                   
     <div class="blog-articles">
       {% for link in linklists.blog-categories.links %}
