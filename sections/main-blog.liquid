@@ -19,15 +19,15 @@
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
   {% if blog.articles %}
-    {% if featuredArticles %}
-        {% assign featuredArticles = featuredArticles | concat:blog.articles %}
+    {% if allArticles %}
+        {% assign allArticles = allArticles | concat:blog.articles %}
     {% else %}
-        {% assign featuredArticles = blog.articles %}
+        {% assign allArticles = blog.articles %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
-{%- paginate featuredArticles by 6 -%}
+{%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
   <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
@@ -113,9 +113,9 @@
     {%- endif -%}
   </div>
 
-  {% if featuredArticles.size > 0 %}
-    {% comment %}{% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}{% endcomment %}
-    {% assign first_article = featuredArticles[0] %}
+  {% if allArticles.size > 0 %}
+    {% comment %}{% assign allArticles = allArticles | sort:'published_at' | reverse %}{% endcomment %}
+    {% assign first_article = allArticles[0] %}
 
     {% if first_article %}
       <a href="{{ first_article.url }}" class="first-blog-article-container">
@@ -151,7 +151,7 @@
     {% endif %}
                   
     <div class="blog-articles">
-      {% for article in featuredArticles %}
+      {% for article in allArticles %}
         {% unless forloop.index == 1 %}
           <div class="blog-articles__article article">
             {%- render 'article-card',
