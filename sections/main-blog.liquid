@@ -27,6 +27,8 @@
   {% endif %}
 {% endfor %}
 
+{{ allArticles }}
+
 {%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
