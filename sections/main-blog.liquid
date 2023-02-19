@@ -182,13 +182,20 @@
   
   const enableSwiper = function() {
     blog_tag_carousel = new Swiper('#blog-tag-carousel', {
+      slidesPerView: 2.3,
+      slidesPerGroup: 1,
       spaceBetween: 0,
-      loop: true,
+      loop: false,
       preventClicks: true,
     
       breakpoints: {
         768: {
           slidesPerView: 4.3,
+          slidesPerGroup: 1,
+        },
+
+        992: {
+          slidesPerView: 8,
           slidesPerGroup: 1,
         }
       }
