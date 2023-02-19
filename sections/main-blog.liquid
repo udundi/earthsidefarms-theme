@@ -144,7 +144,7 @@
                     
       <div class="blog-articles">
         {% for article in featuredArticles %}
-          {% unless featuredArticles[0] %}
+          {% unless forloop.index == 1 %}
             <div class="blog-articles__article article">
               {%- render 'article-card',
                 article: article,
