@@ -16,7 +16,19 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
+{% assign featuredArticles = false %}
+{% for link in linklists.blog-categories.links %}
+  {% assign blog = link.object %}
+  {% if blog.articles %}
+    {% if featuredArticles %}
+        {% assign featuredArticles = featuredArticles | concat:blog.articles %}
+    {% else %}
+        {% assign featuredArticles = blog.articles %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{%- paginate featuredArticles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
 
     <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
@@ -33,10 +45,13 @@
           <div class="swiper-slide">
             <a class="blog-tag active" href="/blogs/all">View all</a>
           </div>
-          {%- for tag in blog.all_tags -%}
-            <div class="swiper-slide">
-              <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-            </div>
+          {% for link in linklists.blog-categories.links %}
+            {% assign blog = link.object %}
+            {%- for tag in blog.all_tags -%}
+              <div class="swiper-slide">
+                <a class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+              </div>
+            {%- endfor -%}
           {%- endfor -%}
         </div>
       </div>
@@ -91,19 +106,6 @@
         </predictive-search>
       {%- endif -%}
     </div>
-
-    {% assign featuredArticles = false %}
-    {% for link in linklists.blog-categories.links %}
-      {% assign blog = link.object %}
-      {% if blog.articles %}
-		{% if featuredArticles %}
-			{% assign featuredArticles = featuredArticles | concat:blog.articles %}
-		{% else %}
-			{% assign featuredArticles = blog.articles %}
-		{% endif %}
-      {% endif %}
-    {% endfor %}
-
 
     {% if featuredArticles %}
       {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
