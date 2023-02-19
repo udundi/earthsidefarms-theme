@@ -77,10 +77,9 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   .swiper {
     width: 100%;
-    max-width: none;
     min-width: none;
     height: 100%;
   }
@@ -90,6 +89,7 @@
   .swiper-wrapper {
     display: flex;
     flex-wrap: nowrap;
+    max-width: none;
   }
 }
 
