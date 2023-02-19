@@ -16,7 +16,7 @@
   }
 {%- endstyle -%}
 
-{% assign featuredArticles = false %}
+{% assign featuredArticles = '' %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
   {% if blog.articles %}
@@ -113,7 +113,7 @@
     {%- endif -%}
   </div>
 
-  {% if featuredArticles %}
+  {% if featuredArticles.size > 0 %}
     {% comment %}{% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}{% endcomment %}
     {% assign first_article = featuredArticles[0] %}
 
