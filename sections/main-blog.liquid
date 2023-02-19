@@ -183,6 +183,8 @@
   };
   
   const enableSwiper = function() {
+    const tagWidth = {{ featuredArticles.size }};
+    
     blog_tag_carousel = new Swiper('#blog-tag-carousel', {
       slidesPerView: 2.3,
       slidesPerGroup: 1,
@@ -195,14 +197,9 @@
           slidesPerView: 4.3,
           slidesPerGroup: 1,
         },
-        
-        768: {
-          slidesPerView: 6,
-          slidesPerGroup: 1,
-        },
 
         992: {
-          slidesPerView: 8,
+          slidesPerView: 6.3,
           slidesPerGroup: 1,
         }
       }
