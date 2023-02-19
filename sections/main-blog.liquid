@@ -114,7 +114,7 @@
   </div>
 
   {% if featuredArticles %}
-    {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+    {% comment %}{% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}{% endcomment %}
     {% assign first_article = featuredArticles[0] %}
 
     {% if first_article %}
@@ -151,6 +151,7 @@
     {% endif %}
                   
     <div class="blog-articles">
+      {%- paginate featuredArticles by 6 -%}
         {% for article in featuredArticles %}
           {% unless forloop.index == 1 %}
             <div class="blog-articles__article article">
@@ -166,6 +167,7 @@
             </div>
           {% endunless %}
         {% endfor %} 
+      {%- endpaginate -%}
     </div>
   {% endif %}
 
