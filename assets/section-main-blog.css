@@ -72,11 +72,6 @@
   height: auto;
 }
 
-.swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 1400px) {
   .swiper {
     width: 100%;
