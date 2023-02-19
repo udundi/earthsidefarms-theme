@@ -151,7 +151,6 @@
     {% endif %}
                   
     <div class="blog-articles">
-      {%- paginate featuredArticles by 6 -%}
         {% for article in featuredArticles %}
           {% unless forloop.index == 1 %}
             <div class="blog-articles__article article">
@@ -167,7 +166,6 @@
             </div>
           {% endunless %}
         {% endfor %} 
-      {%- endpaginate -%}
     </div>
   {% endif %}
 
