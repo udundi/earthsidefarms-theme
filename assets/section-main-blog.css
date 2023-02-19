@@ -73,7 +73,7 @@
   height: auto;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1317px) {
   .swiper {
     width: 100%;
     min-width: none;
