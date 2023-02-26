@@ -3168,3 +3168,9 @@ details-disclosure > details.mega-menu {
 .product-card {
     width: 100%;
 }
+
+.product-card a,
+.product-card a:link, 
+.product-card a:-webkit-any-link {
+  text-decoration: none!important;
+}
