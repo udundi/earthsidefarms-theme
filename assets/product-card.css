@@ -88,6 +88,7 @@
     text-decoration: none;
 }
 
+.product-card .product-title,
 .submenu-collection-products .product-card .product-title {
     font-style: normal;
     font-weight: 900;
@@ -110,6 +111,7 @@
     text-decoration: none;
 }
 
+.product-card .product-price,
 .submenu-collection-products .product-card .product-price {
     font-style: normal;
     font-weight: 500;
