@@ -1,12 +1,42 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Text Banner",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "default": "Don't know what to get?",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "secondary_title",
+      "default": "Build a bundle!",
+      "label": "Secondary Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "label": "Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "default": "Button label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Banner"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
