@@ -39,17 +39,16 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 140%;
-  }
-
-  .collection-tabs .collection-tab-btn.button--secondary {
     border: none;
     background: transparent;
     color: #3356AE;
     padding: 0 0 0 50px;
   }
 
-  .collection-tabs .collection-tab-btn.button--secondary::after {
-    box-shadow: none;
+  .collection-tabs .collection-tab-btn.active {
+    background: #3356AE;
+    color: #fff;
+    padding: 16px 50px;
   }
 {%- endstyle -%}
 
@@ -111,9 +110,9 @@
 
     {% if collection.handle == 'all' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
       <div class="collection-tabs">
-        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle != 'all'%} button--secondary active{% endif %}">Shop All</button>
-        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle != 'candied-nuts'%} button--secondary active{% endif %}">Candied Nuts</button>
-        <button id="bitsTabBtn" class="collection-tab-btn button{% if collection.handle != 'bites'%} button--secondary active{% endif %}">Bites</button>
+        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle == 'all' %} active{% endif %}">Shop All</button>
+        <button id="candiedNutsTabBtn" class="collection-tab-btn button">Candied Nuts</button>
+        <button id="bitsTabBtn" class="collection-tab-btn button">Bites</button>
       </div>
     {% endif %}
 
@@ -162,7 +161,19 @@
   </div>
 </div>
 
-
+<script>
+$(document).ready(function() {
+  $(".collection-tab-btn").each(function() {
+    $(this).click(function() {
+      $(".collection-tab-btn").each(function() {
+        $(this).removeClass("active")
+      })
+      $(this).addClass("active")
+    })
+  })
+});
+</script>
+      
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
