@@ -17,11 +17,11 @@
     <p class="product-price">
       {{ product.price | money }}
     </p>
-  </a>
 
-  {% if show_cta %}
-    <a role="link" href="{{ product.url }}" aria-disabled="false" class="button button--secondary">
-      Shop Now
-    </a>
-  {% endif %}
+    {% if show_cta %}
+      <button role="link" href="{{ product.url }}" aria-disabled="false" class="button button--secondary">
+        Shop Now
+      </button>
+    {% endif %}
+  </a>
 </div>
