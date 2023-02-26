@@ -53,6 +53,10 @@
   text-decoration: none;
 }
 
+.product-card a:link{
+  text-decoration: none!important;
+}
+
 .submenu-collection-products .product-card {
   width: 45%;
   background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
