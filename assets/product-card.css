@@ -43,7 +43,8 @@
     margin: 0 12px;
 }
 
-.submenu-collection-products .product-card {
+.submenu-collection-products .product-card,
+.product-card {
     width: 45%;
     background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
     border-radius: 10px;
