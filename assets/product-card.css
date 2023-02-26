@@ -60,6 +60,7 @@
     margin: 5px;
 }
 
+.product-card:hover,
 .header-product-card-container .product-card:hover,
 .submenu-collection-products .product-card:hover {
     border: 1px solid #2F4FA1;
