@@ -33,7 +33,7 @@
         </span>
       </h1>
 
-      {%- if section.settings.show_collection_description -%}
+      {%- if section.settings.show_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
@@ -70,7 +70,7 @@
     },
     {
       "type": "checkbox",
-      "id": "show_collection_description",
+      "id": "show_description",
       "default": true,
       "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
     },
