@@ -73,6 +73,12 @@
   --color-button-text: var(--color-background);
 }
 
+.button--primary {
+  --color-button: var(--color-background);
+  --color-button-text: var(--color-foreground);
+  transition: 0.3s;
+}
+
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
   --color-button-text: var(--color-base-outline-button-labels);
