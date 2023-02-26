@@ -74,8 +74,10 @@
 }
 
 .button--primary {
+  --color-button: var(--color-base-outline-button-labels);
   --color-button: var(--color-background);
   --color-button-text: var(--color-foreground);
+  --alpha-button-background: 1;
   transition: 0.3s;
 }
 
