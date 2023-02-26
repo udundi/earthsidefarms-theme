@@ -103,9 +103,9 @@
 
     {% if collection.handle == 'all' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
       <div class="collection-tabs">
-        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle == 'all'%} button--primary active{% endif %}">Shop All</button>
-        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle == 'candied-nuts'%} button--primary active{% endif %}">Candied Nuts</button>
-        <button id="bitsTabBtn" class="collection-tab-btn button{% if collection.handle == 'bites'%} button--primary active{% endif %}">Bites</button>
+        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle != 'all'%} button--secondary active{% endif %}">Shop All</button>
+        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle != 'candied-nuts'%} button--secondary active{% endif %}">Candied Nuts</button>
+        <button id="bitsTabBtn" class="collection-tab-btn button{% if collection.handle != 'bites'%} button--secondary active{% endif %}">Bites</button>
       </div>
     {% endif %}
 
