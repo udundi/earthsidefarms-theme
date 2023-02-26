@@ -88,7 +88,17 @@
     text-decoration: none;
 }
 
-.product-card .product-title,
+.product-card .product-title {
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 150%;
+}
+
 .submenu-collection-products .product-card .product-title {
     font-style: normal;
     font-weight: 900;
