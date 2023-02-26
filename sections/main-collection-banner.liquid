@@ -31,7 +31,7 @@
       <h1 class="collection-hero__title">
         Shop
         <span class="yellow-header-text">
-        {% if collection.handle == 'all' %}
+        {% if collection.handle == 'all' or collection.handle == 'all-products' %}
           All Snacks
         {% else %}
           {{- collection.title | escape -}}
@@ -39,7 +39,7 @@
         </span>
       </h1>
 
-      {%- if section.settings.show_description -%}
+      {%- if section.settings.show_description or collection.handle != "all" -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
