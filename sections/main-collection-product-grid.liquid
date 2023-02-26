@@ -167,20 +167,20 @@
 $(document).ready(function() {
   $(".collection-tab-btn").each(function() {
     $(this).click(function() {
-      const collectionId = $(this).attr('id');
+      const tabId = $(this).attr('id');
 
       $(".product-grid-container .product-card").each(function() {
         $(this).css("display", "none")
       })
 
-      if (collectionId.includes('bites')) {
+      if (tabId == 'bitesTabBtn') {
         console.log('here')
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").includes('bites')) {
             $(this).css("display", "block")
           }
         })
-      } else if (collectionId.includes('candied-nuts')) {
+      } else if (tabId == 'candiedNutsTabBtn') {
         console.log('here 2')
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").includes('candied-nuts')) {
