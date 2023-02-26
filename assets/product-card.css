@@ -44,20 +44,22 @@
 }
 
 .product-card {
-    width: 300px;
-    background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+  width: 300px;
+  background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: block;
 }
 
 .submenu-collection-products .product-card {
-    width: 45%;
-    background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
-    border-radius: 10px;
-    padding: 8px;
-    text-align: center;
-    margin: 5px;
+  width: 45%;
+  background: linear-gradient(0deg, #F9F4EF, #F9F4EF);
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  margin: 5px;
+  display: block;
 }
 
 .product-card:hover,
