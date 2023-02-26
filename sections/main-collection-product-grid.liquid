@@ -51,7 +51,6 @@
   .collection-tabs .collection-tab-btn.active {
     background: #3356AE;
     color: #fff;
-    padding: 16px 50px;
   }
 {%- endstyle -%}
 
@@ -171,6 +170,7 @@ $(document).ready(function() {
       const collectionId = $(this).attr('id');
 
       $(".product-grid-container .product-card").each(function() {
+        console.log($(this).data("product-collection"))
         $(this).css("display", "none")
       })
 
