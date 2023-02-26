@@ -176,14 +176,14 @@ $(document).ready(function() {
       if (tabId == 'bitesTabBtn') {
         console.log('here')
         $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowercase().includes('bites')) {
+          if ($(this).data("product-collection").toLowerCase().includes('bites')) {
             $(this).css("display", "block")
           }
         })
       } else if (tabId == 'candiedNutsTabBtn') {
         console.log('here 2')
         $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowercase().includes('candied')) {
+          if ($(this).data("product-collection").toLowerCase().includes('candied')) {
             $(this).css("display", "block")
           }
         })
