@@ -7,6 +7,11 @@
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
     }
   }
+
+  .collection-hero__text-wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
 {%- endstyle -%}
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
@@ -19,10 +24,6 @@
         {% else %}
           <span class="yellow-header-text">{{- collection.title | escape -}}</span>
         {% endif %}
-      </h1>
-
-      <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
-        {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
