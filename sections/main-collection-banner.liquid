@@ -13,8 +13,16 @@
   <div class="collection-hero__inner page-width">
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
+        Shop
+        {% if collection.handle == 'all' %}
+          All <span class="yellow-header-text">Snacks</span>
+        {% else %}
+          <span class="yellow-header-text">{{- collection.title | escape -}}</span>
+        {% endif %}
+      </h1>
+
+      <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
+        {{ section.settings.main_title }} {% if section.settings.secondary_title %}<span class="yellow-header-text">{{ section.settings.secondary_title }}</span>{% endif %}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
