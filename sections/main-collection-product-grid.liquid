@@ -107,7 +107,11 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li class="grid__item">
-                  {% render 'product-card', product: product, show_cta: true %}
+                  {% render 'product-card', 
+                    product: product, 
+                    show_collection: true, 
+                    show_cta: true 
+                  %}
                 </li>
               {%- endfor -%}
             </ul>
