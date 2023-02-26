@@ -3210,8 +3210,9 @@ details-disclosure > details.mega-menu {
 }
 
 .button--secondary:hover {
-  color: rgb(var(--color-button-text));
+  color: #fff;
   background: #3356AE;
+  border: 1px solid #3356AE;
 }
 
 .button--secondary::after {
