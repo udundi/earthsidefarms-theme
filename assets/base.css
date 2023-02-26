@@ -3191,7 +3191,7 @@ details-disclosure > details.mega-menu {
 
 .button--primary {
   background: #3356AE;
-  border: 1px solid: #3356AE;
+  border: 1px solid #3356AE;
   color: #fff;
   transition: 0.3s;
 }
@@ -3207,4 +3207,8 @@ details-disclosure > details.mega-menu {
 .button--secondary:hover {
   color: rgb(var(--color-button-text));
   background: #3356AE;
+}
+
+.button--secondary::after {
+  box-shadow: none;
 }
