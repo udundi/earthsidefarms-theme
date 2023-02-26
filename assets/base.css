@@ -73,9 +73,14 @@
   --color-button-text: var(--color-background);
 }
 
+.button--primary {
+  background: #3356AE;
+  color: #fff;
+  transition: 0.3s;
+}
+
 .button--secondary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
+  color: #3356AE;
   background: transparent;
   --alpha-button-background: 1;
   transition: 0.3s;
@@ -83,7 +88,7 @@
 
 .button--secondary:hover {
   color: rgb(var(--color-button-text));
-  background-color: #3356AE;
+  background: #3356AE;
 }
 
 .color-background-2 .button--secondary,
