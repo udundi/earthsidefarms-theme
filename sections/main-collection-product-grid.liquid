@@ -24,6 +24,30 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .collection-tabs {
+    padding: 10px;
+    border: 1px solid #3356AE;
+    border-radius: 50px;
+  }
+
+  .collection-tabs .button {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  .collection-tabs .button--secondary {
+    border: none;
+    background: transparent;
+    color: #3356AE;
+  }
+
+  .collection-tabs .button--primary {
+    background: #3356AE;
+    color: #fff;
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
@@ -81,6 +105,15 @@
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
       </aside>
     {%- endif -%}
+
+    {% if collection.handle == 'all' %}
+      <div class="collection-tabs">
+        <button id="shopAllTabBtn" class="button button--primary">Shop All</button>
+        {% for collection in collections %}
+          <button id="{{ collection.handle }}TabBtn" class="button button--secondary">{{ collection.title }}</button>
+        {% endfor %}
+      </div>
+    {% endif %}
 
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
