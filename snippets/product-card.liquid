@@ -1,25 +1,27 @@
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 
-<a class="product-card" href="{{ product.url }}">
-  <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" loading="lazy"/>
+<div class="product-card">
+  <a href="{{ product.url }}">
+    <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" loading="lazy"/>
+    
+    {% if show_collection %}
+    <span>
+      {{ current_collection }}
+    </span>
+    {% endif %}
   
-  {% if show_collection %}
-  <span>
-    {{ current_collection }}
-  </span>
-  {% endif %}
-
-  <p class="product-title">
-    {{ product.title }}
-  </p>
-
-  <p class="product-price">
-    {{ product.price | money }}
-  </p>
+    <p class="product-title">
+      {{ product.title }}
+    </p>
+  
+    <p class="product-price">
+      {{ product.price | money }}
+    </p>
+  </a>
 
   {% if show_cta %}
     <a role="link" href="{{ product.url }}" aria-disabled="false" class="button button--secondary">
       Shop Now
     </a>
   {% endif %}
-</a>
+</div>
