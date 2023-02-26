@@ -53,7 +53,9 @@
   text-decoration: none;
 }
 
-.product-card a {
+.product-card a,
+.product-card a:link, 
+.product-card a:-webkit-any-link {
   text-decoration: none!important;
 }
 
