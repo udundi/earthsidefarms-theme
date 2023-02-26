@@ -3163,6 +3163,27 @@ details-disclosure > details.mega-menu {
   text-decoration: none!important;
 }
 
+@media (max-width: 768px) {
+  .product-card {
+    padding: 8px;
+  }
+  
+  .product-card .product-collection {
+    font-size: 8px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+  }
+  
+  .product-card .product-title {
+    font-size: 10px;
+    line-height: 150%;
+  }
+  .product-card .product-price {
+    font-size: 8px;
+    line-height: 150%;
+  }
+}
+
 .button--primary {
   background: #3356AE;
   border: 1px solid: #3356AE;
