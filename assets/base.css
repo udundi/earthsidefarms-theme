@@ -83,7 +83,7 @@
 
 .button--secondary:hover {
   color: rgb(var(--color-button-text));
-  background-color: rgba(var(--color-button),var(--alpha-button-background));
+  background-color: #3356AE;
 }
 
 .color-background-2 .button--secondary,
