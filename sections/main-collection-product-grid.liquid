@@ -171,24 +171,24 @@ $(document).ready(function() {
       const collectionId = $(this).attr('id');
 
       $(".product-grid-container .product-card").each(function() {
-        $(this).style("display", "none")
+        $(this).css("display", "none")
       })
 
       if (collectionId.includes('bites')) {
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").includes('bites')) {
-            $(this).style("display", "block")
+            $(this).css("display", "block")
           }
         })
       } else if (collectionId.includes('candied-nuts')) {
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").includes('candied-nuts')) {
-            $(this).style("display", "block")
+            $(this).css("display", "block")
           }
         })
       } else {
         $(".product-grid-container .product-card").each(function() {
-          $(this).style("display", "block")
+          $(this).css("display", "block")
         })
       }
       
