@@ -29,6 +29,9 @@
     padding: 10px;
     border: 1px solid #3356AE;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .collection-tabs .button {
@@ -106,12 +109,11 @@
       </aside>
     {%- endif -%}
 
-    {% if collection.handle == 'all' %}
+    {% if collection.handle == 'all' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
       <div class="collection-tabs">
-        <button id="shopAllTabBtn" class="button button--primary">Shop All</button>
-        {% for collection in collections %}
-          <button id="{{ collection.handle }}TabBtn" class="button button--secondary">{{ collection.title }}</button>
-        {% endfor %}
+        <button id="shopAllTabBtn" class="collection-tab-btn{% if collection.handle == 'all'%} active{% endif %}">Shop All</button>
+        <button id="candiedNutsTabBtn" class="collection-tab-btn{% if collection.handle == 'candied-nuts'%} active{% endif %}">Candied Nuts</button>
+        <button id="bitsTabBtn" class="collection-tab-btn{% if collection.handle == 'bites'%} active{% endif %}">Bites</button>
       </div>
     {% endif %}
 
