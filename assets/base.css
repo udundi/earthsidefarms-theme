@@ -3198,7 +3198,7 @@ details-disclosure > details.mega-menu {
 
 .button--secondary {
   color: #3356AE;
-  border: 1px solid: #3356AE;
+  border: 1px solid #3356AE;
   background: transparent;
   --alpha-button-background: 1;
   transition: 0.3s;
