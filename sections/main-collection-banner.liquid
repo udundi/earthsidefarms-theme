@@ -19,11 +19,13 @@
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
         Shop
+        <span class="yellow-header-text">
         {% if collection.handle == 'all' %}
-          All <span class="yellow-header-text">Snacks</span>
+          All Snacks
         {% else %}
-          <span class="yellow-header-text">{{- collection.title | escape -}}</span>
+          {{- collection.title | escape -}}
         {% endif %}
+        </span>
       </h1>
 
       {%- if section.settings.show_collection_description -%}
