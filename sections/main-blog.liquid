@@ -27,6 +27,10 @@
     </script>
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
+      <script>
+        const x = {{ allArticles | json }};
+        console.log(x);
+      </script>
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
