@@ -226,23 +226,93 @@
   margin: 0 0 8px 0;
 }
 
-.first-blog-info__top .blog-excerpt {
+.first-blog-info__top .blog-excerpt,
+.ud-article-card-info__top .blog-excerpt {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   margin: 0;
 }
 
-.first-blog-info__bottom-content {
+.first-blog-info__bottom-content,
+.ud-article-card__bottom-content {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
 }
 
-.first-blog-info__bottom-content .author-name {
+.first-blog-info__bottom-content .author-name,
+.ud-article-card__bottom-content {
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
+}
+
+.ud-article-card-container {
+  color: #000;
+  text-decoration: none;
+}
+
+.ud-article-card-container:hover .first-blog-image img {
+  scale: 1.05;
+}
+
+.ud-article-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 50px;
+  border: var(--blog-card-border-width) solid #000;
+  border-radius: var(--blog-card-corner-radius);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.ud-article-card-image,
+.ud-article-card-info {
+  width: 100%;
+  min-height: auto;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.ud-article-card-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.ud-article-card-image {
+  min-height: 300px;
+}
+
+.ud-article-card-info {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.ud-article-card-info .blog-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 140%;
+  margin: 0 0 8px 0;
+}
+
+.ud-article-card-info .blog-excerpt {
+  margin-bottom: 25px;
+}
+
+.ud-article-card-info__bottom-content,
+.ud-article-card-info__bottom-content .author-name {
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -276,5 +346,24 @@
   .first-blog-info__bottom-content,
   .first-blog-info__bottom-content .author-name {
     font-size: 10px;
+  }
+
+  .ud-article-card {
+    flex-direction: row;
+  }
+
+  .ud-article-card-image,
+  .ud-article-card-info {
+    width: 50%;
+    min-height: 125px;
+  }
+  
+  .ud-article-card-info {
+    padding: 12px;
+  }
+
+  .ud-article-card-info .blog-title {
+    font-size: 16px;
+    line-height: 140%;
   }
 }
