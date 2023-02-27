@@ -3209,11 +3209,16 @@ details-disclosure > details.mega-menu {
   transition: 0.3s;
 }
 
-.button--secondary:hover,
-.button--primary:hover{
+.button--secondary:hover {
   color: #fff;
   background: #3356AE;
-  border: 2px solid #3356AE;
+}
+
+.button--primary:not([disabled]):hover::after,
+.button--secondary:not([disabled]):hover::after {
+  --border-offset: 1.3px;
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .button--secondary::after {
