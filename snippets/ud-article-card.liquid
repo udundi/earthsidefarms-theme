@@ -1,14 +1,14 @@
 <a href="{{ article.url }}" class="ud-article-card-container">
   <div class="ud-article-card">
-    <div class="image">
+    <div class="ud-article-card-image">
       {{ article.image | image_url: width: 2400 | image_tag:
         loading: 'lazy',
         sizes: sizes,
         widths: '165, 360, 535, 750, 1070, 1500, 2400'
       }}
     </div>
-    <div class="info">
-      <div class="info__top">
+    <div class="ud-article-card-info">
+      <div class="ud-article-card-info__top">
         {% for tag in article.tags %}
           <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
         {% endfor %}
@@ -17,10 +17,10 @@
           {{ article.excerpt }}
         </p>
       </div>
-      <div class="info__bottom">
-        <div class="info__bottom-content">
+      <div class="ud-article-card-info__bottom">
+        <div class="ud-article-card-info__bottom-content">
           <div class="author-name">{{ article.author }}</div>
-          <div class="info__bottom-content-divider">
+          <div class="ud-article-card-info__bottom-content-divider">
             {{ article.published_at |date: "%d %B 20%y" }}{% if article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
           </div>
         </div>
