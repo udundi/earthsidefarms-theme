@@ -31,7 +31,7 @@
     {% endif %}
 {% endfor %}
 
-{% assign allArticles = allArticles | remove_first: ',' | split: ',' %}
+{% comment %}{% assign allArticles = allArticles | remove_first: ',' | split: ',' %}{% endcomment %}
 
 <script>
   const x = {{ allArticles | json }};
