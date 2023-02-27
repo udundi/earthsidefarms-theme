@@ -46,10 +46,52 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Nacho-Chedda_2.png"
           }
+        },
+        "1a28a7d9-1f23-4724-9052-40a0a9d98966": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_3.png"
+          }
+        },
+        "653d47af-4ef0-4453-9ab2-94dabbe52f06": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_4.png"
+          }
+        },
+        "f54d815c-f4cb-4f72-9682-a10cb4f887ff": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_5.png"
+          }
+        },
+        "f645fb01-5955-415a-b8e2-e251632e3b2b": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_6.png"
+          }
+        },
+        "95e094ad-94dd-473f-a91c-f3aa42b24806": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_7.png"
+          }
+        },
+        "b1c2c8ef-fbb4-45a4-af71-5299583c43e6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nacho-Chedda_8.png"
+          }
         }
       },
       "block_order": [
-        "template--17540507435313__d6a3583c-7968-48d1-8867-c492e00764d5-1677462516da6255b5-0"
+        "template--17540507435313__d6a3583c-7968-48d1-8867-c492e00764d5-1677462516da6255b5-0",
+        "1a28a7d9-1f23-4724-9052-40a0a9d98966",
+        "653d47af-4ef0-4453-9ab2-94dabbe52f06",
+        "f54d815c-f4cb-4f72-9682-a10cb4f887ff",
+        "f645fb01-5955-415a-b8e2-e251632e3b2b",
+        "95e094ad-94dd-473f-a91c-f3aa42b24806",
+        "b1c2c8ef-fbb4-45a4-af71-5299583c43e6"
       ],
       "settings": {
         "padding_top": 36,
