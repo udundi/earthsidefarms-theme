@@ -38,7 +38,7 @@
   console.log(x);
 </script>
 {% assign blog.articles = allArticles %}
-{%- paginate blog.articles by 18 -%}
+{%- paginate blog.articles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
   <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
