@@ -1,5 +1,15 @@
 {
   "sections": {
+    "1a176c81-5ea5-40bf-801a-f056c301a2a8": {
+      "type": "page-title",
+      "settings": {
+        "main_title": "Frequently Asked",
+        "secondary_title": "Questions",
+        "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "d74e0f6b-fa60-4caa-bc45-79dbe96793c9": {
       "type": "faq",
       "blocks": {
@@ -155,6 +165,7 @@
     }
   },
   "order": [
+    "1a176c81-5ea5-40bf-801a-f056c301a2a8",
     "d74e0f6b-fa60-4caa-bc45-79dbe96793c9",
     "d594c3d6-dc54-4729-ad64-0fd2b2451895",
     "4f3a4354-3eee-457c-912f-a31de0cc858e"
