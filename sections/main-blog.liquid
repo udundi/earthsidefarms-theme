@@ -19,11 +19,7 @@
 {% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
-  <script>
-    const m = {{ blog }};
-    console.log(m);
-  </script>
-  {% if blog.articles %}
+  {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
