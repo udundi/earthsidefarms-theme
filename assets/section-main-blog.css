@@ -86,6 +86,11 @@
   .swiper {
     border-rght: none;
   }
+
+  .swiper-slide {
+    flex-shrink: 100 !important;
+    min-width: 200px;
+  }
 }
 
 .title--primary {
