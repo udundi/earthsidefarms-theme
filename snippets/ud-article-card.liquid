@@ -1,14 +1,14 @@
-<a href="{{ article.url }}" class="first-blog-article-container">
-  <div class="first-blog-article">
-    <div class="first-blog-image">
+<a href="{{ article.url }}" class="article-container">
+  <div class="article">
+    <div class="image">
       {{ article.image | image_url: width: 2400 | image_tag:
         loading: 'lazy',
         sizes: sizes,
         widths: '165, 360, 535, 750, 1070, 1500, 2400'
       }}
     </div>
-    <div class="first-blog-info">
-      <div class="first-blog-info__top">
+    <div class="info">
+      <div class="info__top">
         {% for tag in article.tags %}
           <div class="blog-tag" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</div>
         {% endfor %}
@@ -17,10 +17,10 @@
           {{ article.excerpt }}
         </p>
       </div>
-      <div class="first-blog-info__bottom">
-        <div class="first-blog-info__bottom-content">
+      <div class="info__bottom">
+        <div class="info__bottom-content">
           <div class="author-name">{{ article.author }}</div>
-          <div class="first-blog-info__bottom-content-divider">
+          <div class="info__bottom-content-divider">
             {{ article.published_at |date: "%d %B 20%y" }}{% if article.metafields.custom.minutes_to_read_blog_post != '' %} • {{ article.metafields.custom.minutes_to_read_blog_post }} min read{% endif %}
           </div>
         </div>
