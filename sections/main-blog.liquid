@@ -23,7 +23,7 @@
   {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
     {% if allArticles %}
-        {% assign allArticles = allArticles | concat:blog.articles %}
+        {% comment %}{% assign allArticles = allArticles | concat:blog.articles %}{% endcomment %}
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
