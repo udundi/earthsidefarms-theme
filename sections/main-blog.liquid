@@ -36,7 +36,7 @@
   console.log(x);
 </script>
 
-{% assign allArticles = allArticles | split: ',' %}
+{% assign allArticles = allArticles | split: ',' | shift %}
 {%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
