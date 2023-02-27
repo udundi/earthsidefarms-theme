@@ -355,11 +355,12 @@
   }
 
   .ud-article-card-info {
-    width: 80%;
+    width: 70%;
   }
 
   .ud-article-card-image {
-    width: 20%;
+    width: 30%;
+    min-height: none;
   }
   
   .ud-article-card-info {
@@ -373,5 +374,6 @@
   .ud-article-card-info .blog-title {
     font-size: 16px;
     line-height: 140%;
+    margin-bottom: 16px;
   }
 }
