@@ -493,7 +493,7 @@
                 {%- if link.links != blank -%}
                   <header-menu>
                     <details {% if link.title == 'Shop' %} class="mega-menu" {% endif %} id="Details-HeaderMenu-{{ forloop.index }}">
-                      <summary class="{% if link.title == 'Shop' %}button button--primary shop-btn-menu {% endif %}header__menu-item list-menu__item link focus-inset">
+                      <summary class="{% if link.title == 'Shop' %}button shop-btn-menu {% endif %}header__menu-item list-menu__item link focus-inset">
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% unless link.title == 'Shop' %}
                           {% render 'icon-caret' %}
