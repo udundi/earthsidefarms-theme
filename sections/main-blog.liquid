@@ -20,7 +20,7 @@
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
   <script>
-    const m = {{ blog | json }};
+    const m = {{ blog }};
     console.log(m);
   </script>
   {% if blog.articles %}
