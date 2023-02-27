@@ -19,18 +19,14 @@
 {% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
+  <script>
+    const m = {{ blog | json }};
+    console.log(m);
+  </script>
   {% if blog.articles %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
-    <script>
-      const x = {{ allArticles | json }};
-      console.log(x);
-    </script>
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
-      <script>
-        const y = {{ allArticles | json }};
-        console.log(x);
-      </script>
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
@@ -38,7 +34,7 @@
 {% endfor %}
 
 <script>
-  const z = {{ allArticles | json }};
+  const x = {{ allArticles | json }};
   console.log(x);
 </script>
 
