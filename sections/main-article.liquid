@@ -1,5 +1,32 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .article-template {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-title-container {
+    order: 1;
+  }
+
+  .article-template__social-sharing {
+    order: 2;
+  }
+
+  .article-template__hero-container {
+    order: 3;
+  }
+  
+  .article-template__back {
+    order: 4;
+  }
+  
+  .article-template__comment-wrapper {
+    order: 5;
+  }
+</style>
+
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -9,7 +36,7 @@
         </div>
 
       {%- when 'title'-%}
-          <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <header class="page-width page-width--narrow article-title-container" {{ block.shopify_attributes }}>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
