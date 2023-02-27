@@ -254,7 +254,7 @@
   text-decoration: none;
 }
 
-.ud-article-card-container:hover .first-blog-image img {
+.ud-article-card-container:hover .ud-article-card-image img {
   scale: 1.05;
 }
 
