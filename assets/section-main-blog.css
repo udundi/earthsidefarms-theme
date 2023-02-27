@@ -369,6 +369,10 @@
     padding: 12px;
   }
 
+  .ud-article-card-info .blog-excerpt {
+    display: none;
+  }
+
   .ud-article-card-info .blog-title {
     font-size: 16px;
     line-height: 140%;
