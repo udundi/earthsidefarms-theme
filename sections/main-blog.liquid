@@ -37,7 +37,7 @@
   const x = {{ allArticles | json }};
   console.log(x);
 </script>
-{%- paginate allArticles by 6 -%}
+{%- paginate allArticles by 18 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
 
   <h1 class="title--primary" {% if section.settings.main_title == '' %}style="display: none;"{% endif %}>
