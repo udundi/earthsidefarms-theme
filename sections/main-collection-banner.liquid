@@ -39,7 +39,7 @@
         </span>
       </h1>
 
-      {%- if section.settings.show_description or collection.handle != "all" -%}
+      {%- if section.settings.show_description and collection.handle != "all" -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
     </div>
