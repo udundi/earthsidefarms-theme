@@ -19,7 +19,7 @@
 {% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
   {% assign blog = link.object %}
-  {% if blog.articles %}
+  {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
     <script>
       const m = {{ allArticles | json }};
