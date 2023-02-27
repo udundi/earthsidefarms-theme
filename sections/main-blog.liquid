@@ -18,19 +18,17 @@
 
 {% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
+  {% if forloop.index == 1 %}
   {% assign blog = link.object %}
   {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
-    <script>
-      let m = {{ allArticles | json }};
-      console.log(m);
-    </script>
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
   {% endif %}
+    {% endif %}
 {% endfor %}
 
 <script>
