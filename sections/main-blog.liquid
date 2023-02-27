@@ -29,6 +29,11 @@
   {% endif %}
 {% endfor %}
 
+<script>
+  const x = {{ allArticles | json }};
+  console.log(x);
+</script>
+
 {% assign allArticles = allArticles | remove_first: ',' | split: ',' %}
 {%- paginate allArticles by 6 -%}
 <div class="main-blog page-width section-{{ section.id }}-padding">
