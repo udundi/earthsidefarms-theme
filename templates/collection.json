@@ -25,10 +25,21 @@
         "padding_top": 0,
         "padding_bottom": 24
       }
+    },
+    "041ef518-ecc0-46f8-a1ab-fbf005f7d5bd": {
+      "type": "text-banner",
+      "settings": {
+        "main_title": "Don't know what to get?",
+        "secondary_title": "Build a bundle!",
+        "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "button_text": "Button label",
+        "button_link": "#"
+      }
     }
   },
   "order": [
     "main-collection-banner",
-    "main-product-grid"
+    "main-product-grid",
+    "041ef518-ecc0-46f8-a1ab-fbf005f7d5bd"
   ]
 }
