@@ -347,8 +347,14 @@
   }
 
   .first-blog-info__bottom-content,
-  .first-blog-info__bottom-content .author-name {
+  .first-blog-info__bottom-content .author-name,
+  .ud-article-card-info__bottom-content,
+  .ud-article-card-info__bottom-content .author-name {
     font-size: 10px;
+  }
+
+  .ud-article-card-info__bottom-content .author-name {
+    display: none;
   }
 
   .ud-article-card {
