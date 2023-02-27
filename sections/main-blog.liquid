@@ -21,9 +21,9 @@
   {% if forloop.index == 3 %}
   {% assign blog = link.object %}
   {% if blog.articles.size > 0 %}
-    {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
+    {% comment %}{% assign allArticles = allArticles | append: ',' | append: blog.articles %}{% endcomment %}
     {% if allArticles %}
-        {% comment %}{% assign allArticles = allArticles | concat:blog.articles %}{% endcomment %}
+        {% assign allArticles = allArticles | concat:blog.articles %}
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
