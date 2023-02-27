@@ -30,7 +30,7 @@
 <div class="text-banner section-{{ section.id }}-padding">
   <div class="swiper" id="snack-image-carousel">
       <div class="swiper-wrapper">
-        {% for snack_image in section.blocks %}
+        {% for block in section.blocks %}
           <div class="swiper-slide">
             <div class="snack-image-container">
               <img src="{{ block.settings.image | image_url: width: 600 }}" class="snack-image" alt="snack image" />
