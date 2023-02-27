@@ -352,17 +352,14 @@
 
   .ud-article-card {
     flex-direction: row;
-    height: 155px;
   }
 
   .ud-article-card-info {
     width: 80%;
-    height: 155px;
   }
 
   .ud-article-card-image {
     width: 20%;
-    height: 155px;
   }
   
   .ud-article-card-info {
