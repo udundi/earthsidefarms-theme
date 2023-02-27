@@ -146,7 +146,7 @@
       ],
       "settings": {
         "heading": "Topic",
-        "heading_alignment": "center",
+        "heading_alignment": "left",
         "color_scheme": "background-1",
         "open_first_collapsible_row": false,
         "padding_top": 0,
