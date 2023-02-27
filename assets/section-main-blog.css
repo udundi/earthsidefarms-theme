@@ -228,7 +228,9 @@
 }
 
 .first-blog-info__top .blog-excerpt,
-.ud-article-card-info__top .blog-excerpt {
+.ud-article-card-info__top .blog-excerpt,
+.first-blog-info__top .blog-excerpt p,
+.ud-article-card-info__top .blog-excerpt p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
