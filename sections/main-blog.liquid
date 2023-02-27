@@ -162,7 +162,7 @@
     {% endif %}
                   
     <div class="blog-articles">
-      {% for article in allArticles %}
+      {% for article in blog.articles %}
         {% unless forloop.index == 1 %}
           <div class="blog-articles__article article">
             {%- render 'article-card',
