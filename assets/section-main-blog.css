@@ -208,7 +208,8 @@
   padding: 48px;
 }
 
-.first-blog-info__top .blog-tag {
+.first-blog-info__top .blog-tag,
+.ud-article-card .blog-tag {
   border: none;
   font-weight: 500;
   font-size: 14px;
