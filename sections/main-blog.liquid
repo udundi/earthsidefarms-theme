@@ -161,10 +161,10 @@
       </a>
     {% endif %}
                   
-    <div class="blog-articles grid product-grid grid--2-col-tablet-down grid--4-col-desktop">
+    <div class="blog-articles">
       {% for article in blog.articles %}
         {% unless forloop.index == 1 %}
-          <div class="blog-articles__article article grid__item">
+          <div class="blog-articles__article">
             {%- render 'ud-article-card', article: article -%}
           </div>
         {% endunless %}
