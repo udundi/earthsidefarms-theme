@@ -18,8 +18,7 @@
 
 {% assign allArticles = false %}
 {% for link in linklists.blog-categories.links %}
-  {% if forloop.index == 1 %}
-    here
+  {% if forloop.index == 3 %}
   {% assign blog = link.object %}
   {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
