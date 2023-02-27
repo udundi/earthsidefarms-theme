@@ -58,7 +58,7 @@
           </header>
 
       {%- when 'share' -%}
-          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }} style="display: none;">
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
                 {% render 'icon-share' %}
