@@ -21,13 +21,13 @@
   {% assign blog = link.object %}
   {% if blog.articles %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
+    <script>
+      const x = {{ allArticles | json }};
+      console.log(x);
+    </script>
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
     {% else %}
-      <script>
-        const x = {{ blog.articles | json }};
-        console.log(x);
-      </script>
         {% assign allArticles = blog.articles %}
     {% endif %}
   {% endif %}
