@@ -21,13 +21,11 @@
   {% assign blog = link.object %}
   {% if blog.articles %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
-    {% comment %}
     {% if allArticles %}
         {% assign allArticles = allArticles | concat:blog.articles %}
     {% else %}
         {% assign allArticles = blog.articles %}
     {% endif %}
-    {% endcomment %}
   {% endif %}
 {% endfor %}
 
