@@ -22,7 +22,7 @@
   {% if blog.articles.size > 0 %}
     {% assign allArticles = allArticles | append: ',' | append: blog.articles %}
     <script>
-      const m = {{ allArticles | json }};
+      let m = {{ allArticles | json }};
       console.log(m);
     </script>
     {% if allArticles %}
