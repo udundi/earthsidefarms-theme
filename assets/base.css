@@ -3209,10 +3209,11 @@ details-disclosure > details.mega-menu {
   transition: 0.3s;
 }
 
-.button--secondary:hover {
+.button--secondary:hover,
+.button--primary:hover{
   color: #fff;
   background: #3356AE;
-  border: 1px solid #3356AE;
+  border: 2px solid #3356AE;
 }
 
 .button--secondary::after {
