@@ -23,3 +23,8 @@
   display: block;
   text-align: center;
 }
+
+.text-banner .button {
+  margin: 0 auto;
+  text-align: center;
+}
