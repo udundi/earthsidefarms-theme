@@ -320,6 +320,7 @@
 @media (max-width: 768px) {
   .first-blog-article {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .first-blog-image,
@@ -352,6 +353,7 @@
 
   .ud-article-card {
     flex-direction: row;
+    margin-bottom: 20px;
   }
 
   .ud-article-card-info {
