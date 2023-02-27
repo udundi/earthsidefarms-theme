@@ -14,6 +14,12 @@
   }
 {% endstyle %}
 
+<div class="text-banner .section-{{ section.id }}-padding">
+  <h3>{{ section.settings.main_title }} <br /> {{ section.settings.main_title }}</h3>
+  <p>{{ section.settings.sub_text }}</p>
+  <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+</div>
+
 {% schema %}
 {
   "name": "Text Banner",
