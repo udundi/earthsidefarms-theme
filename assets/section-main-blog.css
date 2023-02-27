@@ -360,7 +360,7 @@
 
   .ud-article-card-image {
     width: 30%;
-    min-height: none;
+    min-height: 0;
   }
   
   .ud-article-card-info {
