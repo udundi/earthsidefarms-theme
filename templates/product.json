@@ -34,6 +34,13 @@
           "type": "description",
           "settings": {
           }
+        },
+        "2a1e6f80-1a5b-4388-8fae-57d1d9e822ce": {
+          "type": "popup",
+          "settings": {
+            "text": "Pop-up link text",
+            "page": "careers"
+          }
         }
       },
       "block_order": [
@@ -42,7 +49,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "2a1e6f80-1a5b-4388-8fae-57d1d9e822ce"
       ],
       "settings": {
         "enable_sticky_info": true,
