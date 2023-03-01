@@ -387,12 +387,6 @@
                 {%- endform -%}
               </div>
               {% endcomment %}
-            {%- when 'description' -%}
-              {%- if product.description != blank -%}
-                <div class="product__description rte quick-add-hidden">
-                  {{ product.description }}
-                </div>
-              {%- endif -%}
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
@@ -446,6 +440,12 @@
                   </button>
                 </quantity-input>
               </div>
+            {%- when 'description' -%}
+              {%- if product.description != blank -%}
+                <div class="product__description rte quick-add-hidden">
+                  {{ product.description }}
+                </div>
+              {%- endif -%}
             {%- when 'popup' -%}
               <modal-opener
                 class="product-popup-modal__opener no-js-hidden quick-add-hidden"
