@@ -668,7 +668,7 @@
                           </svg>
                         </div>
                       </button>
-                      {%- if block.settings.show_dynamic_checkout -%}
+                      {%- if block.settings.show_dynamic_checkout and product.selected_or_first_available_variant.available -%}
                         {{ form | payment_button }}
                       {%- endif -%}
                     </div>
