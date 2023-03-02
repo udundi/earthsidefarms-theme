@@ -35,6 +35,13 @@
           "type": "description",
           "settings": {
           }
+        },
+        "0c6c3014-2835-4e73-8f80-4b1a289081ee": {
+          "type": "info_icons",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
+            "text": "Sugar Free"
+          }
         }
       },
       "block_order": [
@@ -43,7 +50,8 @@
         "variant_picker",
         "820ad897-f367-4674-a2e9-632ea3e8ac81",
         "bc9f89e9-c9d0-4055-9551-e73080cf812e",
-        "description"
+        "description",
+        "0c6c3014-2835-4e73-8f80-4b1a289081ee"
       ],
       "settings": {
         "enable_sticky_info": true,
