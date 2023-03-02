@@ -210,6 +210,10 @@
       text-transform: uppercase;
     }
 
+    .product-switch {
+      max-width: 37rem;
+    }
+
     @media (max-width: 768px) {
       .product__title h1 {
         font-size: 24px;
@@ -242,6 +246,12 @@
 
       .product-form__quantity label {
         font-size: 14px;
+      }
+
+      .product-form__input,
+      .product-switch {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   {%- endstyle -%}
@@ -587,14 +597,16 @@
               </div>
               {% endcomment %}
             {%- when 'product_switch' -%}
-              <p class="product-switch__text"><span>Choose Six Pack: </span>{{ product.title }}</p>
-              <div class="product-switch__container">
-                {% for other_product in block.settings.collection.products limit: 5 %}
-                    <a class="{% if product.handle == other_product.handle %}active {% endif %}product-switch__product" href="{{ other_product.url }}">
-                      <div class="product-switch__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
-                      <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
-                    </a>
-                {% endfor %}
+              <div class="product-switch">
+                <p class="product-switch__text"><span>Choose Six Pack: </span>{{ product.title }}</p>
+                <div class="product-switch__container">
+                  {% for other_product in block.settings.collection.products limit: 5 %}
+                      <a class="{% if product.handle == other_product.handle %}active {% endif %}product-switch__product" href="{{ other_product.url }}">
+                        <div class="product-switch__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
+                        <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                      </a>
+                  {% endfor %}
+                </div>
               </div>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
