@@ -126,6 +126,28 @@
       height: 65%;
       padding: 0;
     }
+
+    @media (max-width: 768px) {
+      .product-switch__text {
+        font-size: 14px;
+      }
+      
+      .product-switch__product {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .product-switch__product.active {
+        border: 1.3px solid #5567BD;
+        padding: 0;
+      }
+
+      .product-switch__product:hover {
+        border: 1.3px solid #5567BD;
+        cursor: pointer;
+        padding: 0;
+      }
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
