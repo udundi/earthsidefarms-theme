@@ -422,7 +422,7 @@
               <p class="product-switch__text"><span>Choose Six Pack: </span>{{ product.title }}</p>
               <div class="product-switch__container">
                 {% for other_product in block.settings.collection.products limit: 5 %}
-                  <div class="product-switch__product">
+                  <div class="product-switch__product{% for tag in other_product.tags %}{% if tag.handle contains 'color_' %} {{ tag }}{% endif %}{% endfor %}">
                     <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
                   </div>
                 {% endfor %}
