@@ -39,8 +39,11 @@
         "0c6c3014-2835-4e73-8f80-4b1a289081ee": {
           "type": "info_icons",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled_design_6.png",
-            "text": "Sugar Free"
+            "image_1": "shopify:\/\/shop_images\/Untitled_design_6.png",
+            "tex_1": "Sugar Free",
+            "text_2": "Sugar Free",
+            "text_3": "Sugar Free",
+            "text_4": "Sugar Free"
           }
         }
       },
