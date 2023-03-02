@@ -45,6 +45,37 @@
       padding: 8px 0 8px 16px;
       border-left: 1px solid #000;
     }
+
+    .product-switch__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    .product-switch__text span {
+      font-weight: 900;
+    }
+    
+    .product-switch__container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .product-switch__product {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      position: relative;
+    }
+    
+    .product-switch__product img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -387,6 +418,15 @@
                 {%- endform -%}
               </div>
               {% endcomment %}
+            {%- when 'product_switch' -%}
+              <p class="product-switch__text"><span>Choose Six Pack: </span>{{ product.title }}</p>
+              <div class="product-switch__container">
+                {% for other_product in block.settings.collection limit: 5 %}
+                  <div class="product-switch__product">
+                    <img src="{{ other_product.featured_image | file_img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                  </div>
+                {% endfor %}
+              </div>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'collapsible_tab' -%}
