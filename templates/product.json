@@ -19,6 +19,12 @@
             "picker_type": "button"
           }
         },
+        "820ad897-f367-4674-a2e9-632ea3e8ac81": {
+          "type": "product_switch",
+          "settings": {
+            "collection": "pdp-product-switch"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -34,22 +40,16 @@
           "type": "description",
           "settings": {
           }
-        },
-        "820ad897-f367-4674-a2e9-632ea3e8ac81": {
-          "type": "product_switch",
-          "settings": {
-            "collection": "pdp-product-switch"
-          }
         }
       },
       "block_order": [
         "title",
         "price",
         "variant_picker",
+        "820ad897-f367-4674-a2e9-632ea3e8ac81",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "820ad897-f367-4674-a2e9-632ea3e8ac81"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
