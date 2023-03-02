@@ -22,6 +22,7 @@
         "820ad897-f367-4674-a2e9-632ea3e8ac81": {
           "type": "product_switch",
           "settings": {
+            "collection": "pdp-product-switch"
           }
         },
         "quantity_selector": {
