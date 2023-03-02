@@ -1053,33 +1053,41 @@
                 </product-recommendations>
             {%- when 'info_icons' -%}
               <div class="info_icons">
-                <div class="info-container">
-                  <div class="info-img-wrapper">
-                    <img src="{{ info.settings.image_1 | img_url: 'master'}} alt="{{ product.title }} information" />
+                {% if info.settings.image_1 %}
+                  <div class="info-container">
+                    <div class="info-img-wrapper">
+                      <img src="{{ info.settings.image_1 | img_url: 'master'}} alt="{{ product.title }} information" />
+                    </div>
+                    <div class="info-text">{{ info.settings.text_1 }}</div>
                   </div>
-                  <div class="info-text">{{ info.settings.text_1 }}</div>
-                </div>
+                {% endif %}
 
-                <div class="info-container">
-                  <div class="info-img-wrapper">
-                    <img src="{{ info.settings.image_2 | img_url: 'master'}} alt="{{ product.title }} information" />
+                {% if info.settings.image_2 %}
+                  <div class="info-container">
+                    <div class="info-img-wrapper">
+                      <img src="{{ info.settings.image_2 | img_url: 'master'}} alt="{{ product.title }} information" />
+                    </div>
+                    <div class="info-text">{{ info.settings.text_2 }}</div>
                   </div>
-                  <div class="info-text">{{ info.settings.text_2 }}</div>
-                </div>
+                {% endif %}
 
-                <div class="info-container">
-                  <div class="info-img-wrapper">
-                    <img src="{{ info.settings.image_3 | img_url: 'master'}} alt="{{ product.title }} information" />
+                {% if info.settings.image_3 %}
+                  <div class="info-container">
+                    <div class="info-img-wrapper">
+                      <img src="{{ info.settings.image_3 | img_url: 'master'}} alt="{{ product.title }} information" />
+                    </div>
+                    <div class="info-text">{{ info.settings.text_3 }}</div>
                   </div>
-                  <div class="info-text">{{ info.settings.text_3 }}</div>
-                </div>
+                {% endif %}
 
-                <div class="info-container">
-                  <div class="info-img-wrapper">
-                    <img src="{{ info.settings.image_4 | img_url: 'master'}} alt="{{ product.title }} information" />
+                {% if info.settings.image_4 %}
+                  <div class="info-container">
+                    <div class="info-img-wrapper">
+                      <img src="{{ info.settings.image_4 | img_url: 'master'}} alt="{{ product.title }} information" />
+                    </div>
+                    <div class="info-text">{{ info.settings.text_4 }}</div>
                   </div>
-                  <div class="info-text">{{ info.settings.text_4 }}</div>
-                </div>
+                {% endif %}
               </div>
           {%- endcase -%}
         {%- endfor -%}
