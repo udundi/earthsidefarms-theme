@@ -421,7 +421,7 @@
             {%- when 'product_switch' -%}
               <p class="product-switch__text"><span>Choose Six Pack: </span>{{ product.title }}</p>
               <div class="product-switch__container">
-                {% for other_product in block.settings.product_switch limit: 5 %}
+                {% for other_product in block.settings.product_switch.products limit: 5 %}
                   <div class="product-switch__product">
                     <img src="{{ other_product.featured_image | file_img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
                   </div>
