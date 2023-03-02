@@ -68,6 +68,9 @@
       height: 55px;
       border-radius: 50%;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .product-switch__product img {
@@ -77,19 +80,19 @@
       object-fit: cover;
     }
 
-    .product-switch__product.color_yellow {
+    .product-switch__product:hover .product-switch__product-bg.color_yellow {
       background: #FFAD56;
     }
 
-    .product-switch__product.color_blue {
+    .product-switch__product:hover .product-switch__product-bg.color_blue {
       background: rgba(93, 111, 193, 0.5)
     }
 
-    .product-switch__product.color_pink {
+    .product-switch__product:hover .product-switch__product-bg.color_pink {
       background: #FE4D93;
     }
 
-    .product-switch__product.color_teal {
+    .product-switch__product:hover .product-switch__product-bg.color_teal {
       background: #B9D4DE;
     }
 
@@ -100,7 +103,18 @@
 
     .product-switch__product:hover {
       border: 2px solid #5567BD;
-      padding: 2px;
+    }
+
+    .product-switch__product .product-switch__product-bg {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .product-switch__product:hover .product-switch__product-bg {
+      width: 50px;
+      height: 50px;
     }
   {%- endstyle -%}
 
@@ -449,6 +463,7 @@
               <div class="product-switch__container">
                 {% for other_product in block.settings.collection.products limit: 5 %}
                   <div class="{% if product.handle == other_product.handle %}active {% endif %}product-switch__product{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}">
+                    <div class="product-switch__product-bg"></div>
                     <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
                   </div>
                 {% endfor %}
