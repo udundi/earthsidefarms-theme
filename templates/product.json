@@ -35,8 +35,8 @@
           "settings": {
           }
         },
-        "10000a59-546e-4470-9e0b-53c46d02eacd": {
-          "type": "product",
+        "820ad897-f367-4674-a2e9-632ea3e8ac81": {
+          "type": "product_switch",
           "settings": {
             "collection": "pdp-product-switch"
           }
@@ -49,7 +49,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "10000a59-546e-4470-9e0b-53c46d02eacd"
+        "820ad897-f367-4674-a2e9-632ea3e8ac81"
       ],
       "settings": {
         "enable_sticky_info": true,
