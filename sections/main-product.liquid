@@ -473,8 +473,10 @@
               <div class="product-switch__container">
                 {% for other_product in block.settings.collection.products limit: 5 %}
                   <div class="{% if product.handle == other_product.handle %}active {% endif %}product-switch__product">
-                    <div class="product-switch__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
-                    <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                    <a href="{{ other_product.url }}">
+                      <div class="product-switch__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
+                      <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                    </a>
                   </div>
                 {% endfor %}
               </div>
