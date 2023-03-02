@@ -25,13 +25,8 @@
             "collection": "pdp-product-switch"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "bc9f89e9-c9d0-4055-9551-e73080cf812e": {
+          "type": "add_to_cart",
           "settings": {
             "show_dynamic_checkout": true
           }
@@ -47,8 +42,7 @@
         "price",
         "variant_picker",
         "820ad897-f367-4674-a2e9-632ea3e8ac81",
-        "quantity_selector",
-        "buy_buttons",
+        "bc9f89e9-c9d0-4055-9551-e73080cf812e",
         "description"
       ],
       "settings": {
