@@ -1053,14 +1053,33 @@
                 </product-recommendations>
             {%- when 'info_icons' -%}
               <div class="info_icons">
-                {% for info in block.settings.info_icons %}
-                  <div class="info-container">
-                    <div class="info-img-wrapper">
-                      <img src="{{ info.settings.image | img_url: 'master'}} alt="{{ product.title }} information" />
-                    </div>
-                    <div class="info-text">{{ info.settings.text }}</div>
+                <div class="info-container">
+                  <div class="info-img-wrapper">
+                    <img src="{{ info.settings.image_1 | img_url: 'master'}} alt="{{ product.title }} information" />
                   </div>
-                {% endfor %}
+                  <div class="info-text">{{ info.settings.text_1 }}</div>
+                </div>
+
+                <div class="info-container">
+                  <div class="info-img-wrapper">
+                    <img src="{{ info.settings.image_2 | img_url: 'master'}} alt="{{ product.title }} information" />
+                  </div>
+                  <div class="info-text">{{ info.settings.text_2 }}</div>
+                </div>
+
+                <div class="info-container">
+                  <div class="info-img-wrapper">
+                    <img src="{{ info.settings.image_3 | img_url: 'master'}} alt="{{ product.title }} information" />
+                  </div>
+                  <div class="info-text">{{ info.settings.text_3 }}</div>
+                </div>
+
+                <div class="info-container">
+                  <div class="info-img-wrapper">
+                    <img src="{{ info.settings.image_4 | img_url: 'master'}} alt="{{ product.title }} information" />
+                  </div>
+                  <div class="info-text">{{ info.settings.text_4 }}</div>
+                </div>
               </div>
           {%- endcase -%}
         {%- endfor -%}
@@ -2086,18 +2105,51 @@
     },
     {
       "type": "info_icons",
-      "name": "Info Icons",
+      "name": "Four Info Icons",
       "limit": 1,
       "settings": [
         {
           "type": "image_picker",
-          "id": "image",
-          "label": "Pick an image"
+          "id": "image_1",
+          "label": "Pick an image for icon one"
         },
         {
           "type": "text",
-          "id": "text",
-          "label": "Write some text",
+          "id": "tex_1",
+          "label": "Write some text for icon one",
+          "default": "Sugar Free"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Pick an image for icon two"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Write some text for icon two",
+          "default": "Sugar Free"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Pick an image for icon three"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "Write some text for icon three",
+          "default": "Sugar Free"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Pick an image for icon four"
+        },
+        {
+          "type": "text",
+          "id": "text_4",
+          "label": "Write some text for icon four",
           "default": "Sugar Free"
         }
       ]
