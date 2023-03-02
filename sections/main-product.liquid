@@ -1018,6 +1018,17 @@
                     <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                   {%- endif -%}
                 </product-recommendations>
+            {%- when 'info_icons' -%}
+              <div class="info_icons">
+                {% for info in block.settings.info_icons %}
+                  <div class="info-container">
+                    <div class="info-img-wrapper">
+                      <img src="{{ info.settings.image | img_url: 'master'}} alt="{{ product.title }} information" />
+                    </div>
+                    <div class="info-text">{{ info.settings.text }}</div>
+                  </div>
+                {% endfor %}
+              </div>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -2039,7 +2050,25 @@
               "label": "Pick a collection to display"
           }
       ]
-  }
+    },
+    {
+      "type": "info_icons",
+      "name": "Info Icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Pick an image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Write some text",
+          "default": "Sugar Free"
+        }
+      ]
+    }
   ],
   "settings": [
     {
