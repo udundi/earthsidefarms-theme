@@ -11,6 +11,13 @@
   .drawer {
     visibility: hidden;
   }
+
+  .drawer__heading {
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 48px;
+    color: #3050A2;
+  }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
@@ -46,8 +53,8 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
         <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+        <h2 class="drawer__heading">Shopping Bag</h2>
       </div>
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
