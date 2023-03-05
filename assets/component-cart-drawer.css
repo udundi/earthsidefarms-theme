@@ -563,11 +563,14 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   position: relative;
   display: inline-block;
   border: 0.5px solid #3356AE;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
 }
 
 .cart-drawer__tooltip .cart-drawer__tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 80%;
   background-color: #3356AE;
   color: #fff;
   text-align: center;
