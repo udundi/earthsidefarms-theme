@@ -102,9 +102,9 @@
                               height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
                             >
                             {% endcomment %}
-                            <a class="{% if product.handle == other_product.handle %}active {% endif %}cart-product__product" href="{{ other_product.url }}">
-                              <div class="cart-product__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
-                              <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                            <a class="cart-product__product" href="{{ item.url }}">
+                              <div class="cart-product__product-bg{% for tag in item.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
+                              <img src="{{ item.image | img_url: 'master' }}" alt="{{ item.title }}" loading="lazy" />
                             </a>
                           {% endif %}
                         </td>
