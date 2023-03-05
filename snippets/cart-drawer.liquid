@@ -103,7 +103,7 @@
                             >
                             {% endcomment %}
                             <a class="cart-product__product" href="{{ item.url }}">
-                              <div class="cart-product__product-bg{% for tag in item.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
+                              <div class="cart-product__product-bg{% for tag in item.tags %}{{ tag }}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
                               <img src="{{ item.image | img_url: 'master' }}" alt="{{ item.title }}" loading="lazy" />
                             </a>
                           {% endif %}
