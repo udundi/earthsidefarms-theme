@@ -565,7 +565,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   border-bottom: 1px dotted black;
 }
 
-.cart-drawer__tooltip .cartdrawer__tooltiptext {
+.cart-drawer__tooltip .cart-drawer__tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: black;
