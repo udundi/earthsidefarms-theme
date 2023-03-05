@@ -236,9 +236,9 @@
           <div class="totals" role="status">
             <h2 class="totals__subtotal">
              {{ 'sections.cart.subtotal' | t }}
-              <div class="tooltip">
+              <div class="cart-drawer__tooltip">
                 {% render 'icon-info' %}
-                <span class="tooltiptext">
+                <span class="cart-drawer__tooltiptext">
                   <small class="tax-note caption-large rte">
                     {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                       {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
