@@ -445,12 +445,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   width: 100%;
 }
 
-.drawer quanitity-input .quantity__button {
+.drawer quantity-input .quantity__button {
   line-height: 12px;
   width: 12px;
 }
 
-.drawer quanitity-input .quantity__input {
+.drawer quantity-input .quantity__input {
   line-height: 12px;
   width: 12px;
   border: none;
