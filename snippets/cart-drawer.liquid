@@ -7,47 +7,6 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 
-<style>
-  .drawer {
-    visibility: hidden;
-  }
-
-  .drawer__header {
-    display: block!important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    padding-bottom: 0!important;
-  }
-
-  .drawer__heading {
-    font-weight: 900;
-    font-size: 35px;
-    line-height: 48px;
-    color: #3050A2;
-    clear: both;
-  }
-
-  .drawer__close {
-    {% if cart != empty %}
-    position: static!important;
-    {% endif %}
-    right: 25px;
-    top: 25px;
-    float: right;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #F9F4EF!important;
-    min-height: 0!important;
-    min-width: 0!important;
-    line-height: 12px;
-  }
-
-  .drawer__close svg {
-    width: 12px!important;
-    height: 12px!important;
-  }
-</style>
-
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay"class="cart-drawer__overlay"></div>
