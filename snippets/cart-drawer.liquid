@@ -89,9 +89,10 @@
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
                       <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
+                      
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
-                            {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+                            {% comment %} Leave empty space due to a:empty CSS display: none rule
                             <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
                             <img class="cart-item__image"
                               src="{{ item.image | image_url: width: 300 }}"
@@ -100,6 +101,11 @@
                               width="150"
                               height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
                             >
+                            {% endcomment %}
+                            <a class="{% if product.handle == other_product.handle %}active {% endif %}cart-product__product" href="{{ other_product.url }}">
+                              <div class="cart-product__product-bg{% for tag in other_product.tags %}{% if tag contains 'color_' %} {{ tag }}{% endif %}{% endfor %}"></div>
+                              <img src="{{ other_product.featured_image | img_url: 'master' }}" alt="{{ other_product.title }}" loading="lazy" />
+                            </a>
                           {% endif %}
                         </td>
 
