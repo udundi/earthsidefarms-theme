@@ -522,9 +522,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .drawer__close {
-  {% if cart != empty %}
-  position: static!important;
-  {% endif %}
   right: 25px;
   top: 25px;
   float: right;
