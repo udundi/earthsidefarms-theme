@@ -1251,3 +1251,7 @@ a.product__text {
   font-size: 16px;
   line-height: 150%;
 }
+
+.product-form__input .select {
+  border: 1px solid #3356AE;
+}
