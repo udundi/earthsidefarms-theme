@@ -75,7 +75,7 @@
             </div>
           {%- endif -%}
         </div>
-      {%- endif -%}
+      {%- else -%}
       <div class="drawer__header">
         <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
         <h2 class="drawer__heading">Shopping Bag</h2>
@@ -312,6 +312,7 @@
           </button>
         </div>
       </div>
+      {%- endif -%}
     </div>
   </div>
 </cart-drawer>
