@@ -16,7 +16,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
           }
         },
         "820ad897-f367-4674-a2e9-632ea3e8ac81": {
@@ -40,6 +40,7 @@
           "type": "info_icons",
           "settings": {
             "image_1": "shopify:\/\/shop_images\/Untitled_design_6.png",
+            "text_1": "Sugar Free",
             "image_2": "shopify:\/\/shop_images\/Untitled_design_7.png",
             "text_2": "Keto Friendly",
             "image_3": "shopify:\/\/shop_images\/Untitled_design_8.png",
