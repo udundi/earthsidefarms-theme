@@ -417,3 +417,18 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   font-size: 16px;
   line-height: 150%;
 }
+
+.cart-item__totals.right {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cart-item cart-remove-button {
+  width: auto;
+}
+
+.cart-item cart-remove-button button {
+  line-height: 12px;
+  min-height: 0;
+  height: 14px;
+}
