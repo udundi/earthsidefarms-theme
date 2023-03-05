@@ -558,3 +558,39 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   line-height: 150%;
   color: #3356AE;
 }
+
+.cart-drawer__tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.cart-drawer__tooltip .cartdrawer__tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.cart-drawer__tooltip .cart-drawer__tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.cart-drawer__tooltip:hover .cart-drawer__tooltiptext {
+  visibility: visible;
+}
