@@ -471,3 +471,15 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   display: flex;
   justify-content: space-between;
 }
+
+.cart-product__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-right: 15px;
+}
+
+.cart-product__right cart-remove-button .button {
+  min-width: 0;
+}
