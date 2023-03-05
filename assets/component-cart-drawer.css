@@ -396,7 +396,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cart-product__product {
-  width: 30%;
+  width: 25%;
   height: 92px;
   border-radius: 50%;
   position: relative;
@@ -430,7 +430,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cart-product__details {
-  width: 50%;
+  width: 55%;
 }
 
 .cart-item__totals.right {
