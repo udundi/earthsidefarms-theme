@@ -11,6 +11,12 @@
   .drawer {
     visibility: hidden;
   }
+
+  .drawer__close {
+    {% if cart != empty %}
+    position: static!important;
+    {% endif %}
+  }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
