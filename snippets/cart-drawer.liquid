@@ -89,6 +89,7 @@
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
+                {% for item in cart.items %}
                 <div class="cart-items__container">
                   {% if item.image %}
                     <a class="cart-product__product" href="{{ item.url }}">
@@ -232,6 +233,7 @@
                     </div>
                   </div>
                 </div>
+                {% endfor %}
 
 
                 {% comment %}
