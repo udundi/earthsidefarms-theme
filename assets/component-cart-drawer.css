@@ -466,3 +466,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 #CartDrawer-Note {
   border: 1px solid #000;
 }
+
+.cart-item__container {
+  display: flex;
+  justify-content: space-between;
+}
