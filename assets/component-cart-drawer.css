@@ -462,3 +462,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .drawer quantity-input .quantity__button svg {
   color: #3356AE;
 }
+
+#CartDraer-note {
+  border: 1px solid #000;
+}
