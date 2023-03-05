@@ -568,7 +568,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart-drawer__tooltip .cart-drawer__tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: #3356AE;
   color: #fff;
   text-align: center;
   border-radius: 6px;
