@@ -563,6 +563,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   color: #3356AE;
 }
 
+.cart-drawer .totals .totals__subtotal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .cart-drawer__tooltip {
   position: relative;
   display: flex;
@@ -594,11 +600,11 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   content: "";
   position: absolute;
   bottom: 100%;
-  left: 50%;
+  left: 10%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent #000 transparent;
 }
 
 .cart-drawer__tooltip:hover .cart-drawer__tooltiptext {
