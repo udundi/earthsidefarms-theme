@@ -3224,3 +3224,23 @@ details-disclosure > details.mega-menu {
 .button--secondary::after {
   box-shadow: none;
 }
+
+.color_yellow {
+  background: #FFAD56;
+}
+
+.color_blue {
+  background: rgba(93, 111, 193, 0.5)
+}
+
+.color_pink {
+  background: #FE4D93;
+}
+
+.color_teal {
+  background: #B9D4DE;
+}
+
+.color_light {
+  background: #f1f1f1;
+}
