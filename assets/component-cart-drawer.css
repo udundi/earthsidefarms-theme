@@ -73,14 +73,16 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__header {
   position: relative;
   background-color: rgb(var(--color-background));
-  padding: 1.5rem 30px;
-  display: flex;
+  padding: 0 30px;
+  display: block;
   justify-content: space-between;
   align-items: center;
 }
 
 .drawer__heading {
   margin: 0 0 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .drawer__close {
@@ -505,4 +507,37 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .cart-item__container .details {
   margin: 5px 0;
+}
+
+.drawer {
+  visibility: hidden;
+}
+
+.drawer__heading {
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 48px;
+  color: #3050A2;
+  clear: both;
+}
+
+.drawer__close {
+  {% if cart != empty %}
+  position: static!important;
+  {% endif %}
+  right: 25px;
+  top: 25px;
+  float: right;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #F9F4EF!important;
+  min-height: 0!important;
+  min-width: 0!important;
+  line-height: 12px;
+}
+
+.drawer__close svg {
+  width: 12px!important;
+  height: 12px!important;
 }
