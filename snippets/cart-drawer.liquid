@@ -233,7 +233,8 @@
                   </div>
                 </div>
 
-              
+
+                {% comment %}
                 <table class="cart-items" role="table">
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
@@ -387,6 +388,7 @@
                     {%- endfor -%}
                   </tbody>
                 </table>
+                {% endcomment %}
               </div>
             {%- endif -%}
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
