@@ -588,9 +588,9 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   text-align: center;
   border: 1px solid #000;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 12px 18px;
   position: absolute;
-  z-index: 1;
+  z-index: 55;
   top: 150%;
   left: 50%;
   margin-left: -60px;
