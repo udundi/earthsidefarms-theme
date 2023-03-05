@@ -421,6 +421,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart-item__totals.right {
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .cart-item cart-remove-button {
@@ -430,5 +431,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .cart-item cart-remove-button button {
   line-height: 12px;
   min-height: 0;
+  min-width: 0;
   height: 14px;
 }
