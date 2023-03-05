@@ -3226,7 +3226,7 @@ details-disclosure > details.mega-menu {
 }
 
 .color_yellow {
-  background: #FFAD56;
+  background: rgba(255, 173, 86, 0.5);
 }
 
 .color_blue {
@@ -3234,11 +3234,11 @@ details-disclosure > details.mega-menu {
 }
 
 .color_pink {
-  background: #FE4D93;
+  background: rgba(254, 77, 147, 0.5);
 }
 
 .color_teal {
-  background: #B9D4DE;
+  background: rgba(185, 212, 222, 0.8);
 }
 
 .color_light {
