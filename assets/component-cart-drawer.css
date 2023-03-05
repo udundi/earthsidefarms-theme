@@ -549,3 +549,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   width: 12px!important;
   height: 12px!important;
 }
+
+.cart__drawer .totals .totals__subtotal,
+.cart__drawer .totals .totals__subtotal-value {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3356AE;
+}
