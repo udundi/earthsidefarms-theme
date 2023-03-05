@@ -422,6 +422,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  padding-right: 1rem;
 }
 
 .cart-item cart-remove-button {
