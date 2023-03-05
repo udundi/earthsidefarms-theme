@@ -471,6 +471,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .cart-product__right {
@@ -483,4 +485,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .cart-product__right cart-remove-button .button {
   min-width: 0;
+}
+
+.cart-item__container .details {
+  margin: 5px 0;
 }
