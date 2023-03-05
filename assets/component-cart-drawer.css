@@ -385,8 +385,8 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .cart-product__product {
-  width: 55px;
-  height: 55px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -401,17 +401,6 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.cart-product__product.active {
-  border: 2px solid #5567BD;
-  padding: 0;
-}
-
-.cart-product__product:hover {
-  border: 2px solid #5567BD;
-  cursor: pointer;
-  padding: 0;
 }
 
 .cart-product__product .cart-product__product-bg {
