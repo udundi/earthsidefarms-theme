@@ -11,15 +11,55 @@
     }
   }
 
+  .scroll-content__links-container {
+    background: #F9F4EF;
+    width: 100%;
+  }
+
+  .scroll-content__links-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    padding: 18px 100px;
+  }
+
+  .scroll-content__links-left {
+    width: 10%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 120%;
+    color: #2F4FA1;
+  }
+
+  .scroll-content__links-right {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .scroll-content__links-right .scroll-content__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #888;
+  }
+
+  .scroll-content__links-right .scroll-content__link:hover,
+  .scroll-content__links-right .scroll-content__link.active {
+    color: #000000;
+  }
 </style>
 
 <div class="scroll-content__container section-{{ section.id }}-padding">
   <div class="scroll-content__links-container">
-    <div class="scroll-content__links-left">{{ section.settings.title }}</div>
-    <div class="scroll-content__links-right">
-      {% for block in section.blocks %}
-        <a class="scroll-content__link" href="#{{ block.title | handle }}-{{ block.secondary_title | handle }}">{{ block.title | handle }} {{ block.secondary_title | handle }}</a>
-      {% endfor %}
+    <div class="scroll-content__links-wrapper">
+      <div class="scroll-content__links-left">{{ section.settings.title }}</div>
+      <div class="scroll-content__links-right">
+        {% for block in section.blocks %}
+          <a class="scroll-content__link" href="#{{ block.title | handle }}-{{ block.secondary_title | handle }}">{{ block.title | handle }} {{ block.secondary_title | handle }}</a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
