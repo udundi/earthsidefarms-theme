@@ -1,12 +1,316 @@
+<style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  
+  .blue-banner__container {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    background: #29438B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blue-banner__text-wrapper {
+    width: 100%;
+    max-width: 650px;
+    margin-right: 100px;
+  }
+
+  .blue-banner__header,
+  .blue-banner-text {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 120%;
+    color: #fff;
+    margin: 0;
+  }
+
+  .blue-banner__header {
+    color: #FF9A30;
+  }
+
+  .blue-banner__image-container {
+    min-width: 425px;
+    min-height: 425px;
+    width: 425px;
+    height: 425px;
+    position: relative;
+    border-radius: 50%;
+  }
+
+  .blue-banner__image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 995px) {
+    .blue-banner__image-container {
+      min-width: 275px;
+      min-height: 275px;
+      width: 275px;
+      height: 275px;
+      position: relative;
+    }
+    
+    .blue-banner__header,
+    .blue-banner-text {
+      font-size: 35px;
+      line-height: 110%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .blue-banner__container {
+      padding-right: 8px;
+      padding-left: 8px;
+      flex-direction: column;
+    }
+
+    .blue-banner__text-wrapper {
+      margin-right: 0;
+    }
+
+    .blue-banner__header,
+    .blue-banner-text {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .blue-banner-text {
+      margin-bottom: 30px;
+    }
+  }
+</style>
+
+<div class="blue-banner__container section-{{ section.id }}-padding">
+  <div class="blue-banner__text-wrapper">
+    <div class="blue-banner__header">{{ section.settings.title }}</div>
+    <p class="blue-banner-text">{{ section.settings.sub_text }}</p>
+  </div>
+
+  <div class="blue-banner__image-container">
+    <img src="{{ section.settings.image | img_url: 'master' }}" alt="Our mission image" loading="lazy"/>
+  </div>
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Scroll To Content",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Why our products are healthier",
+        "label": "Scrollbar text"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Content",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Low to no",
+            "label": "Content Title"
+          },
+          {
+            "type": "text",
+            "id": "secondary_title",
+            "default": "added sugar",
+            "label": "Content Secondary Title"
+          },
+          {
+            "type": "text",
+            "id": "sub_text",
+            "default": "On Average, each person in the U.S. consumed 113 pounds of sugar each year, that’s 36 billion pounds of sugar in total.  That’s a whole lot of sugar.",
+            "label": "Content Text"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Pick an image for the content"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_1",
+            "default": "Improved weight management",
+            "label": "Detail Title One"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_1",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text One"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_1",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_2",
+            "default": "Improved weight management",
+            "label": "Detail Title Two"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_2",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Two"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_2",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_3",
+            "default": "Improved weight management",
+            "label": "Detail Title Three"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_3",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Three"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_3",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_4",
+            "default": "Improved weight management",
+            "label": "Detail Title Four"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_4",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Four"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_4",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_5",
+            "default": "Improved weight management",
+            "label": "Detail Title Five"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_5",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Five"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_5",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_6",
+            "default": "Improved weight management",
+            "label": "Detail Title Six"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_6",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Six"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_6",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_7",
+            "default": "Improved weight management",
+            "label": "Detail Title Seven"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_7",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Seven"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_7",
+            "label": "Pick an image for the detail"
+          },
+          {
+            "type": "text",
+            "id": "detail_title_8",
+            "default": "Improved weight management",
+            "label": "Detail Title Eight"
+          },
+          {
+            "type": "text",
+            "id": "detail_text_8",
+            "default": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "label": "Detail Text Eight"
+          },
+          {
+            "type": "image_picker",
+            "id": "detail_image_8",
+            "label": "Pick an image for the detail"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Scroll To Content"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
