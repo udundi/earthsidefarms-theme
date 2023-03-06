@@ -1,12 +1,5 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "551d8338-1d79-45d2-8036-58db45d3ff31": {
       "type": "image-banner",
       "blocks": {
@@ -56,7 +49,6 @@
     }
   },
   "order": [
-    "main",
     "551d8338-1d79-45d2-8036-58db45d3ff31"
   ]
 }
