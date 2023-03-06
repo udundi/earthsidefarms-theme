@@ -16,13 +16,13 @@
       {{ product.price | money }}
     </p>
 
-    {% if show_cta and !show_quick_add %}
+    {% if show_cta and show_quick_add != true %}
       <button role="link" href="{{ product.url }}" aria-disabled="false" class="button button--secondary">
         Shop Now
       </button>
     {% endif %}
 
-    {%- if show_quick_add -%}
+    {%- if show_quick_add and show_cta != true -%}
       <div class="quick-add no-js-hidden">
         {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
         {%- if card_product.variants.size == 1 -%}
