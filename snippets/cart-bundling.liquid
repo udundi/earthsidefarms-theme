@@ -33,9 +33,6 @@
   /*  Progress bar fill color  */
   background-color: tomato; 
 }
-.cart-shipping__plural {
-  display: inline-block;
-}
 </style>
 
 <script>
@@ -60,7 +57,7 @@ function calculateProgress(currentVal, targetVal) {
 
   if (newProgressNum == 1) {
     showPlural.forEach(function(el){
-      el.setAttribute('style', 'display: block;');
+      el.setAttribute('style', 'display: inline-block;');
     });
   } else {
     showPlural.forEach(function(el){
