@@ -12,7 +12,11 @@
   <div class="swiper-wrapper">
     {% for product in settings.cart_drawer_collection.products %}
       <div class="swiper-slide">
-        {% render "product-card", product: product, show_quick_add: true %}
+        {% render "product-card", 
+          product: product, 
+          show_quick_add: true,
+          secondary_background: true
+        %}
       </div>
     {% endfor %}
   </div>
