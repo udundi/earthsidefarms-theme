@@ -10,7 +10,7 @@
 <!-- Slider main container -->
 <div class="swiper">
   <div class="swiper-wrapper">
-    {% for products in settings.cart_drawer_collection.products %}
+    {% for product in settings.cart_drawer_collection.products %}
       <div class="swiper-slide">
         {% render "product-card", product: product, show_quick_add: true %}
       </div>
@@ -63,7 +63,7 @@
 const swiper = new Swiper('.swiper', {
   slidesPerView: 2.3,
   slidesPerGroup: 1,
-  spaceBetween: 0,
+  spaceBetween: 8,
   loop: false,
   preventClicks: true,
 
