@@ -1,54 +1,16 @@
 {
   "sections": {
-    "551d8338-1d79-45d2-8036-58db45d3ff31": {
-      "type": "image-banner",
-      "blocks": {
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-0",
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-1",
-        "template--18188138250545__551d8338-1d79-45d2-8036-58db45d3ff31-1678082229f8edbad4-2"
-      ],
+    "b0b69038-f770-4765-8706-9a5eb9bae7b4": {
+      "type": "blue-image-banner",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "title": "Our Mission",
+        "sub_text": "Provide delicious healthy snacks that nourish the body and support overall wellness. We believe snacking should be a satisfying, guilt-free, and enjoyable experience without sacrificing nutrition or taste.",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "551d8338-1d79-45d2-8036-58db45d3ff31"
+    "b0b69038-f770-4765-8706-9a5eb9bae7b4"
   ]
 }
