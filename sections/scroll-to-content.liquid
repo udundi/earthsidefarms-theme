@@ -62,9 +62,7 @@
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
       <div class="scroll-content__links-right">
         {% for block in section.blocks %}
-          {{ block.title }}
-          {{ block.content.title }}
-          <a class="scroll-content__link" href="#{{ block.title | handle }}-{{ block.secondary_title | handle }}">{{ block.title | handle }} {{ block.secondary_title | handle }}</a>
+          <a class="scroll-content__link" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.title | handle }} {{ block.settings.secondary_title | handle }}</a>
         {% endfor %}
       </div>
     </div>
