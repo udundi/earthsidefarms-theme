@@ -60,6 +60,58 @@
   .scroll-content__links-right .scroll-content__link.active {
     color: #000000;
   }
+
+  .scroll-content__content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .scroll-content__content-wrapper {
+    padding: 80px 0;
+    display: flex;
+  }
+
+  .scroll-content__content-left {
+    width: 35%;
+    background: #F9F4EF;
+    border-radius: 10px;
+    padding: 24px 32px 50px 32px;
+  }
+
+  .scroll-content__content-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .scroll-content__content-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .scroll-content__content-header {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .scroll-content__content-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 139%;
+    text-align: center;
+  }
+
+  .scroll-content__content-right {
+    width: 65%;
+  }
 </style>
 
 <div class="scroll-content__container section-{{ section.id }}-padding">
@@ -72,6 +124,22 @@
         {% endfor %}
       </div>
     </div>
+  </div>
+
+  <div class="scroll-content__content-container">
+    {% for block in section.blocks %}
+      <div class="scroll-content__content-wrapper" id="{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">
+        <div class="scroll-content__content-left">
+          <div class="scroll-content__content-image">
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }} {{ block.settings.secondary_title }} image" />
+          </div>
+          <div class="scroll-content__content-header">{{ block.settings.title }} <span class="yellow-header-text">{{ block.settings.secondary_title }}</span></div>
+          <p class="scroll-content__content-text">{{ block.settings.sub_text }}</p>
+        </div>
+
+        <div class="scroll-content__content-right"></div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
