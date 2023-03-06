@@ -177,7 +177,7 @@
           <div class="scroll-content__content-image">
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }} {{ block.settings.secondary_title }} image" />
           </div>
-          <div class="scroll-content__content-header">{{ block.settings.title }}{% if section.settings.add_break %}<br />{% endif %} <span class="yellow-header-text">{{ block.settings.secondary_title }}</span></div>
+          <div class="scroll-content__content-header">{{ block.settings.title }}{% if section.settings.add_break == true %}<br />{% endif %} <span class="yellow-header-text">{{ block.settings.secondary_title }}</span></div>
           <p class="scroll-content__content-text">{{ block.settings.sub_text }}</p>
         </div>
 
