@@ -80,6 +80,7 @@ function calculateProgress(currentVal, targetVal) {
   dataType: 'json',
   success: function(cart){
     // run the calculator with a target price of $75
+    console.log("items: ", cart.total_items)
     calculateProgress(cart.total_price, 7500);
   }
 });
