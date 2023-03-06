@@ -59,6 +59,10 @@ function calculateProgress(currentVal, targetVal) {
     showPlural.forEach(function(el){
       el.setAttribute('style', 'display: block;');
     });
+  } else {
+    showPlural.forEach(function(el){
+      el.setAttribute('style', 'display: none;');
+    });
   }
   
   if (newProgressNum >= 4){
