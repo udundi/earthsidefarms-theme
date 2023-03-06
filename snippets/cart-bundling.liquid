@@ -10,8 +10,7 @@
 <!-- Slider main container -->
 <div class="swiper">
   <div class="swiper-wrapper">
-    {% for products in settings.cart_drawer_collection %}
-      here
+    {% for products in settings.cart_drawer_collection.products %}
       <div class="swiper-slide">
         {% render "product-card", product: product, show_quick_add: true %}
       </div>
