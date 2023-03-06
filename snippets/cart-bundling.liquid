@@ -55,7 +55,7 @@ function calculateProgress(currentVal, targetVal) {
   // Update the progess text. If threshold is met, show success message
   const newProgressNum = (targetVal - currentVal);
 
-  if (newProgressNum > 1) {
+  if (newProgressNum == 1) {
     showPlural.forEach(function(el){
       el.setAttribute('style', 'display: block;');
     });
