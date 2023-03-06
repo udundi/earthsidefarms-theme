@@ -9,9 +9,47 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "72121908-00de-40f5-9e4c-6a13c736c070": {
+      "type": "scroll-to-content",
+      "blocks": {
+        "975c7d4e-85a7-4caf-8cdc-93875bd3341e": {
+          "type": "text",
+          "settings": {
+            "title": "Low to no",
+            "secondary_title": "added sugar",
+            "sub_text": "On Average, each person in the U.S. consumed 113 pounds of sugar each year, that’s 36 billion pounds of sugar in total.  That’s a whole lot of sugar.",
+            "detail_title_1": "Improved weight management",
+            "detail_text_1": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_2": "Improved weight management",
+            "detail_text_2": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_3": "Improved weight management",
+            "detail_text_3": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_4": "Improved weight management",
+            "detail_text_4": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_5": "Improved weight management",
+            "detail_text_5": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_6": "Improved weight management",
+            "detail_text_6": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_7": "Improved weight management",
+            "detail_text_7": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity.",
+            "detail_title_8": "Improved weight management",
+            "detail_text_8": "Reducing sugar intake can help with weight control by reducing overall calorie intake and reducing the risk of obesity."
+          }
+        }
+      },
+      "block_order": [
+        "975c7d4e-85a7-4caf-8cdc-93875bd3341e"
+      ],
+      "settings": {
+        "title": "Why our products are healthier",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "b0b69038-f770-4765-8706-9a5eb9bae7b4"
+    "b0b69038-f770-4765-8706-9a5eb9bae7b4",
+    "72121908-00de-40f5-9e4c-6a13c736c070"
   ]
 }
