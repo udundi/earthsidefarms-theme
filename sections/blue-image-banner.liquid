@@ -1,7 +1,20 @@
 <style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  
   .blue-banner__container {
     width: 100%;
-    padding: 52px 150px;
+    padding-right: 150px;
+    padding-left: 150px;
     background: #29438B;
     display: flex;
     justify-content: space-between;
@@ -41,7 +54,8 @@
 
   @media (max-width: 768px) {
     .blue-banner__container {
-      padding: 34px 8px;
+      padding-right: 8px;
+      padding-left: 8px;
     }
 
     .blue-banner__header,
@@ -52,14 +66,10 @@
   }
 </style>
 
-<div class="blue-banner__container">
+<div class="blue-banner__container section-{{ section.id }}-padding">
   <div class="blue-banner__text-wrapper">
-    <div class="blue-banner__header">Our Mission</div>
-    <p class="blue-banner-text">
-      Provide delicious healthy snacks that nourish the body and support overall wellness. 
-      We believe snacking should be a satisfying, guilt-free, and enjoyable experience 
-      without sacrificing nutrition or taste.
-    </p>
+    <div class="blue-banner__header">{{ section.settings.title }}</div>
+    <p class="blue-banner-text">{{ section.settings.sub_text }}</p>
   </div>
 
   <div class="blue-banner__image-container">
@@ -69,13 +79,52 @@
 
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Blue Image Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Our Mission",
+        "label": "Banner title"
+      },
+      {
+        "type": "text",
+        "id": "sub_text",
+        "default": "Provide delicious healthy snacks that nourish the body and support overall wellness. We believe snacking should be a satisfying, guilt-free, and enjoyable experience without sacrificing nutrition or taste.",
+        "label": "Banner text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Pick an image for the banner"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "Blue Image Banner"
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
