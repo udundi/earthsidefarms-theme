@@ -54,6 +54,7 @@
     color: #888;
     text-decoration: none!important;
     text-transform: capitalize;
+    margin-right: 15px;
   }
 
   .scroll-content__links-right .scroll-content__link:hover,
@@ -169,7 +170,7 @@
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
       <div class="scroll-content__links-right">
         {% for block in section.blocks %}
-          <a class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.title }} {{ block.settings.secondary_title }}</a>
+          <a class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.secondary_title }}</a>
         {% endfor %}
       </div>
     </div>
