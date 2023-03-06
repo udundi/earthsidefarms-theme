@@ -1,6 +1,6 @@
 <!-- Free shipping progress markup -->
 <div class="cart-shipping__wrapper">
-  <p class="cart-shipping__numOuter">Purchase <span class="cart-shipping__num"></span> more items for free shipping!</p>
+  <p class="cart-shipping__numOuter">Purchase <span class="cart-shipping__num"></span> more item<span class="cart-shipping__plural">s</span> for free shipping!</p>
   <p class="cart-shipping__success">You're eligible for free shipping!</p>
   <div class="cart-shippingThreshold__bar">
     <span class="cart-shippingThreshold__progress"></span>
@@ -42,6 +42,7 @@ function calculateProgress(currentVal, targetVal) {
   const progressNum = document.querySelectorAll('.cart-shipping__num');
   const progressOuter = document.querySelectorAll('.cart-shipping__numOuter');
   const successMsg = document.querySelectorAll('.cart-shipping__success');
+  const showPlural = document.querySelectorAll('.cart-shipping__plural');
 
 
   // Calculate how far progress is from the total as a percentage
@@ -53,7 +54,14 @@ function calculateProgress(currentVal, targetVal) {
 
   // Update the progess text. If threshold is met, show success message
   const newProgressNum = (targetVal - currentVal);
-  if(newProgressNum <= 0){
+
+  if (newProgressNum > 1) {
+    showPlural.forEach(function(el){
+      el.setAttribute('style', 'display: block;');
+    });
+  }
+  
+  if (newProgressNum >= 4){
     successMsg.forEach(function(el){
       el.setAttribute('style', 'display: block;');
     });
