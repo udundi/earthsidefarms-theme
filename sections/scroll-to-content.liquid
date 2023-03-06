@@ -62,7 +62,7 @@
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
       <div class="scroll-content__links-right">
         {% for block in section.blocks %}
-          <a class="scroll-content__link" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.title | handle }} {{ block.settings.secondary_title | handle }}</a>
+          <a class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.title }} {{ block.settings.secondary_title }}</a>
         {% endfor %}
       </div>
     </div>
