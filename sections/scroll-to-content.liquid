@@ -422,10 +422,10 @@
     $(this).click(function() {
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
-        $(".active-scroll-link").empty();
         $(".active-scroll-link").append($(this));
-
         $(".scroll-content__dropdown-container").append(activeChild);
+        
+        $(".active-scroll-link").empty();
         $(".scroll-content__dropdown-container").remove($(this));
 
         activeChild.removeClass("active");
