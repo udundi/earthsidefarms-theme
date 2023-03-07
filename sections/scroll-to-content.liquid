@@ -314,11 +314,16 @@
     },'slow');
   });
 
+  $(".scroll-content__content-wrapper").each(function() {
+    const id = $(this).attr("id");
+    console.log(id)
+  });
+
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
     const scrollToChild = `#scroll-${scrollParentId}`;
 
-  console.log($(scrollToChild))
+    console.log(scrollParentId, scrollToChild)
     
     $(this).click(function() {
       $("html, body").animate({
