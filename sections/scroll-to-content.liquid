@@ -72,6 +72,12 @@
     cursor: pointer;
   }
 
+  {% for block in section.blocks %}
+    .scroll-content__link.order-{{ forloop.index }} {
+      order: {{ forloop.index }}
+    }
+  {% endfor %}
+
   .scroll-content__links-right .scroll-content__link:hover,
   .scroll-content__links-right .scroll-content__link.active {
     color: #000000;
@@ -239,7 +245,7 @@
         <div class="active-scroll-link">
           {% for block in section.blocks %}
             {% if forloop.index == 1 %}
-              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link active">{{ block.settings.secondary_title }}</span>
+              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link active order-{{ forloop.index }}">{{ block.settings.secondary_title }}</span>
               {% break %}
             {% endif %}
           {% endfor %}
@@ -247,7 +253,7 @@
         <div class="scroll-content__dropdown-container">
           {% for block in section.blocks %}
             {% if forloop.index != 1 %}
-              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
+              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %} order-{{ forloop.index }}">{{ block.settings.secondary_title }}</span>
             {% endif %}
           {% endfor %}
         </div>
@@ -387,8 +393,6 @@
 <script>
   $("#scroll-content__dropdown-btn").click(function() {
     const dropdownContainer = $(".scroll-content__dropdown-container")
-    console.log(dropdownContainer);
-    // dropdownContainer.toggleClass("show")
     const hasClass = dropdownContainer.hasClass("show")
 
     if (!hasClass) {
@@ -412,6 +416,19 @@
         scrollTop: $(`#${scrollParentId}`).offset().top
       },"slow");
     });                         
+  });
+
+  $("scroll-content__links-right.mobile .scroll-content__link").each(function() {
+    $(this).click(function() {
+      if (!$(this).hasClass("active")) {
+        const activeChild = $(".active-scroll-link").find(".scroll-content__link");
+        $(".active-scroll-link").empty();
+        $("active-scroll-link").append($(this));
+
+        $(".scroll-content__dropdown-container").append(activeChild);
+        $(".scroll-content__dropdown-container").remove($(this));
+      }
+    })
   });
 </script>
 
