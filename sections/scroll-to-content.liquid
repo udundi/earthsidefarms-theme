@@ -308,16 +308,16 @@
 </div>
 
 <script>
-  $("button").click(function() {
-    $('html,body').animate({
-      scrollTop: $(".second").offset().top
-    },'slow');
-  });
-
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
     
     $(this).click(function() {
+      $(".scroll-content__link").each(function() {
+        $(this).removeClass("active")
+      });
+
+      $(this).addClass("active")
+      
       $("html, body").animate({
         scrollTop: $(`#${scrollParentId}`).offset().top
       },"slow");
