@@ -171,7 +171,7 @@
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
       <div class="scroll-content__links-right">
         {% for block in section.blocks %}
-          <a data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.secondary_title }}</a>
+          <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
         {% endfor %}
       </div>
     </div>
@@ -179,7 +179,7 @@
 
   <div class="scroll-content__content-container">
     {% for block in section.blocks %}
-      <div id="scroll-{{ block.id }}" class="scroll-content__content-wrapper" id="{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">
+      <div id="scroll-{{ block.id }}" class="scroll-content__content-wrapper">
         <div class="scroll-content__content-left">
           <div class="scroll-content__content-image">
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }} {{ block.settings.secondary_title }} image" />
