@@ -236,7 +236,7 @@
         <div class="active-scroll-link">
           {% for block in section.blocks %}
             {% if forloop.index == 1 %}
-              {{ block.settings.secondary_title }}
+              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link active">{{ block.settings.secondary_title }}</span>
               {% break %}
             {% endif %}
           {% endfor %}
