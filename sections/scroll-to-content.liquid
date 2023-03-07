@@ -246,7 +246,9 @@
         </div>
         <div class="scroll-content__dropdown-container">
           {% for block in section.blocks %}
-            <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
+            {% if forloop.index != 1 %}
+              <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
