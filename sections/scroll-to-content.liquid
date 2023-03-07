@@ -193,7 +193,7 @@
     {% for block in section.blocks %}
       <div id="scroll-{{ block.id }}" class="scroll-content__content-wrapper">
         <div class="scroll-content__content-left">
-          <div class="scroll-content__content-image">
+          <div class="scroll-content__content-image {% if block.settings.image_icon %} image-icon{% endif %}">
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }} {{ block.settings.secondary_title }} image" />
           </div>
           <div class="scroll-content__content-header">{{ block.settings.title }}{% if block.settings.add_break %}<br />{% endif %} <span class="yellow-header-text">{{ block.settings.secondary_title }}</span></div>
@@ -204,7 +204,7 @@
           {% if block.settings.detail_title_1 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_1 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_1 | img_url: 'master' }}" alt="{{ block.settings.detail_title_1 }} image" />
               </div>
             </div>
@@ -218,7 +218,7 @@
           {% if block.settings.detail_title_2 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_2 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_2 | img_url: 'master' }}" alt="{{ block.settings.detail_title_2 }} image" />
               </div>
             </div>
@@ -232,7 +232,7 @@
           {% if block.settings.detail_title_3 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_3 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_3 | img_url: 'master' }}" alt="{{ block.settings.detail_title_3 }} image" />
               </div>
             </div>
@@ -246,7 +246,7 @@
           {% if block.settings.detail_title_4 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_4 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_4 | img_url: 'master' }}" alt="{{ block.settings.detail_title_4 }} image" />
               </div>
             </div>
@@ -260,7 +260,7 @@
           {% if block.settings.detail_title_5 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_5 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_5 | img_url: 'master' }}" alt="{{ block.settings.detail_title_5 }} image" />
               </div>
             </div>
@@ -274,7 +274,7 @@
           {% if block.settings.detail_title_6 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_6 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_6 | img_url: 'master' }}" alt="{{ block.settings.detail_title_6 }} image" />
               </div>
             </div>
@@ -288,7 +288,7 @@
           {% if block.settings.detail_title_7 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_7 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_7 | img_url: 'master' }}" alt="{{ block.settings.detail_title_7 }} image" />
               </div>
             </div>
@@ -302,7 +302,7 @@
           {% if block.settings.detail_title_8 != '' %}
           <div class="scroll-content__content-detail">
             <div class="scroll-content__content-detail-left">
-              <div class="scroll-content__content-detail-image{% if block.settings.image_icon_8 %} image-icon{% endif %}">
+              <div class="scroll-content__content-detail-image">
                 <img src="{{ block.settings.detail_image_8 | img_url: 'master' }}" alt="{{ block.settings.detail_title_8 }} image" />
               </div>
             </div>
@@ -404,6 +404,12 @@
             "label": "Pick the main image for the content"
           },
           {
+            "type": "checkbox",
+            "id": "image_icon",
+            "default": false,
+            "label": "Image is an icon"
+          },
+          {
             "type": "text",
             "id": "detail_title_1",
             "default": "Improved weight management",
@@ -419,12 +425,6 @@
             "type": "image_picker",
             "id": "detail_image_1",
             "label": "Pick an image for detail one"
-          },
-          {
-            "type": "checkbox",
-            "id": "image_icon_1",
-            "default": false,
-            "label": "Image is an icon"
           },
           {
             "type": "text",
@@ -444,12 +444,6 @@
             "label": "Pick an image for detail two"
           },
           {
-            "type": "checkbox",
-            "id": "image_icon_2",
-            "default": false,
-            "label": "Image is an icon"
-          },
-          {
             "type": "text",
             "id": "detail_title_3",
             "default": "Improved weight management",
@@ -465,12 +459,6 @@
             "type": "image_picker",
             "id": "detail_image_3",
             "label": "Pick an image for detail three"
-          },
-          {
-            "type": "checkbox",
-            "id": "image_icon_3",
-            "default": false,
-            "label": "Image is an icon"
           },
           {
             "type": "text",
@@ -490,12 +478,6 @@
             "label": "Pick an image for detail four"
           },
           {
-            "type": "checkbox",
-            "id": "image_icon_4",
-            "default": false,
-            "label": "Image is an icon"
-          },
-          {
             "type": "text",
             "id": "detail_title_5",
             "default": "Improved weight management",
@@ -511,12 +493,6 @@
             "type": "image_picker",
             "id": "detail_image_5",
             "label": "Pick an image for detail five"
-          },
-          {
-            "type": "checkbox",
-            "id": "image_icon_5",
-            "default": false,
-            "label": "Image is an icon"
           },
           {
             "type": "text",
@@ -536,12 +512,6 @@
             "label": "Pick an image for detail six"
           },
           {
-            "type": "checkbox",
-            "id": "image_icon_6",
-            "default": false,
-            "label": "Image is an icon"
-          },
-          {
             "type": "text",
             "id": "detail_title_7",
             "default": "Improved weight management",
@@ -559,12 +529,6 @@
             "label": "Pick an image for detail seven"
           },
           {
-            "type": "checkbox",
-            "id": "image_icon_7",
-            "default": false,
-            "label": "Image is an icon"
-          },
-          {
             "type": "text",
             "id": "detail_title_8",
             "default": "Improved weight management",
@@ -580,12 +544,6 @@
             "type": "image_picker",
             "id": "detail_image_8",
             "label": "Pick an image for detail eight"
-          },
-          {
-            "type": "checkbox",
-            "id": "image_icon_8",
-            "default": false,
-            "label": "Image is an icon"
           }
         ]
       }
