@@ -314,12 +314,12 @@
   });
 
   $(".scroll-content__link").each(function() {
-    const scrollId = $(this).data("scroll")
-    console.log(scrollId)
+    const scrollParentId = $(this).data("scroll")
+    const scrollToChild = `#scroll-${scrollId}`;
     
     $(this).click(function() {
       $("html, body").animate({
-        scrollTop: $(`#scroll-${scrollId}`).offset().top
+        scrollTop: $(scrollToChild).offset().top
       },"slow");
     });                         
   });
