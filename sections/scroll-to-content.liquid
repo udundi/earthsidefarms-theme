@@ -171,7 +171,7 @@
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
       <div class="scroll-content__links-right">
         {% for block in section.blocks %}
-          <a class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.secondary_title }}</a>
+          <a data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}" href="#{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">{{ block.settings.secondary_title }}</a>
         {% endfor %}
       </div>
     </div>
@@ -179,7 +179,7 @@
 
   <div class="scroll-content__content-container">
     {% for block in section.blocks %}
-      <div class="scroll-content__content-wrapper" id="{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">
+      <div id="scroll-{{ block.id }}" class="scroll-content__content-wrapper" id="{{ block.settings.title | handle }}-{{ block.settings.secondary_title | handle }}">
         <div class="scroll-content__content-left">
           <div class="scroll-content__content-image">
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }} {{ block.settings.secondary_title }} image" />
@@ -305,6 +305,24 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+  $("button").click(function() {
+    $('html,body').animate({
+      scrollTop: $(".second").offset().top
+    },'slow');
+  });
+
+  $("scroll-content__link").each(function() {
+    const scrollId = $(this).data("scroll")
+    
+    $(this).click(function() {
+      $("html, body").animate({
+        scrollTop: $(`#scroll-${scrollId}`).offset().top
+      },"slow");
+    });                         
+  });
+</script>
 
 {% schema %}
   {
