@@ -321,13 +321,10 @@
 
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
-    const scrollToChild = $(scrollParentId);
-
-    console.log(scrollParentId, scrollToChild)
     
     $(this).click(function() {
       $("html, body").animate({
-        scrollTop: scrollToChild.offset().top
+        scrollTop: $(`#${scrollParentId}`.offset().top
       },"slow");
     });                         
   });
