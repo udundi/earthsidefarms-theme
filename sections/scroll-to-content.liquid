@@ -315,7 +315,7 @@
 
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
-    const scrollToChild = `#scroll-${scrollId}`;
+    const scrollToChild = `#scroll-${scrollParentId}`;
     
     $(this).click(function() {
       $("html, body").animate({
