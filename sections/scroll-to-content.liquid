@@ -425,6 +425,9 @@
         $(".active-scroll-link").empty();
         $("active-scroll-link").append($(this));
 
+        activeChild.removeClass("active");
+        $(this).addClass("active");
+
         $(".scroll-content__dropdown-container").append(activeChild);
         $(".scroll-content__dropdown-container").remove($(this));
       }
