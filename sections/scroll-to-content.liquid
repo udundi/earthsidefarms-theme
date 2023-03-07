@@ -53,6 +53,8 @@
   
   .scroll-content__links-right.mobile {
     display: none;
+    padding-left: 0;
+    width: 100%;
   }
 
   .scroll-content__links-right .scroll-content__link {
@@ -199,6 +201,13 @@
   @media (max-width: 995px) {
     .scroll-content__links-wrapper {
       flex-direction: column;
+      justify-content: center;
+    }
+
+    .scroll-content__links-left {
+      width: 100%;
+      border: none;
+      padding-right: 0;
     }
     
     .scroll-content__links-right.desktop {
