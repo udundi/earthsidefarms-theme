@@ -47,6 +47,14 @@
     padding-left: 30px;
   }
 
+  .scroll-content__links-right.desktop {
+    display: block;
+  }
+  
+  .scroll-content__links-right.mobile {
+    display: none;
+  }
+
   .scroll-content__links-right .scroll-content__link {
     font-style: normal;
     font-weight: 500;
@@ -179,16 +187,54 @@
     line-height: 110%;
     margin: 0;
   }
+
+  .scroll-content__dropdown-container {
+    display: none;
+  }
+
+  .scroll-content__dropdown-container.show {
+    display: block;
+  }
+
+  @media (max-width: 995px) {
+    .scroll-content__links-wrapper {
+      flex-direction: column;
+    }
+    
+    .scroll-content__links-right.desktop {
+      display: none;
+    }
+    
+    .scroll-content__links-right.mobile {
+      display: block;
+    }
+  }
 </style>
 
 <div class="scroll-content__container section-{{ section.id }}-padding">
   <div class="scroll-content__links-container">
     <div class="scroll-content__links-wrapper">
       <div class="scroll-content__links-left">{{ section.settings.title }}</div>
-      <div class="scroll-content__links-right">
+      <div class="scroll-content__links-right desktop">
         {% for block in section.blocks %}
           <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
         {% endfor %}
+      </div>
+
+      <div class="scroll-content__links-right mobile">
+        <div class="active-scroll-link">
+          {% for block in section.blocks %}
+            {% if forloop.index == 1 %}
+              {{ block.settings.secondary_title }}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="scroll-content__dropdown-container">
+          {% for block in section.blocks %}
+            <span data-scroll="scroll-{{ block.id }}" class="scroll-content__link{% if forloop.index == 1 %} active{% endif %}">{{ block.settings.secondary_title }}</span>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
@@ -323,6 +369,18 @@
 </div>
 
 <script>
+  $("#scroll-content__dropdown-btn").click(function() {
+    const dropdownContainer = $("#scroll-content__dropdown-container")
+    dropdownContainer.toggleClass("shows")
+/*     const hasClass = dropdownContainer.hasClass("show")
+
+    if (!hasClass) {
+      dropdownContainer.addClass("show")
+    } else {
+      dropdownContainer.removeClass("show")
+    } */
+  })
+  
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
     
