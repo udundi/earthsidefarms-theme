@@ -56,6 +56,8 @@
     padding-left: 0;
     width: 100%;
     text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 
   .scroll-content__links-right .scroll-content__link {
@@ -382,14 +384,14 @@
 <script>
   $("#scroll-content__dropdown-btn").click(function() {
     const dropdownContainer = $("#scroll-content__dropdown-container")
-    dropdownContainer.toggleClass("show")
-/*     const hasClass = dropdownContainer.hasClass("show")
+    // dropdownContainer.toggleClass("show")
+    const hasClass = dropdownContainer.hasClass("show")
 
     if (!hasClass) {
       dropdownContainer.addClass("show")
     } else {
       dropdownContainer.removeClass("show")
-    } */
+    }
   })
   
   $(".scroll-content__link").each(function() {
