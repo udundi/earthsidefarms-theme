@@ -314,17 +314,12 @@
     },'slow');
   });
 
-  $(".scroll-content__content-wrapper").each(function() {
-    const id = $(this).attr("id");
-    console.log(id)
-  });
-
   $(".scroll-content__link").each(function() {
     const scrollParentId = $(this).data("scroll")
     
     $(this).click(function() {
       $("html, body").animate({
-        scrollTop: $(`#${scrollParentId}`.offset().top
+        scrollTop: $(`#${scrollParentId}`).offset().top
       },"slow");
     });                         
   });
