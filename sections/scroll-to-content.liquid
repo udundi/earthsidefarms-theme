@@ -210,6 +210,10 @@
 
   .active-scroll-link {
     display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
   }
 
   .active-scroll-link .scroll-content__link {
@@ -218,8 +222,8 @@
 
   .active-scroll-link .icon-circle-arrow {
     transition: 0.3s;
-    height: 15px;
-    width: 15px;
+    position: absolute;
+    right: 0;
   }
 
   @media (max-width: 995px) {
