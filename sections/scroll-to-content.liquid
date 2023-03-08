@@ -404,14 +404,11 @@
 
   $(".scroll-content__links-right.mobile .scroll-content__link").each(function() {
     $(this).click(function() {
-      console.log($(this).attr('class'))
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
-      
-        console.log("this: ", $(this))
                                                                      
-        $(".active-scroll-link").append($(this).html());
-        $(".scroll-content__dropdown-container").append(activeChild.html());
+        $(".active-scroll-link").append($(this));
+        $(".scroll-content__dropdown-container").append(activeChild);
         
         activeChild.remove();
         $(this).remove();
