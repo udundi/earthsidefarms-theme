@@ -407,11 +407,11 @@
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
 
-        activeChild.remove();
-        $(this).remove();
+/*         activeChild.detach();
+        $(this).detach(); */
                                                                      
-        $(".active-scroll-link").append($(this));
-        $(".scroll-content__dropdown-container").append(activeChild);
+        $(".active-scroll-link").appendTo($(this));
+        $(".scroll-content__dropdown-container").appendTo(activeChild);
       
         activeChild.removeClass("active");
         $(this).addClass("active");
