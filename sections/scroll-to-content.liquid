@@ -406,17 +406,12 @@
     $(this).click(function() {
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
-
-/*         activeChild.detach();
-        $(this).detach(); */
                                                                      
         $(this).appendTo(".active-scroll-link");
         activeChild.appendTo(".scroll-content__dropdown-container");
       
         activeChild.removeClass("active");
         $(this).addClass("active");
-      } else {
-        console.log("here")
       }
     })
   });
