@@ -200,12 +200,16 @@
   }
 
   .scroll-content__dropdown-container {
-    display: none;
     flex-direction: column;
+    height: 0;
+    visibility: hidden;
+    display: flex;
+    transition: 0.3s;
   }
 
   .scroll-content__dropdown-container.show {
-    display: flex;
+    height: 100%;
+    visibility: visible;
   }
 
   .active-scroll-link {
@@ -271,6 +275,17 @@
     .scroll-content__content-left,
     .scroll-content__content-right {
       width: 100%;
+    }
+
+    .scroll-content__content-left {
+      background: transparent;
+      padding: 0 10px;
+    }
+
+    .scroll-content__content-image {
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
     }
   }
 </style>
