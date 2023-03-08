@@ -406,12 +406,12 @@
     $(this).click(function() {
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
+
+        activeChild.remove();
+        $(this).remove();
                                                                      
         $(".active-scroll-link").append($(this));
         $(".scroll-content__dropdown-container").append(activeChild);
-        
-        activeChild.remove();
-        $(this).remove();
       
         activeChild.removeClass("active");
         $(this).addClass("active");
