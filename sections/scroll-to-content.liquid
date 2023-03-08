@@ -410,8 +410,8 @@
 /*         activeChild.detach();
         $(this).detach(); */
                                                                      
-        $(".active-scroll-link").appendTo($(this));
-        $(".scroll-content__dropdown-container").appendTo(activeChild);
+        $(this).appendTo($(".active-scroll-link"));
+        activeChild.appendTo($(".scroll-content__dropdown-container"));
       
         activeChild.removeClass("active");
         $(this).addClass("active");
