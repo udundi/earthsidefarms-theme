@@ -208,6 +208,10 @@
     display: flex;
   }
 
+  .active-scroll-link {
+    display: flex;
+  }
+
   @media (max-width: 995px) {
     .scroll-content__links-wrapper {
       flex-direction: column;
@@ -249,6 +253,7 @@
               {% break %}
             {% endif %}
           {% endfor %}
+          {% render 'icon-circle-arrow' %}
         </div>
         <div class="scroll-content__dropdown-container">
           {% for block in section.blocks %}
