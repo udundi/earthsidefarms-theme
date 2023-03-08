@@ -420,7 +420,7 @@
 
   $(".scroll-content__links-right.mobile .scroll-content__link").each(function() {
     $(this).click(function() {
-      console.log($(this).html())
+      console.log($(this).classList())
       if (!$(this).hasClass("active")) {
         const activeChild = $(".active-scroll-link").find(".scroll-content__link");
 
