@@ -216,6 +216,12 @@
     margin-right: 12px;
   }
 
+  .active-scroll-link .icon-circle-arrow {
+    transition: 0.3s;
+    height: 15px;
+    width: 15px;
+  }
+
   @media (max-width: 995px) {
     .scroll-content__links-wrapper {
       flex-direction: column;
@@ -406,8 +412,10 @@
 
     if (!hasClass) {
       dropdownContainer.addClass("show")
+      $(".icon-circle-arrow").css("transform", "rotate(180deg)")
     } else {
       dropdownContainer.removeClass("show")
+      $(".icon-circle-arrow").css("transform", "rotate(-180deg)")
     }
   })
 
