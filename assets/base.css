@@ -3208,7 +3208,7 @@ details-disclosure > details.mega-menu {
   --alpha-button-background: 1;
   transition: 0.3s;
 
-  background: linear-gradient(to right, black 50%, white 50%);
+  background: linear-gradient(to right, #3356AE 50%, transparent 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all .5s ease-out;
