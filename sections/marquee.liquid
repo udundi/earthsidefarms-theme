@@ -78,6 +78,7 @@
   .marquee__item {
     font-size: 14px;
     line-height: 150%;
+    min-width: 200px;
   }
 
   .marquee__image {
@@ -97,6 +98,7 @@
         {{ block.settings.text }}
       </div>
     {% endfor %}
+    {% comment %}
     {% for block in section.blocks %}
       <div class="marquee__item">
         <div class="marquee__image" style="border-color: {{ block.settings.border_color }}">
@@ -113,6 +115,7 @@
         {{ block.settings.text }}
       </div>
     {% endfor %}
+    {% endcomment %}
   </div>
 </div>
 
