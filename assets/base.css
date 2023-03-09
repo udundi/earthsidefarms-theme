@@ -3199,11 +3199,6 @@ details-disclosure > details.mega-menu {
   border: 1px solid #3356AE;
   color: #fff;
   transition: 0.3s;
-
-  background: linear-gradient(to right, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
 }
 
 .button--secondary {
@@ -3212,12 +3207,17 @@ details-disclosure > details.mega-menu {
   background: transparent;
   --alpha-button-background: 1;
   transition: 0.3s;
+
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
 }
 
-.button--secondary:hover {
+/* .button--secondary:hover {
   color: #fff;
   background: #3356AE;
-}
+} */
 
 .button--primary:not([disabled]):hover::after,
 .button--secondary:not([disabled]):hover::after {
@@ -3226,7 +3226,7 @@ details-disclosure > details.mega-menu {
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
-.button--secondary:not([disabled]):hover::after {
+.button--secondary:not([disabled]):hover {
   background-position: left bottom;
   color: white
 }
