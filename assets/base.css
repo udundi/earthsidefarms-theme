@@ -3163,10 +3163,10 @@ details-disclosure > details.mega-menu {
   text-decoration: none!important;
 }
 
-.product-card:hover .button--secondary {
+/* .product-card:hover .button--secondary {
   color: rgb(var(--color-button-text));
   background: #3356AE;
-}
+} */
 
 @media (max-width: 768px) {
   .product-card {
