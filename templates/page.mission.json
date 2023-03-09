@@ -110,12 +110,45 @@
             "detail_title_8": "",
             "detail_text_8": ""
           }
+        },
+        "8f8afc34-74db-4d55-9823-16a43865c83b": {
+          "type": "text",
+          "settings": {
+            "title": "Benefits Of",
+            "secondary_title": "Low To No Cholesterol",
+            "add_break": true,
+            "sub_text": "Around 38% of Americans live with high Cholesterol.",
+            "image": "shopify:\/\/shop_images\/cholesterol_1.png",
+            "image_icon": true,
+            "detail_title_1": "Reduced risk of high blood pressure and heart disease",
+            "detail_text_1": "High levels of sodium in the diet can lead to high blood pressure, which is a major risk factor for heart disease.",
+            "detail_image_1": "shopify:\/\/shop_images\/Vector_36c45a2c-b264-4239-9af6-ab2fad226b18.png",
+            "detail_title_2": "Better overall heart health",
+            "detail_text_2": "A low cholesterol diet can improve heart health by reducing the buildup of plaque in the arteries and promoting healthy blood flow.",
+            "detail_image_2": "shopify:\/\/shop_images\/heart-health.png",
+            "detail_title_3": "Improved blood lipid profile",
+            "detail_text_3": "A low cholesterol diet can also help to improve the overall balance of fats in the blood, such as reducing levels of low-density lipoprotein (LDL) cholesterol, which is often referred to as \"bad\" cholesterol.",
+            "detail_image_3": "shopify:\/\/shop_images\/drop.png",
+            "detail_title_4": "Supports a healthy weight",
+            "detail_text_4": "By reducing the consumption of high-fat foods and increasing the consumption of fiber-rich foods, a low cholesterol diet can also support a healthy weight.",
+            "detail_image_4": "shopify:\/\/shop_images\/scale.png",
+            "detail_title_5": "Lower risk of type 2 diabetes",
+            "detail_text_5": "High cholesterol levels have been linked to an increased risk of type 2 diabetes. By reducing cholesterol levels, a low cholesterol diet can also help to lower the risk of developing this condition.",
+            "detail_image_5": "shopify:\/\/shop_images\/shield.png",
+            "detail_title_6": "",
+            "detail_text_6": "",
+            "detail_title_7": "",
+            "detail_text_7": "",
+            "detail_title_8": "",
+            "detail_text_8": ""
+          }
         }
       },
       "block_order": [
         "975c7d4e-85a7-4caf-8cdc-93875bd3341e",
         "d67d8658-421c-4ab8-b965-35179452e61e",
-        "55aa9a2a-9a05-42b8-878d-5409f26b8d7d"
+        "55aa9a2a-9a05-42b8-878d-5409f26b8d7d",
+        "8f8afc34-74db-4d55-9823-16a43865c83b"
       ],
       "settings": {
         "title": "Why our products are healthier",
