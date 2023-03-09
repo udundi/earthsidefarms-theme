@@ -192,8 +192,10 @@
     "8f7e77e2-f26e-4ff0-a2d3-34807f7c34da": {
       "type": "text-banner",
       "settings": {
+        "bg_color": "#f9f4ef",
         "main_title": "Don't know what to get?",
         "secondary_title": "Build a bundle!",
+        "reverse_titles": false,
         "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
         "button_text": "Button label",
         "button_link": "",
