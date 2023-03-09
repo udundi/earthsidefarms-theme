@@ -1,5 +1,8 @@
 .text-banner {
   width: 100%;
+}
+
+.text-banner__wrapper {
   max-width: 900px;
   padding-left: 15px;
   padding-right: 15px;
