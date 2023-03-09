@@ -195,12 +195,13 @@
         "bg_color": "#f9f4ef",
         "main_title": "It's not about the destination, it’s about the snacks you eat along the way.",
         "secondary_title": "So join us",
+        "capitalize_titles": false,
         "reverse_titles": true,
         "sub_text": "",
         "button_text": "",
         "button_link": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
