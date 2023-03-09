@@ -59,7 +59,8 @@
         "template--17540507533617__19ca8568-e35a-49e6-bcc9-6697f86e324f-1678395603786d61ac-0": {
           "type": "item",
           "settings": {
-            "border_color": "#3356AE",
+            "image": "shopify:\/\/shop_images\/Vector_6b58c438-3c2d-4277-90d8-8114dac3b6dc.png",
+            "border_color": "#f13d7e",
             "text": "Real Food Ingredients"
           }
         }
