@@ -67,6 +67,18 @@
   0% { left: 0; }
   100% { left: -100%; }
 }
+
+@media (max-width: 768px) {
+  .marquee__item {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .marquee__image {
+    width: 25px;
+    height: 25px;
+  }
+}
 </style>
 
 <div class="marquee__container section-{{ section.id }}-padding">
