@@ -193,11 +193,11 @@
       "type": "text-banner",
       "settings": {
         "bg_color": "#f9f4ef",
-        "main_title": "Don't know what to get?",
-        "secondary_title": "Build a bundle!",
-        "reverse_titles": false,
-        "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-        "button_text": "Button label",
+        "main_title": "It's not about the destination, it’s about the snacks you eat along the way.",
+        "secondary_title": "So join us",
+        "reverse_titles": true,
+        "sub_text": "",
+        "button_text": "",
         "button_link": "",
         "padding_top": 36,
         "padding_bottom": 36
