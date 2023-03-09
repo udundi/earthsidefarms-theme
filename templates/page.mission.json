@@ -78,11 +78,39 @@
             "detail_title_8": "",
             "detail_text_8": ""
           }
+        },
+        "55aa9a2a-9a05-42b8-878d-5409f26b8d7d": {
+          "type": "text",
+          "settings": {
+            "title": "Benefits Of",
+            "secondary_title": "Low Sodium",
+            "add_break": false,
+            "sub_text": "American Heart Association recommends that adults consume no more than 1200mg of sodium per day and about 1500mg per day for people with high blood pressure. However, the average American consumes about 3400 mg of sodium every day.",
+            "image": "shopify:\/\/shop_images\/Rectangle_413.jpg",
+            "image_icon": false,
+            "detail_title_1": "Reduced risk of high blood pressure and heart disease",
+            "detail_text_1": "High levels of sodium in the diet can lead to high blood pressure, which is a major risk factor for heart disease.",
+            "detail_title_2": "Reduced fluid retention",
+            "detail_text_2": "Excess sodium can cause fluid retention, leading to swelling in the legs, ankles, and feet.",
+            "detail_title_3": "Better kidney function",
+            "detail_text_3": "Sodium can contribute to fluid retention and put extra strain on the kidneys. Lowering sodium intake can help maintain proper kidney function.",
+            "detail_title_4": "Better heart health",
+            "detail_text_4": "High levels of sodium can contribute to high blood pressure, which can put extra strain on the heart and increase the risk of heart disease and stroke.",
+            "detail_title_5": "Improved bone health",
+            "detail_text_5": "High levels of sodium in the diet can lead to calcium loss, which can negatively impact bone health.",
+            "detail_title_6": "",
+            "detail_text_6": "",
+            "detail_title_7": "",
+            "detail_text_7": "",
+            "detail_title_8": "",
+            "detail_text_8": ""
+          }
         }
       },
       "block_order": [
         "975c7d4e-85a7-4caf-8cdc-93875bd3341e",
-        "d67d8658-421c-4ab8-b965-35179452e61e"
+        "d67d8658-421c-4ab8-b965-35179452e61e",
+        "55aa9a2a-9a05-42b8-878d-5409f26b8d7d"
       ],
       "settings": {
         "title": "Why our products are healthier",
