@@ -63,10 +63,52 @@
             "border_color": "#f13d7e",
             "text": "Real Food Ingredients"
           }
+        },
+        "b12e3808-2ba9-4542-b1af-61d2c8d18802": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_6b58c438-3c2d-4277-90d8-8114dac3b6dc.png",
+            "border_color": "#3356AE",
+            "text": "Real Food Ingredients"
+          }
+        },
+        "cc6c0650-4f1c-462e-843b-829e1c0a414c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vector_6b58c438-3c2d-4277-90d8-8114dac3b6dc.png",
+            "border_color": "#3356AE",
+            "text": "Real Food Ingredients"
+          }
+        },
+        "c1d84f02-142d-4ada-a346-b0e72ca0219c": {
+          "type": "item",
+          "settings": {
+            "border_color": "#3356AE",
+            "text": "Real Food Ingredients"
+          }
+        },
+        "f0ca64ca-a3f0-45cd-bc2e-12a853f5e5b3": {
+          "type": "item",
+          "settings": {
+            "border_color": "#3356AE",
+            "text": "Real Food Ingredients"
+          }
+        },
+        "d2c977ec-12b3-4767-a35b-8c9bd8611f24": {
+          "type": "item",
+          "settings": {
+            "border_color": "#3356AE",
+            "text": "Real Food Ingredients"
+          }
         }
       },
       "block_order": [
-        "template--17540507533617__19ca8568-e35a-49e6-bcc9-6697f86e324f-1678395603786d61ac-0"
+        "template--17540507533617__19ca8568-e35a-49e6-bcc9-6697f86e324f-1678395603786d61ac-0",
+        "b12e3808-2ba9-4542-b1af-61d2c8d18802",
+        "cc6c0650-4f1c-462e-843b-829e1c0a414c",
+        "c1d84f02-142d-4ada-a346-b0e72ca0219c",
+        "f0ca64ca-a3f0-45cd-bc2e-12a853f5e5b3",
+        "d2c977ec-12b3-4767-a35b-8c9bd8611f24"
       ],
       "settings": {
         "padding_top": 36,
