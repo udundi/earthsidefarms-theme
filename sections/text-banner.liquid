@@ -15,19 +15,21 @@
 {% endstyle %}
 
 <div class="text-banner section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }}">
-  
-  <div class="h3 text-banner-title{% if section.settings.reverse_titles %} reverse-order{% endif %}">
-    <span>{{ section.settings.main_title }}</span>
-    <span class="yellow-header-text">{{ section.settings.secondary_title }}</span>
-  </div>
-  
-  {% if section.settings.sub_text != '' %}
-  <p class="text-banner-sub_text">{{ section.settings.sub_text }}</p>
-  {% endif %}
 
-  {% if section.settings.button_text %}
-    <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_text }}</a>
-  {% endif %}
+  <div class="text-banner__wrapper">
+    <div class="h3 text-banner-title{% if section.settings.reverse_titles %} reverse-order{% endif %}">
+      <span>{{ section.settings.main_title }}</span>
+      <span class="yellow-header-text">{{ section.settings.secondary_title }}</span>
+    </div>
+    
+    {% if section.settings.sub_text != '' %}
+    <p class="text-banner-sub_text">{{ section.settings.sub_text }}</p>
+    {% endif %}
+  
+    {% if section.settings.button_text %}
+      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
 </div>
 
 {% schema %}
