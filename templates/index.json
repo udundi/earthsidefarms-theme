@@ -67,38 +67,41 @@
         "b12e3808-2ba9-4542-b1af-61d2c8d18802": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vector_6b58c438-3c2d-4277-90d8-8114dac3b6dc.png",
-            "border_color": "#3356AE",
-            "text": "Real Food Ingredients"
+            "image": "shopify:\/\/shop_images\/Vector_15be5006-7005-4dd6-b786-98cecb105c50.png",
+            "border_color": "#ff9a30",
+            "text": "Crave-able Snacks"
           }
         },
         "cc6c0650-4f1c-462e-843b-829e1c0a414c": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Vector_6b58c438-3c2d-4277-90d8-8114dac3b6dc.png",
-            "border_color": "#3356AE",
-            "text": "Real Food Ingredients"
+            "image": "shopify:\/\/shop_images\/Vector_598ca4e5-2fdc-4a53-b647-f8686981b872.png",
+            "border_color": "#3050a2",
+            "text": "0 Grams of Sugar"
           }
         },
         "c1d84f02-142d-4ada-a346-b0e72ca0219c": {
           "type": "item",
           "settings": {
-            "border_color": "#3356AE",
-            "text": "Real Food Ingredients"
+            "image": "shopify:\/\/shop_images\/Vector_9e61dd93-c328-44b7-9446-153bedae4fef.png",
+            "border_color": "#57cb60",
+            "text": "Low Cholesterol"
           }
         },
         "f0ca64ca-a3f0-45cd-bc2e-12a853f5e5b3": {
           "type": "item",
           "settings": {
-            "border_color": "#3356AE",
-            "text": "Real Food Ingredients"
+            "image": "shopify:\/\/shop_images\/Vector_a30f93b5-d59d-4bfd-bd73-db609bed9ecf.png",
+            "border_color": "#ad7d60",
+            "text": "Keto Friendly"
           }
         },
         "d2c977ec-12b3-4767-a35b-8c9bd8611f24": {
           "type": "item",
           "settings": {
-            "border_color": "#3356AE",
-            "text": "Real Food Ingredients"
+            "image": "shopify:\/\/shop_images\/Group_958e6970-e814-43f2-98f7-44a135b23808.png",
+            "border_color": "#fb4288",
+            "text": "Low Sodium"
           }
         }
       },
