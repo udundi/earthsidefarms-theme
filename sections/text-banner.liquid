@@ -17,7 +17,7 @@
 <div class="text-banner section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }}">
 
   <div class="text-banner__wrapper">
-    <div class="h3 text-banner-title{% if section.settings.reverse_titles %} reverse-order{% endif %}">
+    <div class="h3 text-banner-title{% if section.settings.reverse_titles %} reverse-order{% endif %}{% if section.settings.reverse_titles %} capitalize{% endif %}">
       <span>{{ section.settings.main_title }}</span>
       <span class="yellow-header-text">{{ section.settings.secondary_title }}</span>
     </div>
@@ -54,6 +54,12 @@
       "id": "secondary_title",
       "default": "Build a bundle!",
       "label": "Secondary Title"
+    },
+    {
+      "type": "checkbox",
+      "id": "capitalize_titles",
+      "default": false,
+      "label": "Capitalize titles"
     },
     {
       "type": "checkbox",
