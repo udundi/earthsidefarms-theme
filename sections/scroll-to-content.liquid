@@ -248,15 +248,11 @@
       border: none;
       padding-right: 0;
       text-align: center;
-      font-size: 12px;
-      line-height: 120%;
     }
 
     .scroll-content__links-right .scroll-content__link,
     .active-scroll-link .scroll-content__link {
-      font-size: 12px;
-      line-height: 120%;
-      margin: 5px 0 0 0;
+      margin: 10px 0 0 0;
     }
     
     .scroll-content__links-right.desktop {
@@ -303,6 +299,31 @@
       height: 130px;
     }
 
+    .scroll-content__content-right {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    .scroll-content__content-detail {
+      margin-bottom: 30px;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .scroll-content__links-left {
+      font-size: 12px;
+      line-height: 120%;
+    }
+
+    .scroll-content__links-right .scroll-content__link,
+    .active-scroll-link .scroll-content__link {
+      font-size: 12px;
+      line-height: 120%;
+      margin: 5px 0 0 0;
+    }
+
     .scroll-content__content-header {
       font-size: 25px;
       line-height: 120%;
@@ -312,20 +333,9 @@
       font-size: 16px;
       line-height: 120%;
     }
-
-    .scroll-content__content-right {
-      flex-wrap: nowrap;
-      flex-direction: column;
-    }
     
     .scroll-content__content-detail-header {
       font-size: 16px;
-    }
-
-    .scroll-content__content-detail {
-      margin-bottom: 30px;
-      padding: 0;
-      width: 100%;
     }
   }
 </style>
