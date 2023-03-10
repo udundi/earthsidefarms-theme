@@ -100,9 +100,8 @@
         {{ block.settings.text }}
       </div>
     {% endfor %}
-    {% comment %}
     {% for block in section.blocks %}
-      <div class="marquee__item">
+      <div class="marquee__item marquee__duplicate">
         <div class="marquee__image" style="border-color: {{ block.settings.border_color }}">
           <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}" loading="lazy" />
         </div>
@@ -110,14 +109,13 @@
       </div>
     {% endfor %}
     {% for block in section.blocks %}
-      <div class="marquee__item">
+      <div class="marquee__item marquee__duplicate">
         <div class="marquee__image" style="border-color: {{ block.settings.border_color }}">
           <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.text }}" loading="lazy" />
         </div>
         {{ block.settings.text }}
       </div>
     {% endfor %}
-    {% endcomment %}
   </div>
 </div>
 
