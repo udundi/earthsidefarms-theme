@@ -27,7 +27,6 @@
 
 .marquee__wrapper {
   display: flex;
-  justify-content: space-around;
   position: absolute;
   overflow: hidden;
   white-space: nowrap;
@@ -73,7 +72,8 @@
 
 @media (max-width: 768px) {
   .marquee__wrapper {
-    width: 100%;
+    width: 700%;
+    animation: marquee 10s linear infinite;
   }
     
   .marquee__duplicate {
