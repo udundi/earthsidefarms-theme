@@ -130,14 +130,6 @@
       </aside>
     {%- endif -%}
 
-    {% if collection.handle == 'all' or collection.handle == 'all-products' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
-      <div class="collection-tabs">
-        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle == 'all' or collection.handle == 'all-products' %} active{% endif %}">Shop All</button>
-        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle == 'candied-nuts' %} active{% endif %}">Candied Nuts</button>
-        <button id="bitesTabBtn" class="collection-tab-btn button{% if collection.handle == 'bites' %} active{% endif %}">Bites</button>
-      </div>
-    {% endif %}
-
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
@@ -182,46 +174,6 @@
     </div>
   </div>
 </div>
-
-<script>
-$(document).ready(function() {
-  $(".collection-tab-btn").each(function() {
-    $(this).click(function() {
-      const tabId = $(this).attr('id');
-
-      $(".product-grid-container .product-card").each(function() {
-        $(this).css("display", "none")
-      })
-
-      if (tabId == 'bitesTabBtn') {
-        console.log('here')
-        $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowerCase().includes('bites')) {
-            $(this).css("display", "block")
-          }
-        })
-      } else if (tabId == 'candiedNutsTabBtn') {
-        console.log('here 2')
-        $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowerCase().includes('candied')) {
-            $(this).css("display", "block")
-          }
-        })
-      } else {
-        console.log('here 3')
-        $(".product-grid-container .product-card").each(function() {
-          $(this).css("display", "block")
-        })
-      }
-      
-      $(".collection-tab-btn").each(function() {
-        $(this).removeClass("active")
-      })
-      $(this).addClass("active")
-    })
-  })
-});
-</script>
       
 {% schema %}
 {
