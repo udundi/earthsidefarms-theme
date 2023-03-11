@@ -131,7 +131,7 @@
 
     <div class="collection-tabs">
       {% for block in section.blocks %}
-        <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% endif %}">{{ block.settings.collection.title }}</button>
+        <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% endif %}">{% if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif %}</button>
       {% endfor %}
     </div>
     
