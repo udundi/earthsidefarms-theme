@@ -128,6 +128,14 @@
         {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
       </aside>
     {%- endif -%}
+
+    {% if collection.handle == 'all' or collection.handle == 'all-products' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
+      <div class="collection-tabs">
+        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle == 'all' or collection.handle == 'all-products' %} active{% endif %}">Shop All</button>
+        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle == 'candied-nuts' %} active{% endif %}">Candied Nuts</button>
+        <button id="bitesTabBtn" class="collection-tab-btn button{% if collection.handle == 'bites' %} active{% endif %}">Bites</button>
+      </div>
+    {% endif %}
     
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
