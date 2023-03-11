@@ -1,10 +1,10 @@
-<div class="product-card" data-product-collection="{{ current_collection }}">
+<div class="product-card" data-product-collection="{{ current_collection.handle }}">
   <a href="{{ product.url }}">
     <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" loading="lazy"/>
     
     {% if show_collection %}
     <span class="product-collection">
-      {{ current_collection }}
+      {{ current_collection.title }}
     </span>
     {% endif %}
   
