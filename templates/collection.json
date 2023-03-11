@@ -14,12 +14,26 @@
         "template--17540507435313__3833be83-7ffa-40ec-ba00-2a0d49eec079-1678575692b047430f-0": {
           "type": "item",
           "settings": {
-            "collection": ""
+            "collection": "all-products"
+          }
+        },
+        "b73a6b2c-ae95-4d30-8ec8-85cd035b8057": {
+          "type": "item",
+          "settings": {
+            "collection": "candied-nuts"
+          }
+        },
+        "30e07e8e-46eb-44b3-9833-441690ef723c": {
+          "type": "item",
+          "settings": {
+            "collection": "bites"
           }
         }
       },
       "block_order": [
-        "template--17540507435313__3833be83-7ffa-40ec-ba00-2a0d49eec079-1678575692b047430f-0"
+        "template--17540507435313__3833be83-7ffa-40ec-ba00-2a0d49eec079-1678575692b047430f-0",
+        "b73a6b2c-ae95-4d30-8ec8-85cd035b8057",
+        "30e07e8e-46eb-44b3-9833-441690ef723c"
       ],
       "settings": {
         "products_per_page": 16,
