@@ -183,36 +183,26 @@
 
 <script>
 $(document).ready(function() {
-  $(".collection-tab-btn").each(function() {
-    $(this).click(function() {
-      const tabId = $(this).attr('id');
+  $(".collection-tab-btn").each(function(tabBtn) {
+    tabBtn.click(function(clickedBtn) {
+      const tabId = clickedBtn.attr('id');
 
-      $(".product-grid-container .product-card").each(function() {
-        $(this).css("display", "none")
+      $(".product-grid-container .product-card").each(function(productCard) {
+        
+        productCard.css("display", "none")
+        
+        const productCollection = productCard.data("product-collection") + "TabBtn"
+
+        if (tabId == productCollection) {
+          productCard.css("display", "block")
+        }
       })
-
-      if (tabId == 'bitesTabBtn') {
-        $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowerCase().includes('bites')) {
-            $(this).css("display", "block")
-          }
-        })
-      } else if (tabId == 'candiedNutsTabBtn') {
-        $(".product-grid-container .product-card").each(function() {
-          if ($(this).data("product-collection").toLowerCase().includes('candied')) {
-            $(this).css("display", "block")
-          }
-        })
-      } else {
-        $(".product-grid-container .product-card").each(function() {
-          $(this).css("display", "block")
-        })
-      }
       
-      $(".collection-tab-btn").each(function() {
-        $(this).removeClass("active")
+      $(".collection-tab-btn").each(function(allBtns) {
+        allBtns.removeClass("active")
       })
-      $(this).addClass("active")
+      
+      clickedBtn.addClass("active")
     })
   })
 });
