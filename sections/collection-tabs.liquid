@@ -129,13 +129,11 @@
       </aside>
     {%- endif -%}
 
-    {% if collection.handle == 'all' or collection.handle == 'all-products' or collection.handle == 'candied-nuts' or collection.handle == 'bites' %}
-      <div class="collection-tabs">
-        <button id="shopAllTabBtn" class="collection-tab-btn button{% if collection.handle == 'all' or collection.handle == 'all-products' %} active{% endif %}">Shop All</button>
-        <button id="candiedNutsTabBtn" class="collection-tab-btn button{% if collection.handle == 'candied-nuts' %} active{% endif %}">Candied Nuts</button>
-        <button id="bitesTabBtn" class="collection-tab-btn button{% if collection.handle == 'bites' %} active{% endif %}">Bites</button>
-      </div>
-    {% endif %}
+    <div class="collection-tabs">
+      {% for block in section.blocks %}
+        <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% endif %}">{{ block.settings.collection.title }}</button>
+      {% endfor %}
+    </div>
     
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
@@ -165,7 +163,7 @@
                   {% render 'product-card', 
                     product: product, 
                     show_collection: true, 
-                    current_collection: product.collections[1].title,
+                    current_collection: product.collections[1],
                     show_cta: true 
                   %}
                 </li>
@@ -194,21 +192,18 @@ $(document).ready(function() {
       })
 
       if (tabId == 'bitesTabBtn') {
-        console.log('here')
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").toLowerCase().includes('bites')) {
             $(this).css("display", "block")
           }
         })
       } else if (tabId == 'candiedNutsTabBtn') {
-        console.log('here 2')
         $(".product-grid-container .product-card").each(function() {
           if ($(this).data("product-collection").toLowerCase().includes('candied')) {
             $(this).css("display", "block")
           }
         })
       } else {
-        console.log('here 3')
         $(".product-grid-container .product-card").each(function() {
           $(this).css("display", "block")
         })
