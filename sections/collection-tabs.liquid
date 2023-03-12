@@ -135,6 +135,7 @@
         {% assign showTabs = true %}
         
         {% if block.settings.collection.products.size > 0 %}
+          here
           {% if collectionProducts %}
               {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
           {% else %}
@@ -218,7 +219,6 @@
           {%- endif -%}
         {%- endpaginate -%}
       {% else %}
-        {{  collectionProducts }}
         {%- if collectionProducts.size == 0 -%}
             <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
