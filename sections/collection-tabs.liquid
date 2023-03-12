@@ -289,7 +289,10 @@
 $(document).ready(function() {
 
   $(".collection-tab-btn").each(function() {
-    const y = {{ section.blocks }}
+    let y = [];
+    {% for block in sections.blocks %}
+      y.push({{block.settings.collection | json}})
+    {% endfor %}
     console.log(y)
     
     $(this).click(function() {
