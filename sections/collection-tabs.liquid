@@ -142,6 +142,8 @@
     {% for block in section.blocks %}
       {% if request.page_type == 'collection' and collection.handle == block.settings.collection.handle %}
         {% assign collectionPageHasTabs = true %}
+      {% else collection.handle == 'all' or collection.handle == 'all-products' %}
+        {% assign collectionPageHasTabs = true %}
       {% endif %}
     {% endfor %}
 
