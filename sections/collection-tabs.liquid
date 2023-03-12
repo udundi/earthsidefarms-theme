@@ -185,7 +185,7 @@
           {% for block in section.blocks %}
             <button 
               id="{{ block.settings.collection.handle }}TabBtn" 
-              class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% else %}{% if forloop.index == 1 %} active{% endif %}{% endif %}"
+              class="collection-tab-btn button{% if forloop.index == 1 %} active{% else %}{% if collection.handle == block.settings.collection.handle %} active{% endif %}{% endif %}"
             >
               {%- if shownShopAll -%}
                 {{ block.settings.collection.title }}
