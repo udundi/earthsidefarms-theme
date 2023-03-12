@@ -2,10 +2,6 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  #shopify-section-{{ section.id }} {
-    margin: 0;
-  }
-  
   @media screen and (max-width: 749px) {
     .collection-hero--with-image .collection-hero__inner {
       padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
@@ -18,7 +14,7 @@
   }
 
   .collection-hero__description {
-    margin: 0 auto;
+    margin: 0 auto!important;
     text-align: center;
   }
 
