@@ -169,7 +169,7 @@
     {% endfor %}
 
     {% if showTabs != true %}
-      {% assign collectionProducts = collection.products %}
+      {% comment %}{% assign collectionProducts = collection.products %}{% endcomment %}
     {% else %}
       {% assign collection.products = collectionProducts %}
     {% endif %}
