@@ -232,7 +232,9 @@ $(document).ready(function() {
         
         const productCollection $(this).data("product-collection") + "TabBtn"
 
-        if (tabId == productCollection || tabId == 'all-productsTabBtn' || tabId == 'allTabBtn') {
+        console.log(tabId)
+
+        if (tabId == productCollection || tabId == 'all-productsTabBtn' || || tabId == 'all-productsTabBtn') {
           $(this).css("display", "block")
         }
       })
