@@ -148,6 +148,11 @@
       {% assign collectionProducts = collection.products %}
     {% endif %}
 
+    <script>
+      const x = {{ collectionProducts | json }} 
+      console.log(x)
+    </script>
+
     {% if showTabs %}
     <div class="collection-tabs">
       {% assign shownShopAll = false %}
