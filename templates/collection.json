@@ -5,7 +5,9 @@
       "settings": {
         "show_description": true,
         "show_collection_image": false,
-        "color_scheme": "background-1"
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 0
       }
     },
     "3833be83-7ffa-40ec-ba00-2a0d49eec079": {
