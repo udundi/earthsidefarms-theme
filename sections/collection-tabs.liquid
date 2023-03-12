@@ -130,8 +130,19 @@
     {%- endif -%}
 
     <div class="collection-tabs">
+      {% assign shownShopAll = false %}
       {% for block in section.blocks %}
-        <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% endif %}">{% if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif %}</button>
+        <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle %} active{% endif %}">
+          {%- if shownShopAll -%}
+            {{ block.settings.collection.title }}
+          {%- else -%}
+            {%- if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif -%}
+          {%- endif -%}
+        </button>
+        
+        {% if collection.handle == 'all' or collection.handle == 'all-products' %}  
+          {% assign shownShopAll = true %}
+        {% endif %}
       {% endfor %}
     </div>
     
