@@ -291,9 +291,8 @@ $(document).ready(function() {
   $(".collection-tab-btn").each(function() {
     let y = [];
     {% for block in sections.blocks %}
-      y.push({{block.settings.collection | json}})
+      console.log({{block.settings.collection | json}})
     {% endfor %}
-    console.log(y)
     
     $(this).click(function() {
       const tabId = $(this).attr('id');
