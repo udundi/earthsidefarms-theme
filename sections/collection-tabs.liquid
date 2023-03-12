@@ -131,7 +131,20 @@
     {%- endif -%}
 
     {% for block in section.blocks %}
-      {% if collection.handle == block.settings.collection.handle %}
+      {% if request.page_type == 'collection' %}
+        {% if collection.handle == block.settings.collection.handle %}
+          {% assign showTabs = true %}
+          
+          {% if block.settings.collection.products.size > 0 %}
+            {% if collectionProducts %}
+                {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
+            {% else %}
+                {% assign collectionProducts = block.settings.collection.products %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+      {% else %}
         {% assign showTabs = true %}
         
         {% if block.settings.collection.products.size > 0 %}
