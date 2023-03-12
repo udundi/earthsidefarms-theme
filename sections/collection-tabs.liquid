@@ -140,7 +140,7 @@
     {% endif %}
 
     {% for block in section.blocks %}
-      {% if collection.handle == block.settings.collection.handle %}
+      {% if request.page_type == 'collection' and collection.handle == block.settings.collection.handle %}
         {% assign collectionPageHasTabs = true %}
       {% endif %}
     {% endfor %}
@@ -158,6 +158,8 @@
                 {% assign collectionProducts = block.settings.collection.products %}
             {% endif %}
           {% endif %}
+        {% else %}
+          {% assign showTabs = false %}
         {% endif %}
 
       {% else %}
