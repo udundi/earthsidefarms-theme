@@ -143,6 +143,7 @@
       {% if request.page_type == 'collection' %}
         {% if collection.handle == block.settings.collection.handle %}
           {% assign showTabs = true %}
+          {% assign onBlockCollectionPage = true %}
           
           {% if block.settings.collection.products.size > 0 %}
             {% if collectionProducts %}
@@ -185,7 +186,7 @@
           {% for block in section.blocks %}
             <button 
               id="{{ block.settings.collection.handle }}TabBtn" 
-              class="collection-tab-btn button"
+              class="collection-tab-btn button {% if collection.handle == block.settings.collection.handle %} active{% else %}{% if forloop.index == 1 and onBlockCollectionPage != true %} active{% endif %}{% endif %}"
             >
               {%- if shownShopAll -%}
                 {{ block.settings.collection.title }}
@@ -289,11 +290,6 @@
 $(document).ready(function() {
 
   $(".collection-tab-btn").each(function() {
-    let y = [];
-    {% for block in sections.blocks %}
-      console.log({{block.settings.collection | json}})
-    {% endfor %}
-    
     $(this).click(function() {
       const tabId = $(this).attr('id');
 
