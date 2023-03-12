@@ -47,8 +47,8 @@
         "filter_type": "horizontal",
         "enable_sorting": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "main-product-grid": {
@@ -73,7 +73,7 @@
     "041ef518-ecc0-46f8-a1ab-fbf005f7d5bd": {
       "type": "text-banner",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "main_title": "Don't know what to get?",
         "secondary_title": "Build a bundle!",
         "capitalize_titles": false,
