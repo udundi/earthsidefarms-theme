@@ -289,7 +289,7 @@
 $(document).ready(function() {
 
   $(".collection-tab-btn").each(function() {
-    const y = {{ section.blocks | json }}
+    const y = {{ section.blocks }}
     console.log(y)
     
     $(this).click(function() {
