@@ -25,13 +25,18 @@
     }
   }
 
+  .collection-tabs__button-container {
+    width: 100%;
+    text-align: center;
+  }
+
   .collection-tabs {
     padding: 10px;
     border: 1px solid #3356AE;
     border-radius: 50px;
     margin: 0 auto 85px auto;
     text-align: center;
-    width: 650px;
+    display: inline-block;
   }
 
   .collection-tabs .collection-tab-btn {
@@ -42,6 +47,7 @@
     border: none;
     background: transparent;
     color: #3356AE;
+    float: left;
   }
 
   .collection-tabs .collection-tab-btn::after {
@@ -173,21 +179,23 @@
     </script>
 
     {% if showTabs %}
-      <div class="collection-tabs">
-        {% assign shownShopAll = false %}
-        {% for block in section.blocks %}
-          <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle or forloop.index == 1 %} active{% endif %}">
-            {%- if shownShopAll -%}
-              {{ block.settings.collection.title }}
-            {%- else -%}
-              {%- if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif -%}
-            {%- endif -%}
-          </button>
-          
-          {% if collection.handle == 'all' or collection.handle == 'all-products' %}  
-            {% assign shownShopAll = true %}
-          {% endif %}
-        {% endfor %}
+      <div class="collection-tabs__button-container">
+        <div class="collection-tabs">
+          {% assign shownShopAll = false %}
+          {% for block in section.blocks %}
+            <button id="{{ block.settings.collection.handle }}TabBtn" class="collection-tab-btn button{% if collection.handle == block.settings.collection.handle or forloop.index == 1 %} active{% endif %}">
+              {%- if shownShopAll -%}
+                {{ block.settings.collection.title }}
+              {%- else -%}
+                {%- if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif -%}
+              {%- endif -%}
+            </button>
+            
+            {% if collection.handle == 'all' or collection.handle == 'all-products' %}  
+              {% assign shownShopAll = true %}
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     {% endif %}
     
