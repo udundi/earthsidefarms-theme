@@ -185,16 +185,16 @@
           {% for block in section.blocks %}
             <button 
               id="{{ block.settings.collection.handle }}TabBtn" 
-              class="collection-tab-btn button{% if forloop.index == 1 %} active{% else %}{% if collection.handle == block.settings.collection.handle %} active{% endif %}{% endif %}"
+              class="collection-tab-btn button"
             >
               {%- if shownShopAll -%}
                 {{ block.settings.collection.title }}
               {%- else -%}
-                {%- if collection.handle == 'all' or collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif -%}
+                {%- if block.settings.collection.handle == 'all' or block.settings.collection.handle == 'all-products' %}Shop All{% else %}{{ block.settings.collection.title }}{% endif -%}
               {%- endif -%}
             </button>
             
-            {% if collection.handle == 'all' or collection.handle == 'all-products' %}  
+            {% if block.settings.collection.handle == 'all' or block.settings.collection.handle == 'all-products' %}  
               {% assign shownShopAll = true %}
             {% endif %}
           {% endfor %}
@@ -287,7 +287,11 @@
 
 <script>
 $(document).ready(function() {
+
   $(".collection-tab-btn").each(function() {
+    const y = {{ block.settings | json }}
+    console.log(y)
+    
     $(this).click(function() {
       const tabId = $(this).attr('id');
 
