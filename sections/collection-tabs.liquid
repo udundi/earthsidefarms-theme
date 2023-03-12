@@ -133,7 +133,7 @@
       {% if collection.handle == block.settings.collection.handle %}
         {% assign showTabs = true %}
         
-        {% if blog.articles.size > 0 %}
+        {% if block.settings.collection.products.size > 0 %}
           {% if collectionProducts %}
               {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
           {% else %}
