@@ -156,9 +156,6 @@
           {% if block.settings.collection.products.size > 0 %}
             {% if collectionProducts %}
               {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
-              {% for p in collectionProducts %}
-                {{ p.title }}
-              {% endfor %}
             {% else %}
               {% assign collectionProducts = block.settings.collection.products %}
             {% endif %}
@@ -181,11 +178,19 @@
       {% endif %}
     {% endfor %}
 
+    {% for p in collectionProducts %}
+                {{ p.title }}
+              {% endfor %}
+
     {% if showTabs != true %}
       {% assign collectionProducts = collection.products %}
     {% else %}
       {% assign collection.products = collectionProducts %}
     {% endif %}
+
+    {% for p in collectionProducts %}
+                {{ p.title }}
+              {% endfor %}
 
     <script>
       const x = {{ collectionProducts | json }} 
