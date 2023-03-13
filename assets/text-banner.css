@@ -24,6 +24,7 @@
 .text-banner .text-banner-title.inline {
   flex-direction: row;
   text-align: center;
+  justify-content: center;
 }
 
 .text-banner .text-banner-title.inline span:first-child {
