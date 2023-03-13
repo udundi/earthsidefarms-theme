@@ -21,6 +21,10 @@
   flex-direction: column;
 }
 
+.text-banner .text-banner-title.inline {
+  flex-direction: row;
+}
+
 .text-banner .text-banner-title.reverse-order {
   flex-direction: column-reverse;
 }
