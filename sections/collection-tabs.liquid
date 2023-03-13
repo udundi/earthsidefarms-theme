@@ -169,10 +169,7 @@
         
         {% if block.settings.collection.products.size > 0 %}
           {% if collectionProducts %}
-              {% assign new = collectionProducts | concat:block.settings.collection.products %}
-            {% for p in new %}
-                {{ p.title }}
-              {% endfor %}
+              {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
           {% else %}
               {% assign collectionProducts = block.settings.collection.products %}
           {% endif %}
