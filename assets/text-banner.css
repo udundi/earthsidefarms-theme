@@ -70,3 +70,7 @@
     line-height: 150%;
   }
 }
+
+#shopify-section-{{ section.id }} {
+  margin: 0;
+}
