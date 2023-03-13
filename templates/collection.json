@@ -38,6 +38,13 @@
         "30e07e8e-46eb-44b3-9833-441690ef723c"
       ],
       "settings": {
+        "main_title": "Check us out.",
+        "secondary_title": "Our products.",
+        "keep_inline": false,
+        "capitalize_titles": false,
+        "reverse_titles": false,
+        "invert_background": false,
+        "swipe_on_mobile": true,
         "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",
@@ -78,6 +85,7 @@
         "bg_color": "#ffffff",
         "main_title": "Don't know what to get?",
         "secondary_title": "Build a bundle!",
+        "keep_inline": false,
         "capitalize_titles": false,
         "reverse_titles": false,
         "sub_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
