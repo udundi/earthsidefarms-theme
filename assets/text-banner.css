@@ -23,6 +23,11 @@
 
 .text-banner .text-banner-title.inline {
   flex-direction: row;
+  text-align: center;
+}
+
+.text-banner .text-banner-title.inline span:first-child {
+  margin-right: 5px;
 }
 
 .text-banner .text-banner-title.reverse-order {
