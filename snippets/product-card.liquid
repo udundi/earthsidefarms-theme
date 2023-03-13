@@ -1,5 +1,5 @@
 <div class="product-card" data-product-collection="{{ current_collection.handle }}" {% if invert_bg %}style="background: #fff;"{% endif %}>
-  <a href="{{ product.url }}">
+  <a href="{{ product.url }}" class="product-card__link">
     <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}" loading="lazy"/>
     
     {% if show_collection %}
