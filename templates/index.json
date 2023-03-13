@@ -121,9 +121,10 @@
     "18118e7a-f8a9-4f62-8e71-fc4c521863d1": {
       "type": "text-banner",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#ffffff",
         "main_title": "Check Us Out.",
         "secondary_title": "Our Products.",
+        "keep_inline": true,
         "capitalize_titles": true,
         "reverse_titles": false,
         "sub_text": "",
