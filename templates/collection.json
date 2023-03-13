@@ -38,8 +38,8 @@
         "30e07e8e-46eb-44b3-9833-441690ef723c"
       ],
       "settings": {
-        "main_title": "Check us out.",
-        "secondary_title": "Our products.",
+        "main_title": "",
+        "secondary_title": "",
         "keep_inline": false,
         "capitalize_titles": false,
         "reverse_titles": false,
@@ -56,7 +56,7 @@
         "filter_type": "horizontal",
         "enable_sorting": false,
         "columns_mobile": "2",
-        "padding_top": 0,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
