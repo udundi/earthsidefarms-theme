@@ -1,4 +1,8 @@
 <style>
+  .why-choose__container {
+    position: relative;
+  }
+  
   .why-choose__title {
     font-style: normal;
     font-weight: 900;
@@ -52,6 +56,15 @@
     object-fit: cover;
   }
 
+  .arrows-img {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: auto;
+  }
+
   @media (max-width: 768px) {
     .why-choose__title {
       font-size: 25px;
@@ -64,6 +77,8 @@
 <div class="why-choose__container section-{{ section.id }}-padding">
   <div class="why-choose__title">{{ section.settings.main_title }} <span class="yellow-header-text">{{ section.settings.secondary_title }}</span></div>
 
+  <img src="{{ 'arrows.png' | img_url: 'master' }}" alt="arrows pointing to image" class="arrows-img" />
+  
   <div class="why-choose__image">
     <img src="{{ section.settings.image | img_url: 'master' }}" alt="why choose earthside farms" />
   </div>
