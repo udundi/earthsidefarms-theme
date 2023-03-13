@@ -145,6 +145,7 @@
         "capitalize_titles": true,
         "reverse_titles": false,
         "invert_background": true,
+        "swipe_on_mobile": true,
         "products_per_page": 16,
         "columns_desktop": 4,
         "image_ratio": "adapt",
