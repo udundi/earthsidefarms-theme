@@ -287,10 +287,13 @@
                show_quick_add: section.settings.enable_quick_add,
                section_id: section.id
              %}{% endcomment %}
-            {% render 'product-card',
-               product: product,
-               show_quick_add: section.settings.enable_quick_add,
-             %}
+            {% render 'product-card', 
+              product: product, 
+              show_collection: true, 
+              current_collection: product.collections[1],
+              show_cta: true,
+              invert_bg: section.settings.invert_background
+            %}
           </li>
         {%- else -%}
           {%- for product in collectionProducts -%}
