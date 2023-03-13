@@ -1,12 +1,184 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+  .why-choose__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 50px;
   }
+
+  .why-choose__image {
+    width: 500px;
+    height: 600px;
+    position: relative;
+  }
+
+  .why-choose__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .why-choose__title {
+      font-size: 25px;
+      line-height: 110%;
+      margin-bottom: 35px;
+    }
+  }
+</style>
+
+<div class="why-choose__container section-{{ section.id }}-padding">
+  <div class="why-choose__title">{{ section.settings.main_title }} <span class="yellow-header-title">{{ section.settings.secondary_title }}</span></div>
+
+  <div class="why-choose__image">
+    <img src="{{ section.settings.image | img_url: 'master' }}" alt="why choose earthside farms" />
+  </div>
+
+  <div class="why-choose__detail" id="why-choose__detail_one">
+    <div class="why-choose__detail-image">
+      <img src="{{ block.settings.detail_image_one | img_url: 'master' }}" alt="{{ block.settings.detail_text_one }}" loading="lazy" />
+    </div>
+    <span class="yellow-header-text">{{ block.settings.detail_text_one_primary }}</span>
+    {{ block.settings.detail_text_one_secondary }}
+  </div>
+
+  <div class="why-choose__detail" id="why-choose__detail_two">
+    <div class="why-choose__detail-image">
+      <img src="{{ block.settings.detail_image_two | img_url: 'master' }}" alt="{{ block.settings.detail_text_two }}" loading="lazy" />
+    </div>
+    <span class="yellow-header-text">{{ block.settings.detail_text_two_primary }}</span>
+    {{ block.settings.detail_text_two_secondary }}
+  </div>
+
+  <div class="why-choose__detail" id="why-choose__detail_three">
+    <div class="why-choose__detail-image">
+      <img src="{{ block.settings.detail_image_three | img_url: 'master' }}" alt="{{ block.settings.detail_text_three }}" loading="lazy" />
+    </div>
+    <span class="yellow-header-text">{{ block.settings.detail_text_three_primary }}</span>
+    {{ block.settings.detail_text_three_secondary }}
+  </div>
+
+  <div class="why-choose__detail" id="why-choose__detail_four">
+    <div class="why-choose__detail-image">
+      <img src="{{ block.settings.detail_image_four | img_url: 'master' }}" alt="{{ block.settings.detail_text_four }}" loading="lazy" />
+    </div>
+    <span class="yellow-header-text">{{ block.settings.detail_text_four_primary }}</span>
+    {{ block.settings.detail_text_four_secondary }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collections Tabs",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "default": "Why Choose",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "secondary_title",
+      "default": "Earthside Farms?",
+      "label": "Secondary Title"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_one_primary",
+      "default": "Plant",
+      "label": "Detail One Primary Title"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_one_secondary",
+      "default": "Based",
+      "label": "Detail One Secondary Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "detail_image_one",
+      "label": "Image for text one"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_two_primary",
+      "default": "Low To No",
+      "label": "Detail Two Primary Title"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_two_secondary",
+      "default": "Cholesterol",
+      "label": "Detail Two Secondary Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "detail_image_two",
+      "label": "Image for text two"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_three_primary",
+      "default": "Low",
+      "label": "Detail Three Primary Title"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_three_secondary",
+      "default": "Sugar, Carbs, & Sodium",
+      "label": "Detail Three Secondary Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "detail_image_three",
+      "label": "Image for text three"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_four_primary",
+      "default": "Keto",
+      "label": "Detail Four Primary Title"
+    },
+    {
+      "type": "text",
+      "id": "detail_text_four_secondary",
+      "default": "Friendly",
+      "label": "Detail Four Secondary Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "detail_image_four",
+      "label": "Image for text four"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Choose"
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
