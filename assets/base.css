@@ -3157,6 +3157,10 @@ details-disclosure > details.mega-menu {
     width: 100%;
 }
 
+.product-card__link {
+  text-decoration: none;
+}
+
 .product-card__link,
 .product-card__link:link, 
 .product-card__link:-webkit-any-link {
