@@ -121,6 +121,14 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+-%}
+
 <div class="collection-tabs__container section-{{ section.id }}-padding" {% if section.settings.invert_background %}style="background: #F9F4EF;"{% endif %}>
   {% if section.settings.main_title != '' %}
     <div class="h3 text-banner-title{% if section.settings.keep_inline %} inline{% endif %}{% if section.settings.reverse_titles %} reverse-order{% endif %}{% if section.settings.capitalize_titles %} capitalize{% endif %}">
@@ -448,6 +456,12 @@ $(document).ready(function() {
       "id": "invert_background",
       "default": false,
       "label": "Invert background color"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Swipe products on mobile"
     },
     {
       "type": "range",
