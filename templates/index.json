@@ -159,11 +159,29 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "345cdc50-6e5d-4fc9-849f-fcde205400e2": {
+      "type": "why-choose-image",
+      "settings": {
+        "main_title": "Why Choose",
+        "secondary_title": "Earthside Farms?",
+        "detail_text_one_primary": "Plant",
+        "detail_text_one_secondary": "Based",
+        "detail_text_two_primary": "Low To No",
+        "detail_text_two_secondary": "Cholesterol",
+        "detail_text_three_primary": "Low",
+        "detail_text_three_secondary": "Sugar, Carbs, & Sodium",
+        "detail_text_four_primary": "Keto",
+        "detail_text_four_secondary": "Friendly",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "slideshow",
     "19ca8568-e35a-49e6-bcc9-6697f86e324f",
-    "87c99542-9f9b-415e-bc1c-90e7e456de8c"
+    "87c99542-9f9b-415e-bc1c-90e7e456de8c",
+    "345cdc50-6e5d-4fc9-849f-fcde205400e2"
   ]
 }
