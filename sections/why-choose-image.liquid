@@ -95,6 +95,10 @@
     margin: 0 auto;
   }
 
+  .arrow-down-img {
+    display: none;
+  }
+
   @media (max-width: 1200px) {
     .why-choose__detail {
       font-size: 16px;
@@ -186,6 +190,13 @@
       height: 100%;
       text-align: center;
     }
+
+    .arrow-down-img {
+      display: block;
+      position: absolute;
+      bottom: 400px;
+      right: 10px;
+    }
   }
 </style>
 
@@ -236,6 +247,7 @@
   </div>
 
   <img src="{{ 'arrows-home.svg' | file_url }}" alt="arrows pointing to image" class="arrows-img" />
+  <img src="{{ 'arrow-down.svg' | file_url }}" alt="arrow pointing down to image" class="arrow-down-img" />
   
   <div class="why-choose__image">
     <img src="{{ section.settings.image | img_url: 'master' }}" alt="why choose earthside farms" />
