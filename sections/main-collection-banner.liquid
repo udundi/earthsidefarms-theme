@@ -35,12 +35,6 @@
       display: none;
     }
   }
-
-  {% if collection.handle == 'all' %}
-    .section-{{ section.id }}-padding {
-      padding: 0;
-    }
-  {% endif %}
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">

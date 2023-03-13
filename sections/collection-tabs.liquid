@@ -119,6 +119,12 @@
       min-height: auto;
     }
   }
+
+  {% if collection.handle == 'all' %}
+    .section-{{ section.id }}-padding {
+      padding: 0;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
