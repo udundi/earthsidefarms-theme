@@ -274,6 +274,8 @@ $(document).ready(function() {
   })
 
   $(".collection-tab-btn").each(function() {
+    const tabId = $(this).attr('id');
+    
     if ($(this).hasClass("active")) {
       $(".product-grid-container .product-card").each(function() {
         
@@ -289,8 +291,6 @@ $(document).ready(function() {
     }
     
     $(this).click(function() {
-      const tabId = $(this).attr('id');
-
       $(".product-grid-container .product-card").each(function() {
         
         $(this).css("display", "none")
