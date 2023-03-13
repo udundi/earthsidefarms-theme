@@ -155,12 +155,12 @@
           
           {% if block.settings.collection.products.size > 0 %}
             {% if collectionProducts %}
-                {% for p in block.settings.collection.products %}
-                  {{ p.title }}
-                {% endfor %}
-                {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
+              {% assign collectionProducts = collectionProducts | concat:block.settings.collection.products %}
+              {% for p in collectionProducts %}
+                {{ p.title }}
+              {% endfor %}
             {% else %}
-                {% assign collectionProducts = block.settings.collection.products %}
+              {% assign collectionProducts = block.settings.collection.products %}
             {% endif %}
           {% endif %}
         {% else %}
