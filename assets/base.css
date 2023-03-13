@@ -3157,9 +3157,9 @@ details-disclosure > details.mega-menu {
     width: 100%;
 }
 
-.product-card .product-card__link,
-.product-card .product-card__link:link, 
-.product-card .product-card__link:-webkit-any-link {
+.product-card__link,
+.product-card__link:link, 
+.product-card__link:-webkit-any-link {
   text-decoration: none!important;
 }
 
