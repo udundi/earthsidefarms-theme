@@ -227,7 +227,8 @@
     
     <div class="product-grid-container" id="ProductGridContainer">
       {% if request.page_type == 'collection' %}
-        {%- paginate collectionProducts by section.settings.products_per_page -%}
+        {% assign collection.products = collectionProducts %}
+        {%- paginate collection.products by section.settings.products_per_page -%}
           {%- if collection.products.size == 0 -%}
             <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
