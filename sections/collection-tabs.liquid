@@ -84,7 +84,7 @@
   }
 {%- endstyle -%}
 
-<div class="collection-tabs__container section-{{ section.id }}-padding">
+<div class="collection-tabs__container section-{{ section.id }}-padding" {% if section.settings.invert_background %}style="background: #F9F4EF;"{% endif %}>
   {% if section.settings.main_title != '' %}
     <div class="h3 text-banner-title{% if section.settings.keep_inline %} inline{% endif %}{% if section.settings.reverse_titles %} reverse-order{% endif %}{% if section.settings.capitalize_titles %} capitalize{% endif %}">
       <span>{{ section.settings.main_title }}</span>
@@ -252,7 +252,8 @@
                     product: product, 
                     show_collection: true, 
                     current_collection: product.collections[1],
-                    show_cta: true 
+                    show_cta: true,
+                    invert_bg: section.settings.invert_background
                   %}
                 </li>
               {%- endfor -%}
@@ -349,9 +350,9 @@ $(document).ready(function() {
     },
     {
       "type": "checkbox",
-      "id": "invert_product_colors",
+      "id": "invert_background",
       "default": false,
-      "label": "Invert product background color"
+      "label": "Invert background color"
     },
     {
       "type": "range",
