@@ -267,8 +267,27 @@
 
 <script>
 $(document).ready(function() {
+  let foundActive = false;
+  
+  $(".product-grid-container .product-card").each(function() {
+    $(this).css("display", "none")
+  })
 
   $(".collection-tab-btn").each(function() {
+    if ($(this).hasClass("active")) {
+      $(".product-grid-container .product-card").each(function() {
+        
+        const productCollection = $(this).data("product-collection") + "TabBtn"
+
+        if (tabId == productCollection || tabId == 'all-productsTabBtn' || tabId == 'allTabBtn') {
+          $(this).css("display", "block")
+          foundActive = true;
+        } else if ((tabId == 'all-productsTabBtn' || tabId == 'allTabBtn') && !foundActive) {
+          $(this).css("display", "block")
+        }
+      })
+    }
+    
     $(this).click(function() {
       const tabId = $(this).attr('id');
 
@@ -278,7 +297,7 @@ $(document).ready(function() {
         
         const productCollection = $(this).data("product-collection") + "TabBtn"
 
-        if (tabId == productCollection || tabId == 'all-productsTabBtn' || tabId == 'all-productsTabBtn') {
+        if (tabId == productCollection || tabId == 'all-productsTabBtn' || tabId == 'allTabBtn') {
           $(this).css("display", "block")
         }
       })
