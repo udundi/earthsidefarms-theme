@@ -95,7 +95,9 @@
     <div class="why-choose__detail-image">
       <img src="{{ section.settings.detail_image_one | img_url: 'master' }}" alt="{{ section.settings.detail_text_one }}" loading="lazy" />
     </div>
-    <span class="yellow-header-text">{{ section.settings.detail_text_one_primary }}</span> {{ section.settings.detail_text_one_secondary }}
+    <span class="yellow-header-text">{{ section.settings.detail_text_one_primary }}</span>
+    <br />
+    {{ section.settings.detail_text_one_secondary }}
   </div>
 
   <div class="why-choose__detail" id="why-choose__detail_two">
