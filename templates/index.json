@@ -141,8 +141,8 @@
       "settings": {
         "main_title": "Check us out.",
         "secondary_title": "Our products.",
-        "keep_inline": false,
-        "capitalize_titles": false,
+        "keep_inline": true,
+        "capitalize_titles": true,
         "reverse_titles": false,
         "invert_background": true,
         "products_per_page": 16,
