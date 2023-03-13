@@ -168,12 +168,16 @@
         "image": "shopify:\/\/shop_images\/b3LY4ORI.png",
         "detail_text_one_primary": "Plant",
         "detail_text_one_secondary": "Based",
+        "detail_image_one": "shopify:\/\/shop_images\/Vector_77273ce3-c239-4849-a8c1-550d7ba96f86.png",
         "detail_text_two_primary": "Low To No",
         "detail_text_two_secondary": "Cholesterol",
+        "detail_image_two": "shopify:\/\/shop_images\/Vector_77273ce3-c239-4849-a8c1-550d7ba96f86.png",
         "detail_text_three_primary": "Low",
         "detail_text_three_secondary": "Sugar, Carbs, & Sodium",
+        "detail_image_three": "shopify:\/\/shop_images\/Vector_77273ce3-c239-4849-a8c1-550d7ba96f86.png",
         "detail_text_four_primary": "Keto",
         "detail_text_four_secondary": "Friendly",
+        "detail_image_four": "shopify:\/\/shop_images\/Vector_77273ce3-c239-4849-a8c1-550d7ba96f86.png",
         "padding_top": 36,
         "padding_bottom": 36
       }
