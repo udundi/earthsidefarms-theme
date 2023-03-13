@@ -202,7 +202,7 @@
 
     {% if showTabs %}
       <div class="collection-tabs__button-container">
-        <div class="collection-tabs">
+        <div class="collection-tabs" {% if section.settings.invert_background %}style="background: #fff;"{% endif %}>
           {% assign shownShopAll = false %}
           {% for block in section.blocks %}
             <button 
