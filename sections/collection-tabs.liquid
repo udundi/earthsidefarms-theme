@@ -85,7 +85,7 @@
 {%- endstyle -%}
 
 <div class="collection-tabs__container section-{{ section.id }}-padding">
-  {% if section.settings.tabs_title != '' %}
+  {% if section.settings.main_title != '' %}
     <div class="h3 text-banner-title{% if section.settings.keep_inline %} inline{% endif %}{% if section.settings.reverse_titles %} reverse-order{% endif %}{% if section.settings.capitalize_titles %} capitalize{% endif %}">
       <span>{{ section.settings.main_title }}</span>
       <span class="yellow-header-text">{{ section.settings.secondary_title }}</span>
@@ -317,6 +317,42 @@ $(document).ready(function() {
   "name": "Collections Tabs",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "default": "Check us out.",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "secondary_title",
+      "default": "Our products.",
+      "label": "Secondary Title"
+    },
+    {
+      "type": "checkbox",
+      "id": "keep_inline",
+      "default": false,
+      "label": "Keep title on same line"
+    },
+    {
+      "type": "checkbox",
+      "id": "capitalize_titles",
+      "default": false,
+      "label": "Capitalize titles"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_titles",
+      "default": false,
+      "label": "Reverse titles"
+    },
+    {
+      "type": "checkbox",
+      "id": "invert_product_colors",
+      "default": false,
+      "label": "Invert product background color"
+    },
     {
       "type": "range",
       "id": "products_per_page",
