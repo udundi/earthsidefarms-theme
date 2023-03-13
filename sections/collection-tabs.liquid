@@ -175,9 +175,6 @@
               {% endfor %}
           {% else %}
               {% assign collectionProducts = block.settings.collection.products %}
-            {% for p in collectionProducts %}
-                {{ p.title }}
-              {% endfor %}
           {% endif %}
         {% endif %}
 
