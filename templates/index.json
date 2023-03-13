@@ -118,6 +118,21 @@
         "padding_bottom": 56
       }
     },
+    "18118e7a-f8a9-4f62-8e71-fc4c521863d1": {
+      "type": "text-banner",
+      "settings": {
+        "bg_color": "#FFFFFF",
+        "main_title": "Check Us Out.",
+        "secondary_title": "Our Products.",
+        "capitalize_titles": true,
+        "reverse_titles": false,
+        "sub_text": "",
+        "button_text": "",
+        "button_link": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "87c99542-9f9b-415e-bc1c-90e7e456de8c": {
       "type": "collection-tabs",
       "blocks": {
@@ -158,6 +173,7 @@
   "order": [
     "slideshow",
     "19ca8568-e35a-49e6-bcc9-6697f86e324f",
+    "18118e7a-f8a9-4f62-8e71-fc4c521863d1",
     "87c99542-9f9b-415e-bc1c-90e7e456de8c"
   ]
 }
