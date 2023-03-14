@@ -1,17 +1,18 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
+    "d07acb05-ed04-404c-a25e-80593bcdb97d": {
+      "type": "home-slideshow",
       "blocks": {
-        "slide-0": {
+        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-0": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_2.jpg",
-            "heading": "Image slide",
-            "heading_size": "h1",
+            "caption": "New Candied Nuts Are Here!",
+            "heading": "Loaded with real blueberries. Not sugar.",
+            "heading_size": "h0",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
-            "link": "",
+            "link": "shopify:\/\/products\/blueberry-vanilla-cashews",
             "button_style_secondary": true,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -20,14 +21,33 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-1": {
+          "type": "slide",
+          "settings": {
+            "caption": "New Candied Nuts Are Here!",
+            "heading": "Loaded with real blueberries. Not sugar.",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide-0"
+        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-0",
+        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-1"
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -167,7 +187,7 @@
     }
   },
   "order": [
-    "slideshow",
+    "d07acb05-ed04-404c-a25e-80593bcdb97d",
     "19ca8568-e35a-49e6-bcc9-6697f86e324f",
     "87c99542-9f9b-415e-bc1c-90e7e456de8c",
     "345cdc50-6e5d-4fc9-849f-fcde205400e2"
