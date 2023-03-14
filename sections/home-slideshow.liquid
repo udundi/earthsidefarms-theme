@@ -54,6 +54,7 @@
 
   .slideshow__text.banner__box {
     max-width: none;
+    border-bottom: 1px solid #ff;
   }
 
   .banner__buttons .button.button--secondary {
@@ -148,17 +149,18 @@
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
-            {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
-              </div>
-            {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
                 <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
           </div>
+
+          {%- if block.settings.subheading != blank -%}
+            <div class="banner__text" {{ block.shopify_attributes }}>
+              <span>{{ block.settings.subheading | escape }}</span>
+            </div>
+          {%- endif -%}
 
           {% if block.settings.secondary_image %}
             <img src="{{ block.settings.secondary_image | img_url: 'master' }}" class="banner__secondary-image" alt="banner image" loading="lazy" />
