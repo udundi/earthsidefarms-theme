@@ -3359,3 +3359,15 @@ details-disclosure > details.mega-menu {
   -webkit-animation: float 8s ease-in-out infinite;
   animation: float 8s ease-in-out infinite;
 }
+
+.animateFloat_3 {
+  transform: translatey(0px);
+  -webkit-animation: float 8s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+}
+
+.animateFloat_4 {
+  transform: translatey(0px);
+  -webkit-animation: float 8s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
+}
