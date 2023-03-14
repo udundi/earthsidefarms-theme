@@ -198,7 +198,7 @@
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content{% if block.settings.secondary_image %} has-second-image{% endif %} banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          <div class="animated fadeInUp slideshow__text banner__box content-container content-container--full-width-mobile slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             <div class="banner__text-container">
               {%- if block.settings.caption != blank -%}
                 <p class="banner__caption">{{ block.settings.caption | escape }}</p>
@@ -218,6 +218,26 @@
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
+
+            {% if block.settings.product_1 or block.settings.product_2 %}
+              <div class="banner__products">
+                {% if block.settings.product_1 %}
+                  <div class="banner__product-1">
+                    <div class="banner__product-image">
+                      <img src="{{ block.settings.product_1.image | img_url: 'master' }}" alt="{{ block.settings.product_1.title }}" loading="lazy" />
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if block.settings.product_2 %}
+                  <div class="banner__product-2">
+                    <div class="banner__product-image">
+                      <img src="{{ block.settings.product_2.image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
           </div>
 
           {% if block.settings.secondary_image %}
