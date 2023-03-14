@@ -3341,7 +3341,7 @@ details-disclosure > details.mega-menu {
     transform: translatey(0px);
   }
   50% {
-    transform: translatey(-35px);
+    transform: translatey(-20px);
   }
   100% {
     transform: translatey(0px);
@@ -3356,6 +3356,6 @@ details-disclosure > details.mega-menu {
 
 .animateFloat_2 {
   transform: translatey(0px);
-  -webkit-animation: float-2 8s ease-in-out infinite;
-  animation: float-2 8s ease-in-out infinite;
+  -webkit-animation: float 8s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
