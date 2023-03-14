@@ -170,7 +170,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .banner__product-title,
@@ -178,7 +178,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 150%;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
   }
 
   .banner__product-arrow-container {
@@ -333,6 +333,12 @@
                   <div class="banner__product-2">
                     <div class="banner__product-image">
                       <img src="{{ block.settings.product_2.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
+                    </div>
+
+                    <div class="banner__product-info">
+                      <p class="banner__product-title">{{ block.settings.product_2.title }}</p>
+                      <p class="banner__product-title">{{ block.settings.product_2.price | money }}</p>
+                      <div class="banner__product-arrow-container"></div>
                     </div>
                   </div>
                 {% endif %}
