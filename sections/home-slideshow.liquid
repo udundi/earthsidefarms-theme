@@ -74,6 +74,17 @@
     line-height: 150%;
     margin-bottom: 35px;
   }
+
+  .banner__float-item {
+    height: auto;
+    position: absolute;
+  }
+
+  #banner__blue-item-1 {
+    width: 250px;
+    right: 15px;
+    top: 45px;
+  }
 </style>
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
@@ -179,7 +190,7 @@
             <img src="{{ block.settings.secondary_image | img_url: 'master' }}" class="banner__secondary-image" alt="banner image" loading="lazy" />
           
             {% if block.settings.product_type == "blueberry" %} 
-              <img src="{{ 'blue-banner-1.svg' | file_url }}" class="banner__blue-item" alt="banner item" loading="lazy" />
+              <img src="{{ 'blue-banner-1.svg' | file_url }}" class="banner__blue-item banner__float-item" alt="banner item" loading="lazy" />
             {% endif %}
           {% endif %}
         </div>
