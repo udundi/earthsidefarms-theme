@@ -221,11 +221,11 @@
           </div>
 
           {% if block.settings.secondary_image %}
-            <img src="{{ block.settings.secondary_image | img_url: 'master' }}" class="banner__secondary-image" alt="banner image" loading="lazy" />
+            <img src="{{ block.settings.secondary_image | img_url: 'master' }}" class="banner__secondary-image animated fadeInUp" alt="banner image" loading="lazy" />
           
             {% if block.settings.product_type == "blueberry" %} 
-              <img src="{{ 'blue-banner-1.svg' | file_url }}" id="banner__blue-item-1" class="banner__float-item animated fadeInUp" alt="banner item" loading="lazy" />
-              <img src="{{ 'blue-banner-2.svg' | file_url }}" id="banner__blue-item-2" class="banner__float-item animated fadeInUp" alt="banner item" loading="lazy" />
+              <img src="{{ 'blue-banner-1.svg' | file_url }}" id="banner__blue-item-1" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
+              <img src="{{ 'blue-banner-2.svg' | file_url }}" id="banner__blue-item-2" class="banner__float-item animateFloat_2" alt="banner item" loading="lazy" />
               <img src="{{ 'blueberry.svg' | file_url }}" id="banner__blueberry-1" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
               <img src="{{ 'blueberry.svg' | file_url }}" id="banner__blueberry-2" class="banner__float-item animateFloat_2" alt="banner item" loading="lazy" />
               <img src="{{ 'blueberry.svg' | file_url }}" id="banner__blueberry-3" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
