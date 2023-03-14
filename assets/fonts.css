@@ -11,18 +11,6 @@
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url('Avenir-Light.eot');
-    src: local('Avenir Light'), local('Avenir-Light'),
-        url('Avenir-Light.eot?#iefix') format('embedded-opentype'),
-        url('Avenir-Light.woff2') format('woff2'),
-        url('Avenir-Light.woff') format('woff'),
-        url('Avenir-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Avenir Book';
     src: url('Avenir-BookOblique.eot');
     src: local('Avenir Book Oblique'), local('Avenir-BookOblique'),
@@ -139,6 +127,18 @@
         url('Avenir-Medium.woff') format('woff'),
         url('Avenir-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Light.eot');
+    src: local('Avenir Light'), local('Avenir-Light'),
+        url('Avenir-Light.eot?#iefix') format('embedded-opentype'),
+        url('Avenir-Light.woff2') format('woff2'),
+        url('Avenir-Light.woff') format('woff'),
+        url('Avenir-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
 }
 
