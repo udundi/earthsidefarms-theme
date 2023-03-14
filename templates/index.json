@@ -6,7 +6,7 @@
         "slide-0": {
           "type": "slide",
           "settings": {
-            "image": "{{ shop.brand.cover_image }}",
+            "image": "shopify:\/\/shop_images\/Rectangle_2.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
