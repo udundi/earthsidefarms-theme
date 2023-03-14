@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_2.jpg",
+            "secondary_image": "shopify:\/\/shop_images\/BVC_Flat_in_Bowl_-_Retouched_3.png",
             "caption": "New Candied Nuts Are Here!",
             "heading": "Loaded with real blueberries. Not sugar.",
             "heading_size": "h0",
