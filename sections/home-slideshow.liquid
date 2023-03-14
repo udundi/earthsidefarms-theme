@@ -79,10 +79,6 @@
     margin-bottom: 35px;
   }
 
-  .banner__buttons .button.button--secondary {
-    background: #fff;
-  }
-
   .banner__text {
     font-weight: 500;
     font-size: 15px;
@@ -256,6 +252,14 @@
     max-height: 800px;
   }
 
+  .slideshow__text.banner__box.blueberry .banner__text,
+  .slideshow__text.banner__box.blueberry .banner__caption,
+  .slideshow__text.banner__box.blueberry .banner__heading,
+  .slideshow__text.banner__box.blueberry .banner__text-container,
+  .slideshow__text.banner__box.blueberry .banner__buttons .button {
+    color: #3050A2;
+  }
+
   #banner__coconut-item-1 {
     right: 0;
     z-index: 50;
@@ -355,7 +359,7 @@
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content{% if block.settings.secondary_image %} has-second-image{% endif %} banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div class="animated fadeInUp slideshow__text banner__box content-container content-container--full-width-mobile slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          <div class="animated fadeInUp slideshow__text banner__box content-container content-container--full-width-mobile slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}{% if block.settings.product_type == "blueberry" %} blue{% endif %}{% if block.settings.product_type == "banana" %} banana{% endif %}{% if block.settings.product_type == "coconut" %} coconut{% endif %}{% if block.settings.product_type == "chocolate" %} chocolate{% endif %}">
             <div class="banner__text-container">
               {%- if block.settings.caption != blank -%}
                 <p class="banner__caption">{{ block.settings.caption | escape }}</p>
