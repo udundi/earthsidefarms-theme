@@ -133,9 +133,24 @@
     display: flex;
   }
 
-  .banner__product-1.blue,
-  .banner__product-2.blue {
-    background: #29438B
+  .banner__products.blue .banner__product-1,
+  .banner__products.blue .banner__product-2 {
+    background: #29438B;
+  }
+
+  .banner__products.coconut .banner__product-1,
+  .banner__products.coconut .banner__product-2 {
+    background: #fff;
+  }
+
+  .banner__products.chocolate .banner__product-1,
+  .banner__products.chocolate .banner__product-2 {
+    background: rgba(81, 168, 176, 0.5);
+  }
+
+  .banner__products.banana .banner__product-1,
+  .banner__products.banana .banner__product-2 {
+    background: rgba(206, 98, 44, 0.2);
   }
 
   .banner__product-image {
@@ -149,6 +164,53 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+  }
+
+  .banner__product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .banner__product-title,
+  .banner__product-price {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 5px;
+  }
+
+  .banner__product-arrow {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner__products.blue .banner__product-title,
+  .banner__products.blue .banner__product-price,
+  .banner__products.blue .banner__product-arrow {
+    color: #FEFEFD;
+  }
+
+  .banner__products.coconut .banner__product-title,
+  .banner__products.coconut .banner__product-price,
+  .banner__products.blue .banner__product-arrow {
+    color: #29438B;
+  }
+
+  .banner__products.chocolate .banner__product-title,
+  .banner__products.chocolate .banner__product-price,
+  .banner__products.blue .banner__product-arrow {
+    color: #fff;
+  }
+
+  .banner__products.banana .banner__product-title,
+  .banner__products.banana .banner__product-price,
+  .banner__products.blue .banner__product-arrow {
+    color: #CE622C;
   }
 </style>
 
@@ -251,11 +313,17 @@
             {%- endif -%}
 
             {% if block.settings.product_1 or block.settings.product_2 %}
-              <div class="banner__products">
+              <div class="banner__products{% if block.settings.product_type == "blueberry" %} blue{% endif %}{% if block.settings.product_type == "banana" %} banana{% endif %}{% if block.settings.product_type == "coconut" %} coconut{% endif %}{% if block.settings.product_type == "chocolate" %} chocolate{% endif %}">
                 {% if block.settings.product_1 %}
                   <div class="banner__product-1">
                     <div class="banner__product-image">
-                      <img src="{{ block.settings.product_1.image | img_url: 'master' }}" alt="{{ block.settings.product_1.title }}" loading="lazy" />
+                      <img src="{{ block.settings.product_1.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_1.title }}" loading="lazy" />
+                    </div>
+
+                    <div class="banner__product-info">
+                      <p class="banner__product-title">{{ block.settings.product_1.title }}</p>
+                      <p class="banner__product-title">{{ block.settings.product_1.price | money }}</p>
+                      <div class="banner__product-arrow-container"></div>
                     </div>
                   </div>
                 {% endif %}
@@ -263,7 +331,7 @@
                 {% if block.settings.product_2 %}
                   <div class="banner__product-2">
                     <div class="banner__product-image">
-                      <img src="{{ block.settings.product_2.image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
+                      <img src="{{ block.settings.product_2.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
                     </div>
                   </div>
                 {% endif %}
