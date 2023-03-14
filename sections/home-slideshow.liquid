@@ -408,7 +408,10 @@
                       <p class="banner__product-title">{{ block.settings.product_1.title }}</p>
                       <p class="banner__product-title">{{ block.settings.product_1.price | money }}</p>
                       <div class="banner__product-arrow-container">
-                        {% render 'icon-slim-arrow-right' %}
+                        {% if block.settings.product_type == "blueberry" %}{% render 'icon-slim-arrow-right' %}{% endif %}
+                        {% if block.settings.product_type == "banana" %}{% render 'icon-slim-arrow-right', fill: 'red' %}{% endif %}
+                        {% if block.settings.product_type == "coconut" %}{% render 'icon-slim-arrow-right', fill: 'silver' %}{% endif %}
+                        {% if block.settings.product_type == "chocolate" %}{% render 'icon-slim-arrow-right', fill: 'teal' %}{% endif %}
                       </div>
                     </div>
                   </a>
