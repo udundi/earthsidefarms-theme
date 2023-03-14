@@ -48,11 +48,35 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "5d385d9d-0e50-45d1-8e43-fc4b17db3296": {
+          "type": "slide",
+          "settings": {
+            "product_type": "chocolate",
+            "image": "shopify:\/\/shop_images\/Group_153.jpg",
+            "secondary_image": "shopify:\/\/shop_images\/KF_-_Chocolate_Chip_Cookie_Dough_Bites_-_Pouch_Mockup_-_Front_1.png",
+            "caption": "New Candied Nuts Are Here!",
+            "heading": "Loaded with real blueberries. Not sugar.",
+            "heading_size": "h0",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "product_1": "",
+            "product_2": "",
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-0",
-        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-1"
+        "template--17540507533617__d07acb05-ed04-404c-a25e-80593bcdb97d-16787624769487ef23-1",
+        "5d385d9d-0e50-45d1-8e43-fc4b17db3296"
       ],
       "settings": {
         "layout": "full_bleed",
