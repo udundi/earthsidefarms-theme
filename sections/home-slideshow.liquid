@@ -348,38 +348,34 @@
             {% if block.settings.product_1 or block.settings.product_2 %}
               <div class="banner__products{% if block.settings.product_type == "blueberry" %} blue{% endif %}{% if block.settings.product_type == "banana" %} banana{% endif %}{% if block.settings.product_type == "coconut" %} coconut{% endif %}{% if block.settings.product_type == "chocolate" %} chocolate{% endif %}">
                 {% if block.settings.product_1 %}
-                  <div class="banner__product-1">
-                    <a href="{{ block.settings.product_1.url }}">
-                      <div class="banner__product-image">
-                        <img src="{{ block.settings.product_1.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_1.title }}" loading="lazy" />
+                  <a class="banner__product-1" href="{{ block.settings.product_1.url }}">
+                    <div class="banner__product-image">
+                      <img src="{{ block.settings.product_1.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_1.title }}" loading="lazy" />
+                    </div>
+
+                    <div class="banner__product-info">
+                      <p class="banner__product-title">{{ block.settings.product_1.title }}</p>
+                      <p class="banner__product-title">{{ block.settings.product_1.price | money }}</p>
+                      <div class="banner__product-arrow-container">
+                        {% render 'icon-slim-arrow-right' %}
                       </div>
-  
-                      <div class="banner__product-info">
-                        <p class="banner__product-title">{{ block.settings.product_1.title }}</p>
-                        <p class="banner__product-title">{{ block.settings.product_1.price | money }}</p>
-                        <div class="banner__product-arrow-container">
-                          {% render 'icon-slim-arrow-right' %}
-                        </div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 {% endif %}
 
                 {% if block.settings.product_2 %}
-                  <div class="banner__product-2">
-                    <a href="{{ block.settings.product_2.url }}">
-                      <div class="banner__product-image">
-                        <img src="{{ block.settings.product_2.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
+                  <a class="banner__product-2" href="{{ block.settings.product_2.url }}">
+                    <div class="banner__product-image">
+                      <img src="{{ block.settings.product_2.featured_image | img_url: 'master' }}" alt="{{ block.settings.product_2.title }}" loading="lazy" />
+                    </div>
+
+                    <div class="banner__product-info">
+                      <p class="banner__product-title">{{ block.settings.product_2.title }}</p>
+                      <p class="banner__product-title">{{ block.settings.product_2.price | money }}</p>
+                      <div class="banner__product-arrow-container">
+                        {% render 'icon-slim-arrow-right' %}
                       </div>
-  
-                      <div class="banner__product-info">
-                        <p class="banner__product-title">{{ block.settings.product_2.title }}</p>
-                        <p class="banner__product-title">{{ block.settings.product_2.price | money }}</p>
-                        <div class="banner__product-arrow-container">
-                          {% render 'icon-slim-arrow-right' %}
-                        </div>
-                      </div>
-                    </a>
+                    </div>
                   </div>
                 {% endif %}
               </div>
