@@ -121,6 +121,10 @@
               </div>
             {%- endif -%}
           </div>
+
+          {% if block.settings.secondary_image %}
+            <img src="{{ block.settings.secondary_image | img_url: 'master' }}" class="banner__secondary-image" alt="banner image" loading="lazy" />
+          {% endif %}
         </div>
       </div>
     {%- endfor -%}
@@ -286,6 +290,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "secondary_image",
+          "label": "Second image"
         },
         {
           "type": "text",
