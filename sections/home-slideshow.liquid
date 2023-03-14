@@ -194,26 +194,42 @@
 
   .banner__products.blue .banner__product-title,
   .banner__products.blue .banner__product-price,
-  .banner__products.blue .banner__product-arrow {
+  .banner__products.blue .banner__product-arrow-container {
     color: #FEFEFD;
+  }
+
+  .banner__products.blue .icon-slim-arrow-right {
+    background: #3254AA;
   }
 
   .banner__products.coconut .banner__product-title,
   .banner__products.coconut .banner__product-price,
-  .banner__products.blue .banner__product-arrow {
+  .banner__products.coconut .banner__product-arrow-container {
     color: #29438B;
+  }
+
+  .banner__products.coconut .icon-slim-arrow-right {
+    background: #fff;
   }
 
   .banner__products.chocolate .banner__product-title,
   .banner__products.chocolate .banner__product-price,
-  .banner__products.blue .banner__product-arrow {
+  .banner__products.chocolate .icon-slim-arrow-right {
     color: #fff;
+  }
+
+  .banner__products.chocolate .icon-slim-arrow-right {
+    background: #51A8B0;
   }
 
   .banner__products.banana .banner__product-title,
   .banner__products.banana .banner__product-price,
-  .banner__products.blue .banner__product-arrow {
+  .banner__products.banana .icon-slim-arrow-right {
     color: #CE622C;
+  }
+
+  .banner__products.chocolate .icon-slim-arrow-right {
+    background: #C7622F;
   }
 </style>
 
@@ -326,7 +342,9 @@
                     <div class="banner__product-info">
                       <p class="banner__product-title">{{ block.settings.product_1.title }}</p>
                       <p class="banner__product-title">{{ block.settings.product_1.price | money }}</p>
-                      <div class="banner__product-arrow-container"></div>
+                      <div class="banner__product-arrow-container">
+                        {% render 'icon-slim-arrow-right' %}
+                      </div>
                     </div>
                   </div>
                 {% endif %}
@@ -340,7 +358,9 @@
                     <div class="banner__product-info">
                       <p class="banner__product-title">{{ block.settings.product_2.title }}</p>
                       <p class="banner__product-title">{{ block.settings.product_2.price | money }}</p>
-                      <div class="banner__product-arrow-container"></div>
+                      <div class="banner__product-arrow-container">
+                        {% render 'icon-slim-arrow-right' %}
+                      </div>
                     </div>
                   </div>
                 {% endif %}
