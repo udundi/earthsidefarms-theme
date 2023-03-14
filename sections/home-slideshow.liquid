@@ -255,6 +255,10 @@
   .slideshow__media.banner__media {
     max-height: 800px;
   }
+
+  #banner__coconut-item-1 {
+    right: 0;
+  }
 </style>
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
@@ -405,6 +409,7 @@
 
             {% if block.settings.product_type == "coconut" %} 
               <img src="{{ 'Coconut_Caramel_Cashews_1.svg' | file_url }}" id="banner__coconut-item-1" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
+              <img src="{{ 'coconut-1.svg' | file_url }}" id="banner__coconut-item-2" class="banner__float-item animateFloat-2" alt="banner item" loading="lazy" />
             {% endif %}
           {% endif %}
         </div>
