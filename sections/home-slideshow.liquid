@@ -266,6 +266,16 @@
     bottom: 175px;
     z-index: 10;
   }
+
+  #banner__coconut-item-3 {
+    right: 50px;
+    top: 125px;
+  }
+
+  #banner__coconut-item-4 {
+    right: 50px;
+    bottom: 35px;
+  }
 </style>
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
@@ -417,8 +427,8 @@
             {% if block.settings.product_type == "coconut" %} 
               <img src="{{ 'Coconut_Caramel_Cashews_1.svg' | file_url }}" id="banner__coconut-item-1" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
               <img src="{{ 'coconut-1.svg' | file_url }}" id="banner__coconut-item-2" class="banner__float-item animateFloat_2" alt="banner item" loading="lazy" />
-              <img src="{{ 'caramel.svg' | file_url }}" id="banner__coconut-item-3" class="banner__float-item animateFloat" alt="banner item" loading="lazy" />
-              <img src="{{ 'cashews.svg' | file_url }}" id="banner__coconut-item-4" class="banner__float-item animateFloat_2" alt="banner item" loading="lazy" />
+              <img src="{{ 'caramel.svg' | file_url }}" id="banner__coconut-item-3" class="banner__float-item animateFloat_3" alt="banner item" loading="lazy" />
+              <img src="{{ 'cashews.svg' | file_url }}" id="banner__coconut-item-4" class="banner__float-item animateFloat_4" alt="banner item" loading="lazy" />
             {% endif %}
           {% endif %}
         </div>
