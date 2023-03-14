@@ -31,6 +31,12 @@
     width: 635px;
     height: auto;
   }
+
+  .banner__content.has-second-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 </style>
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
@@ -109,7 +115,7 @@
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+        <div class="slideshow__text-wrapper banner__content{% if block.settings.secondary_image %} has-second-image{% endif %} banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.caption != blank -%}
               <p class="banner__caption">{{ block.settings.caption | escape }}</p>
